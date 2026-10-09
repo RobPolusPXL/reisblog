@@ -37,10 +37,10 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 
 /* ---------- header ---------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 92px; transition: height .25s; }
+.site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 76px; }
 .site-head a { text-decoration: none; color: var(--ink); }
 .logo { display: inline-flex; align-items: center; }
-.lk { display: block; height: 76px; width: auto; transition: height .25s; }
+.lk { display: block; height: 38px; width: auto; }
 .lk-wit { display: none; }
 body.has-hero:not(.scrolled) .site-head .lk-wit { display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.4)); }
 body.has-hero:not(.scrolled) .site-head .lk-donker { display: none; }
@@ -212,6 +212,3 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 .leaflet-control-zoom a { color: var(--ink); }
 
 
-body.has-hero:not(.scrolled) .site-head .wrap { height: 128px; }
-body.has-hero:not(.scrolled) .site-head .lk { height: 108px; }
-@media (max-width: 700px) { .lk { height: 60px; } .site-head .wrap { height: 76px; } body.has-hero:not(.scrolled) .site-head .wrap { height: 100px; } body.has-hero:not(.scrolled) .site-head .lk { height: 84px; } }
