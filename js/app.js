@@ -124,7 +124,7 @@
     }
 
     if (c.gallery && c.gallery.length) {
-      html += section("Meer foto's", '<div class="gallery">' + c.gallery.map(function (g) { return photo(g); }).join("") + "</div>");
+      html += section("Meer foto's", '<div class="gallery">' + c.gallery.map(function (g) { return "<figure>" + photo(g) + (g.caption ? "<figcaption>" + esc(g.caption) + "</figcaption>" : "") + "</figure>"; }).join("") + "</div>");
     }
 
     $("country").innerHTML = html;

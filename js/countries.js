@@ -21,7 +21,7 @@ window.COUNTRIES = [
     intro:
       "Acht dagen in twee delen: eerst Mostar en omgeving, daarna Kulen Vakuf in het Nationaal Park Una. " +
       "Een reis voor wie van natuur, water en een beetje avontuur houdt, zonder dat het ver of duur hoeft te zijn.",
-    cover: { src: null, alt: "Landschap in Bosnië en Herzegovina" },
+    cover: { src: "images/bosnie-en-herzegovina/stari-most-schemering.webp", alt: "De Stari Most in Mostar bij schemering" },
     transport: [
       { t: "Vlucht Charleroi – Sarajevo met Ryanair", ok: true },
       { t: "Huurauto (automaat) via Sunny Cars, opgehaald op de luchthaven van Sarajevo", ok: true }
@@ -32,14 +32,14 @@ window.COUNTRIES = [
         name: "Villa Olea",
         nights: 3,
         text: "Onze basis voor de eerste dagen, dicht genoeg bij het centrum om te voet te gaan.",
-        photo: { src: null, alt: "Mostar" }
+        photo: { src: "images/bosnie-en-herzegovina/mostar-rivier-zonsondergang.webp", alt: "Zonsondergang boven de Neretva en de oude stad van Mostar" }
       },
       {
         place: "Kulen Vakuf",
         name: "Bungalov Cozy Una",
         nights: 4,
         text: "Een bungalow in het rustige Kulen Vakuf, vlak bij het Nationaal Park Una.",
-        photo: { src: null, alt: "Kulen Vakuf en de Una" }
+        photo: { src: "images/bosnie-en-herzegovina/kulen-vakuf-tuin-aan-de-una.webp", alt: "Tuin met hangmat aan de Una in Kulen Vakuf" }
       }
     ],
     activities: [
@@ -55,8 +55,10 @@ window.COUNTRIES = [
       },
       { t: "Raften op de Una", text: "Samen betaalden we €110.", ok: true },
       { t: "Kravice-watervallen", text: "Een dagtrip vanuit Mostar.", ok: true },
-      { t: "Blagaj en Počitelj", ok: false },
-      { t: "Martin Brod en zijn watervallen", ok: false }
+      { t: "Počitelj", text: "Een stenen dorpje met fort en moskee boven de Neretva.", ok: true },
+      { t: "Martin Brod", text: "Watervallen aan de Una, mooi in het avondlicht.", ok: true },
+      { t: "Jajce", text: "Een laatste stop op de terugweg, met de waterval midden in de stad.", ok: true },
+      { t: "Blagaj", ok: false }
     ],
     practical: [
       { t: "Een Belgische identiteitskaart volstaat, neem het paspoort mee als reserve (zeker bij de huurauto).", ok: true },
@@ -78,7 +80,15 @@ window.COUNTRIES = [
       "Eten, boodschappen en slapen kostte ons samen ongeveer € 76 per dag voor twee. " +
       "Dat ligt iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
     costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" },
-    gallery: []
+    gallery: [
+      { src: "images/bosnie-en-herzegovina/mostar-brug-bij-nacht.webp", alt: "De Stari Most verlicht bij nacht", caption: "Mostar bij nacht" },
+      { src: "images/bosnie-en-herzegovina/kravice-watervallen.webp", alt: "De Kravice-watervallen met een meertje eronder", caption: "Kravice-watervallen" },
+      { src: "images/bosnie-en-herzegovina/fortica-via-ferrata-hangbrug.webp", alt: "Klimmer op de hangbrug van de via ferrata aan de Fortica", caption: "Via ferrata aan de Fortica" },
+      { src: "images/bosnie-en-herzegovina/pocitelj-fort-en-dorp.webp", alt: "Het fort van Počitelj tussen de bomen", caption: "Počitelj" },
+      { src: "images/bosnie-en-herzegovina/strbacki-buk.webp", alt: "De Štrbački buk, een brede waterval op de Una", caption: "Štrbački buk" },
+      { src: "images/bosnie-en-herzegovina/una-boot-turkoois-water.webp", alt: "Houten boot op het turkooisgroene water van de Una", caption: "De Una" },
+      { src: "images/bosnie-en-herzegovina/martin-brod-waterval.webp", alt: "Waterval bij Martin Brod", caption: "Martin Brod" }
+    ]
   },
 
   { slug: "costa-rica", name: "Costa Rica", done: false, pin: [9.9, -84.1], visited: "2025" },
