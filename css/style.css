@@ -202,7 +202,7 @@ table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 v
 /* ---------- footer ---------- */
 footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15px; padding: 44px 0 56px; }
 .mark { display: block; height: 26px; width: auto; }
-.mark-oranje { display: none; }
+.mark-oranje { display: none; height: 31px; margin: -2px 0 -2px -3px; }
 body.has-hero:not(.scrolled) .site-head .mark-oranje { display: block; filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
 body.has-hero:not(.scrolled) .site-head .mark-basis { display: none; }
 body.has-hero:not(.scrolled) .site-head .logo { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.4); }
