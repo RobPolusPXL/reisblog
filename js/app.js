@@ -159,17 +159,17 @@
     }
 
     if (c.getThere && c.getThere.length) {
-      html += section("Er geraken",
+      html += section("Er geraken anno 2026",
         '<div class="getthere">' + c.getThere.map(function (g) {
           return '<div class="gt"><h3>' + esc(g.from) + "</h3>" +
             (g.routes.length ? "<ul>" + g.routes.map(function (r) {
               return "<li><b>" + esc(r.airport) + "</b><span>" + esc(r.airline) + " naar " + esc(r.to) +
-                (r.seasonal ? " · seizoensgebonden, controleer de data" : "") + (r.ours ? " · zo vlogen wij" : "") + "</span></li>";
+                (r.seasonal ? " · seizoensgebonden" : "") + (r.ours ? " · zo vlogen wij" : "") + "</span></li>";
             }).join("") + "</ul>" : "") +
             (g.note ? "<p>" + esc(g.note) + "</p>" : "") + "</div>";
         }).join("") + "</div>" +
         (c.transport && c.transport.length ? '<h3 class="subh">Zo deden wij het</h3><ul class="list">' + c.transport.map(item).join("") + "</ul>" : ""),
-        "Vluchten naar Sarajevo, Tuzla en Banja Luka vanuit België, Nederland en Duitsland, gecontroleerd in oktober 2026. Dienstregelingen veranderen, controleer altijd bij de maatschappij.");
+        "Rechtstreekse vluchten, stand oktober 2026.");
     } else if (c.transport && c.transport.length) html += section("Er geraken", '<ul class="list">' + c.transport.map(item).join("") + "</ul>");
     if (c.practical && c.practical.length) html += section("Praktisch", '<ul class="list">' + c.practical.map(item).join("") + "</ul>");
 
