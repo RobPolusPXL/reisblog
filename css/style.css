@@ -118,9 +118,8 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .stamp { display: inline-grid; place-items: center; text-align: center; width: 132px; height: 132px; border-radius: 50%; margin-top: 30px; color: var(--clay);
   border: 2px solid var(--clay); outline: 2px solid var(--clay); outline-offset: -8px; transform: rotate(-9deg); font: 700 12px/1.25 var(--body); letter-spacing: .08em; text-transform: uppercase; padding: 18px; }
 .stamp b { display: block; font: 800 22px/1 var(--display); letter-spacing: -.01em; text-transform: none; margin: 4px 0; }
-.c-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: start; margin-top: 64px; }
-.intro { font-size: 18px; line-height: 1.75; color: #34433f; margin: 0; max-width: 62ch; text-wrap: pretty; }
-.intro .lead { display: block; font: 700 clamp(26px, 3vw, 34px)/1.15 var(--display); letter-spacing: -.02em; color: var(--ink); margin-bottom: 18px; text-wrap: balance; }
+.c-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: start; margin-top: 72px; }
+.intro { font-size: clamp(20px, 2.2vw, 24px); line-height: 1.55; color: var(--ink); margin: 0; font-weight: 500; }
 .fact-card { background: var(--sand); border-radius: var(--radius); padding: 26px 26px 18px; }
 .fact-card h2 { font-size: 22px; margin-bottom: 8px; }
 .fact-card dl { margin: 0; }
