@@ -29,7 +29,7 @@ window.COUNTRIES = [
       "Bosnië verraste ons. Al de rit van Sarajevo naar Mostar, langs de Neretva, is misschien wel de mooiste weg van Europa. " +
       "In Mostar liepen we onder de beroemde brug en tussen de terrasjes langs de rivier, daarna trokken we naar de smaragdgroene Una. " +
       "We klommen langs de Fortica, zwommen onder de Kravice-watervallen, raftten op de Una en dronken Bosnische koffie in de tuin aan de rivier. " +
-      "En het is maar twee uur vliegen, maar het voelt als een andere wereld.",
+      "Het is maar twee uur vliegen, en toch voelt het als een andere wereld.",
     cover: { src: "images/bosnie-en-herzegovina/stari-most-schemering.webp", alt: "De Stari Most in Mostar bij schemering" },
     // Vluchten gecontroleerd in oktober 2026 (Ryanair-routelijst, Eurowings, FlightConnections). Dienstregelingen veranderen.
     getThere: [
