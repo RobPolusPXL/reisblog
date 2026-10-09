@@ -43,12 +43,15 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .logo::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--clay); margin-right: 9px; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
-body.has-hero .site-head { position: absolute; left: 0; right: 0; background: none; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
-body.has-hero .site-head a { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+body.has-hero .site-head { position: fixed; left: 0; right: 0; background: transparent; border-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; transition: background .25s, border-color .25s; }
+body.has-hero .site-head a { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); transition: color .25s; }
 body.has-hero .logo::before { background: #fff; }
+body.has-hero.scrolled .site-head { background: rgba(255,255,255,.94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-color: var(--line); }
+body.has-hero.scrolled .site-head a { color: var(--ink); text-shadow: none; }
+body.has-hero.scrolled .logo::before { background: var(--clay); }
 
 /* ---------- grote openingsfoto ---------- */
-.hero { position: relative; height: min(90vh, 880px); min-height: 560px; background: #243c38; overflow: hidden; color: #fff; display: flex; align-items: flex-end; border-radius: 0 0 36px 36px; }
+.hero { position: relative; height: min(90vh, 880px); min-height: 560px; background: #243c38; overflow: hidden; color: #fff; display: flex; align-items: flex-end; }
 .hero.short { height: min(78vh, 720px); }
 .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: settle 2.6s ease-out both; }
 @keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
@@ -59,7 +62,7 @@ body.has-hero .logo::before { background: #fff; }
 .hero p { margin: 22px 0 0; max-width: 34ch; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: rgba(255,255,255,.94); }
 .hero .label { color: #fff; opacity: .9; }
 .hero .stamp { color: #fff; border-color: #fff; outline-color: #fff; margin: 0; flex: none; }
-@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } .hero { border-radius: 0 0 24px 24px; } }
+@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } }
 
 /* ---------- gedeelde onderdelen ---------- */
 .label { font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--clay); }
@@ -78,7 +81,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .block-head { padding: 88px 0 28px; }
 .block-head h2 { font-size: clamp(32px, 4.6vw, 54px); }
 .block-head p { margin: 14px 0 0; color: var(--muted); max-width: 52ch; }
-#map { height: min(62vh, 580px); width: 100%; background: var(--sand); border-radius: 24px; overflow: hidden; }
+#map { isolation: isolate; z-index: 0; height: min(62vh, 580px); width: 100%; background: var(--sand); border-radius: 24px; overflow: hidden; }
 #map .leaflet-interactive { cursor: pointer; outline: none; }
 .map-wrap { padding-bottom: 24px; }
 
@@ -110,7 +113,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 
 /* ---------- landenpagina ---------- */
 .stamp { color: #fff; border-color: #fff; outline-color: #fff; margin: 0; flex: none; }
-@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } .hero { border-radius: 0 0 24px 24px; } }
+@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } }
 
 /* ---------- gedeelde onderdelen ---------- */
 .label { font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--clay); }
@@ -129,7 +132,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .block-head { padding: 88px 0 28px; }
 .block-head h2 { font-size: clamp(32px, 4.6vw, 54px); }
 .block-head p { margin: 14px 0 0; color: var(--muted); max-width: 52ch; }
-#map { height: min(62vh, 580px); width: 100%; background: var(--sand); border-radius: 24px; overflow: hidden; }
+#map { isolation: isolate; z-index: 0; height: min(62vh, 580px); width: 100%; background: var(--sand); border-radius: 24px; overflow: hidden; }
 #map .leaflet-interactive { cursor: pointer; outline: none; }
 .map-wrap { padding-bottom: 24px; }
 

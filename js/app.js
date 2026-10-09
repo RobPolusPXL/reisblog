@@ -229,6 +229,10 @@
     else window.scrollTo(0, 0);
   }
 
+  function onScroll() { document.body.classList.toggle("scrolled", window.scrollY > 40); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
   renderHome();
   renderMap();
   window.addEventListener("hashchange", route);
