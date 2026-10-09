@@ -214,16 +214,16 @@
       var a = parts[1] && places(c).filter(function (x) { return x.slug === parts[1]; })[0];
       if (a) {
         renderPlace(c, a);
-        document.title = a.t + " · " + c.name + " · Travel Mustache";
+        document.title = a.t + " · " + c.name + " · Voyage Moustache";
       } else {
         renderCountry(c);
-        document.title = c.name + " · Travel Mustache";
+        document.title = c.name + " · Voyage Moustache";
       }
       window.scrollTo(0, 0);
       return;
     }
 
-    document.title = "Travel Mustache";
+    document.title = "Voyage Moustache";
     if (map) setTimeout(function () { map.invalidateSize(); }, 0);
     if (anchor) setTimeout(function () { $(anchor).scrollIntoView(); }, 30);
     else window.scrollTo(0, 0);
