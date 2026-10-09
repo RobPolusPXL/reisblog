@@ -33,23 +33,29 @@ window.COUNTRIES = [
       {
         from: "Vanuit België",
         routes: [
-          { airport: "Brussels South Charleroi (CRL)", airline: "Ryanair", to: "Sarajevo", ours: true }
+          { airport: "Brussels South Charleroi (CRL)", airline: "Ryanair", to: "Sarajevo", ours: true },
+          { airport: "Maastricht Aachen (MST), net over de grens in Nederland", airline: "Wizz Air", to: "Tuzla", seasonal: true }
         ],
-        note: "Brussels Airport (BRU) heeft geen rechtstreekse vlucht naar Bosnië. Wie via Zagreb wil, vliegt vanaf Charleroi met Ryanair naar Zagreb (ZAG) en reist verder over land."
+        note: "Brussels Airport (BRU) heeft geen rechtstreekse vlucht naar Bosnië, en vanuit België is er ook niets naar Tuzla of Banja Luka. Wie via Zagreb wil, vliegt vanaf Charleroi met Ryanair naar Zagreb (ZAG) en reist verder over land."
       },
       {
         from: "Vanuit Nederland",
-        routes: [],
-        note: "Geen enkele luchthaven in Nederland heeft een rechtstreekse vlucht naar Bosnië. Je kiest tussen een luchthaven net over de grens in Duitsland (zie hieronder) of een tussenstop. Vanaf Eindhoven vlieg je met Ryanair naar Zagreb (ZAG) of Zadar (ZAD) en reis je verder met de auto of bus."
+        routes: [
+          { airport: "Maastricht Aachen (MST)", airline: "Wizz Air", to: "Tuzla", seasonal: true }
+        ],
+        note: "Maastricht Aachen is de enige Nederlandse luchthaven met een rechtstreekse vlucht naar Bosnië, en die rijdt maar een deel van het jaar. Verder is er niets rechtstreeks, ook niet naar Banja Luka. Vanaf Eindhoven vlieg je met Ryanair naar Zagreb (ZAG) of Zadar (ZAD) en reis je verder met de auto of bus."
       },
       {
         from: "Duitsland, vlak bij de grens",
         routes: [
           { airport: "Weeze (NRN), bij Nijmegen en Venlo", airline: "Ryanair", to: "Sarajevo" },
           { airport: "Keulen/Bonn (CGN)", airline: "Eurowings", to: "Sarajevo" },
+          { airport: "Keulen/Bonn (CGN)", airline: "Wizz Air", to: "Tuzla" },
+          { airport: "Dortmund (DTM)", airline: "Wizz Air", to: "Tuzla" },
+          { airport: "Dortmund (DTM)", airline: "Wizz Air", to: "Banja Luka", seasonal: true },
           { airport: "Düsseldorf (DUS)", airline: "Eurowings", to: "Mostar", seasonal: true }
         ],
-        note: "Weeze ligt het dichtst bij Nederlands Limburg en Noord-Brabant. Keulen/Bonn en Düsseldorf zijn beter bereikbaar vanuit het zuiden van Limburg en vanuit België."
+        note: "Weeze ligt het dichtst bij Nederlands Limburg en Noord-Brabant. Keulen/Bonn en Düsseldorf zijn beter bereikbaar vanuit het zuiden van Limburg en vanuit België. Naar Banja Luka vliegen vooral Ryanair vanaf Memmingen en Karlsruhe/Baden-Baden, ver in het zuiden van Duitsland."
       }
     ],
     transport: [
