@@ -35,14 +35,16 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .narrow { max-width: 680px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; } }
 
-@font-face { font-family: "Pacifico"; font-weight: 400; font-display: swap; src: url(../fonts/pacifico-latin-400-normal.woff2) format("woff2"); }
-
 /* ---------- header ---------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 76px; }
 .site-head a { text-decoration: none; color: var(--ink); }
-.logo { font: 400 32px/1.25 "Pacifico", var(--display); letter-spacing: 0; }
-.logo { display: inline-flex; align-items: center; gap: 12px; }
+.logo { display: inline-flex; align-items: center; }
+.lk { display: block; height: 42px; width: auto; }
+.lk-wit { display: none; }
+body.has-hero:not(.scrolled) .site-head .lk-wit { display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.4)); }
+body.has-hero:not(.scrolled) .site-head .lk-donker { display: none; }
+footer .lk { height: 46px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
@@ -203,10 +205,7 @@ table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 v
 
 /* ---------- footer ---------- */
 footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15px; padding: 44px 0 56px; }
-.mark { display: block; height: 32px; width: auto; }
-body.has-hero:not(.scrolled) .site-head body.has-hero:not(.scrolled) .site-head .logo { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.4); }
-footer .mark { height: 28px; }
-footer .logo { color: #fff; display: flex; width: fit-content; margin-bottom: 14px; }
+footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 
 /* ---------- kaart ---------- */
 .leaflet-container { font-family: var(--body); background: var(--sand); }
