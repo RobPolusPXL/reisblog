@@ -97,7 +97,15 @@
     }
 
     if (c.activities && c.activities.length) {
-      html += section("Wat we deden", '<ul class="list">' + c.activities.map(item).join("") + "</ul>");
+      html += section("Wat we deden", c.activities.map(function (x) {
+        var shots = x.photos && x.photos.length ? x.photos : [{ alt: x.t }];
+        return '<div class="activity' + (x.ok === false ? " concept" : "") + '">' +
+          "<h3>" + esc(x.t) + "</h3>" +
+          (x.text ? "<p>" + esc(x.text) + "</p>" : '<p class="todo">Uitleg volgt.</p>') +
+          '<div class="shots n' + shots.length + '">' + shots.map(function (g) {
+            return "<figure>" + photo(g) + (g.caption ? "<figcaption>" + esc(g.caption) + "</figcaption>" : "") + "</figure>";
+          }).join("") + "</div></div>";
+      }).join(""));
     }
 
     if (c.transport && c.transport.length) {

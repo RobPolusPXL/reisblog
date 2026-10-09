@@ -32,31 +32,60 @@ window.COUNTRIES = [
         name: "Villa Olea",
         nights: 3,
         text: "Onze basis voor de eerste dagen, dicht genoeg bij het centrum om te voet te gaan.",
-        photo: { src: "images/bosnie-en-herzegovina/mostar-rivier-zonsondergang.webp", alt: "Zonsondergang boven de Neretva en de oude stad van Mostar" }
+        photo: { src: null, alt: "Villa Olea in Mostar" }
       },
       {
         place: "Kulen Vakuf",
         name: "Bungalov Cozy Una",
         nights: 4,
         text: "Een bungalow in het rustige Kulen Vakuf, vlak bij het Nationaal Park Una.",
-        photo: { src: "images/bosnie-en-herzegovina/kulen-vakuf-tuin-aan-de-una.webp", alt: "Tuin met hangmat aan de Una in Kulen Vakuf" }
+        photo: { src: null, alt: "Bungalov Cozy Una in Kulen Vakuf" }
       }
     ],
     activities: [
       {
+        t: "Mostar: de oude stad en de Stari Most",
+        text: "De beroemde brug is 's avonds mooi verlicht, de oude stad zit vol terrasjes langs de Neretva.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/mostar-brug-bij-nacht.webp", alt: "De Stari Most verlicht bij nacht", caption: "Mostar bij nacht" }, { src: "images/bosnie-en-herzegovina/mostar-rivier-zonsondergang.webp", alt: "Zonsondergang boven de Neretva en de oude stad van Mostar" }]
+      },
+      {
+        t: "Kravice-watervallen",
+        text: "Een dagtrip vanuit Mostar.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/kravice-watervallen.webp", alt: "De Kravice-watervallen met een meertje eronder" }, { src: "images/bosnie-en-herzegovina/kravice-zwemmen.webp", alt: "Zwemmers voor een brede waterval van Kravice" }]
+      },
+      {
         t: "Via ferrata aan de Fortica in Mostar",
-        text: "Steil en pittig. Materiaal huur je ter plaatse, een gids is niet verplicht.",
-        ok: true
+        text: "Steil en pittig, met onder meer een hangbrug. Materiaal huur je ter plaatse, een gids is niet verplicht.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/fortica-via-ferrata-hangbrug.webp", alt: "Klimmer op de hangbrug van de via ferrata aan de Fortica" }, { src: "images/bosnie-en-herzegovina/fortica-via-ferrata-wand.webp", alt: "Klimmer op een steile rotswand van de via ferrata" }]
+      },
+      {
+        t: "Počitelj",
+        text: "Een stenen dorpje met fort en moskee boven de Neretva.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/pocitelj-fort-en-dorp.webp", alt: "Het fort van Počitelj tussen de bomen" }, { src: "images/bosnie-en-herzegovina/pocitelj-moskee-en-klokkentoren.webp", alt: "Moskee en klokkentoren van Počitelj" }]
+      },
+      {
+        t: "Kulen Vakuf",
+        text: "Een rustig dorp aan de Una, onze basis voor het tweede deel.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/kulen-vakuf-tuin-aan-de-una.webp", alt: "Tuin met hangmat aan de Una in Kulen Vakuf" }, { src: "images/bosnie-en-herzegovina/kulen-vakuf-bosnische-koffie.webp", alt: "Bosnische koffie op een houten tafel" }]
       },
       {
         t: "Štrbački buk",
         text: "De grote waterval op de Una. We hadden prachtig weer.",
-        ok: true
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/strbacki-buk.webp", alt: "De Štrbački buk, een brede waterval op de Una" }, { src: "images/bosnie-en-herzegovina/una-boot-turkoois-water.webp", alt: "Houten boot op het turkooisgroene water van de Una" }]
       },
       { t: "Raften op de Una", text: "Samen betaalden we €110.", ok: true },
-      { t: "Kravice-watervallen", text: "Een dagtrip vanuit Mostar.", ok: true },
-      { t: "Počitelj", text: "Een stenen dorpje met fort en moskee boven de Neretva.", ok: true },
-      { t: "Martin Brod", text: "Watervallen aan de Una, mooi in het avondlicht.", ok: true },
+      {
+        t: "Martin Brod",
+        text: "Watervallen aan de Una, mooi in het avondlicht.",
+        ok: true,
+        photos: [{ src: "images/bosnie-en-herzegovina/martin-brod-waterval.webp", alt: "Waterval bij Martin Brod" }, { src: "images/bosnie-en-herzegovina/martin-brod-rivier-avond.webp", alt: "De Una bij Martin Brod in het avondlicht" }]
+      },
       { t: "Jajce", text: "Een laatste stop op de terugweg, met de waterval midden in de stad.", ok: true },
       { t: "Blagaj", ok: false }
     ],
@@ -80,15 +109,7 @@ window.COUNTRIES = [
       "Eten, boodschappen en slapen kostte ons samen ongeveer € 76 per dag voor twee. " +
       "Dat ligt iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
     costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" },
-    gallery: [
-      { src: "images/bosnie-en-herzegovina/mostar-brug-bij-nacht.webp", alt: "De Stari Most verlicht bij nacht", caption: "Mostar bij nacht" },
-      { src: "images/bosnie-en-herzegovina/kravice-watervallen.webp", alt: "De Kravice-watervallen met een meertje eronder", caption: "Kravice-watervallen" },
-      { src: "images/bosnie-en-herzegovina/fortica-via-ferrata-hangbrug.webp", alt: "Klimmer op de hangbrug van de via ferrata aan de Fortica", caption: "Via ferrata aan de Fortica" },
-      { src: "images/bosnie-en-herzegovina/pocitelj-fort-en-dorp.webp", alt: "Het fort van Počitelj tussen de bomen", caption: "Počitelj" },
-      { src: "images/bosnie-en-herzegovina/strbacki-buk.webp", alt: "De Štrbački buk, een brede waterval op de Una", caption: "Štrbački buk" },
-      { src: "images/bosnie-en-herzegovina/una-boot-turkoois-water.webp", alt: "Houten boot op het turkooisgroene water van de Una", caption: "De Una" },
-      { src: "images/bosnie-en-herzegovina/martin-brod-waterval.webp", alt: "Waterval bij Martin Brod", caption: "Martin Brod" }
-    ]
+    gallery: []
   },
 
   { slug: "costa-rica", name: "Costa Rica", done: false, pin: [9.9, -84.1], visited: "2025" },

@@ -95,3 +95,13 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 56px; color: var(--m
 .leaflet-container { font-family: inherit; }
 .pin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--accent); background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
 .pin.done { background: var(--accent); }
+
+/* activiteiten met foto's */
+.activity { margin-bottom: 80px; }
+.activity h3 { font-size: clamp(26px, 3vw, 34px); }
+.activity > p { max-width: 640px; margin: 10px 0 20px; }
+.shots { display: grid; gap: 16px; }
+.shots.n2 { grid-template-columns: repeat(2, 1fr); }
+.shots .photo { aspect-ratio: 3 / 2; }
+.shots.n1 { max-width: 720px; }
+@media (max-width: 640px) { .shots.n2 { grid-template-columns: 1fr; } }
