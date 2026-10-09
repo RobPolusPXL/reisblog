@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rob op reis</title>
+  <meta name="description" content="Reisinspiratie per land, van plaatsen waar we echt geweest zijn.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap"><a href="#/">Rob op reis</a></div>
+  </header>
+
+  <main id="home">
+    <section class="wrap hero">
+      <h1>Waar we al geweest zijn</h1>
+      <p>Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.</p>
+    </section>
+    <div id="map" role="region" aria-label="Wereldkaart met bezochte landen"></div>
+    <section class="wrap">
+      <h2 class="section-title">Alle landen</h2>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <article id="country" class="wrap country" hidden></article>
+
+  <footer><div class="wrap">Rob op reis</div></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/countries.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
