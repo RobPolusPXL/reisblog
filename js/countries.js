@@ -28,8 +28,31 @@ window.COUNTRIES = [
       "Acht dagen in twee delen: eerst Mostar en omgeving, daarna Kulen Vakuf in het Nationaal Park Una. " +
       "Een reis voor wie van natuur, water en een beetje avontuur houdt, zonder dat het ver of duur hoeft te zijn.",
     cover: { src: "images/bosnie-en-herzegovina/stari-most-schemering.webp", alt: "De Stari Most in Mostar bij schemering" },
+    // Vluchten gecontroleerd in oktober 2026 (Ryanair-routelijst, Eurowings, FlightConnections). Dienstregelingen veranderen.
+    getThere: [
+      {
+        from: "Vanuit België",
+        routes: [
+          { airport: "Brussels South Charleroi (CRL)", airline: "Ryanair", to: "Sarajevo", ours: true }
+        ],
+        note: "Brussels Airport (BRU) heeft geen rechtstreekse vlucht naar Bosnië. Wie via Zagreb wil, vliegt vanaf Charleroi met Ryanair naar Zagreb (ZAG) en reist verder over land."
+      },
+      {
+        from: "Vanuit Nederland",
+        routes: [],
+        note: "Geen enkele luchthaven in Nederland heeft een rechtstreekse vlucht naar Bosnië. Je kiest tussen een luchthaven net over de grens in Duitsland (zie hieronder) of een tussenstop. Vanaf Eindhoven vlieg je met Ryanair naar Zagreb (ZAG) of Zadar (ZAD) en reis je verder met de auto of bus."
+      },
+      {
+        from: "Duitsland, vlak bij de grens",
+        routes: [
+          { airport: "Weeze (NRN), bij Nijmegen en Venlo", airline: "Ryanair", to: "Sarajevo" },
+          { airport: "Keulen/Bonn (CGN)", airline: "Eurowings", to: "Sarajevo" },
+          { airport: "Düsseldorf (DUS)", airline: "Eurowings", to: "Mostar", seasonal: true }
+        ],
+        note: "Weeze ligt het dichtst bij Nederlands Limburg en Noord-Brabant. Keulen/Bonn en Düsseldorf zijn beter bereikbaar vanuit het zuiden van Limburg en vanuit België."
+      }
+    ],
     transport: [
-      { t: "Vlucht Charleroi – Sarajevo met Ryanair", ok: true },
       { t: "Huurauto (automaat) via Sunny Cars, opgehaald op de luchthaven van Sarajevo", ok: true }
     ],
     stays: [

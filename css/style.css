@@ -220,3 +220,13 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 .leaflet-control-zoom a { color: var(--ink); }
 
 
+
+.getthere { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.gt { background: var(--sand); border-radius: var(--radius); padding: 28px; }
+.gt h3 { font-size: 22px; line-height: 1.15; }
+.gt ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 14px; }
+.gt li b { display: block; font-weight: 700; }
+.gt li span { display: block; color: var(--muted); font-size: 15px; line-height: 1.4; margin-top: 2px; }
+.gt p { margin: 18px 0 0; font-size: 16px; line-height: 1.5; }
+.subh { font-size: 22px; margin: 48px 0 8px; }
+@media (max-width: 980px) { .getthere { grid-template-columns: 1fr; } }
