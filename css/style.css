@@ -43,6 +43,23 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .logo::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--clay); margin-right: 9px; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
+body.has-hero .site-head { position: absolute; left: 0; right: 0; background: none; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
+body.has-hero .site-head a { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+body.has-hero .logo::before { background: #fff; }
+
+/* ---------- grote openingsfoto ---------- */
+.hero { position: relative; height: min(90vh, 880px); min-height: 560px; background: #243c38; overflow: hidden; color: #fff; display: flex; align-items: flex-end; border-radius: 0 0 36px 36px; }
+.hero.short { height: min(78vh, 720px); }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: settle 2.6s ease-out both; }
+@keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(6,22,20,.7) 0%, rgba(6,22,20,.15) 45%, rgba(6,22,20,0) 65%), linear-gradient(to bottom, rgba(6,22,20,.4), rgba(6,22,20,0) 22%); }
+.hero-text { position: relative; z-index: 2; width: 100%; padding-bottom: 64px; display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
+.hero h1 { color: #fff; font-weight: 800; font-size: clamp(44px, 6.5vw, 96px); max-width: 42vw; min-width: min(100%, 9ch); line-height: .96; letter-spacing: -.035em; margin-top: 14px; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
+.hero p { margin: 22px 0 0; max-width: 34ch; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: rgba(255,255,255,.94); }
+.hero .label { color: #fff; opacity: .9; }
+.hero .stamp { color: #fff; border-color: #fff; outline-color: #fff; margin: 0; flex: none; }
+@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } .hero { border-radius: 0 0 24px 24px; } }
 
 /* ---------- gedeelde onderdelen ---------- */
 .label { font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--clay); }
@@ -57,22 +74,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .back:hover { text-decoration: underline; text-underline-offset: 5px; }
 .back svg { width: 16px; height: 16px; transform: scaleX(-1); }
 
-/* ---------- home: opening met polaroids ---------- */
-.open { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 40px; }
-.open h1 { font-size: clamp(46px, 7vw, 92px); font-weight: 800; letter-spacing: -.035em; line-height: .98; margin: 16px 0 0; }
-.open p.lead { margin: 26px 0 0; font-size: clamp(19px, 2vw, 22px); line-height: 1.55; color: var(--ink); max-width: 30em; }
-.polaroids { position: relative; height: clamp(360px, 46vw, 560px); }
-.polaroid { position: absolute; margin: 0; background: #fff; padding: 10px 10px 0; border-radius: 6px; box-shadow: 0 12px 34px rgba(21,33,31,.18); }
-.polaroid .photo { border-radius: 2px; }
-.polaroid figcaption { font: 600 14px/1 var(--body); color: var(--ink); text-align: center; padding: 12px 4px 13px; margin: 0; }
-.polaroid.p1 { width: 55%; left: 0; top: 4%; transform: rotate(-3deg); z-index: 2; }
-.polaroid.p1 .photo { aspect-ratio: 4 / 5; }
-.polaroid.p2 { width: 42%; right: 0; top: 0; transform: rotate(4deg); z-index: 1; }
-.polaroid.p2 .photo { aspect-ratio: 1; }
-.polaroid.p3 { width: 44%; right: 6%; bottom: 0; transform: rotate(-2deg); z-index: 3; }
-.polaroid.p3 .photo { aspect-ratio: 4 / 3; }
-@media (max-width: 860px) { .open { grid-template-columns: 1fr; gap: 36px; padding-top: 40px; } }
-
+/* ---------- home ---------- */
 .block-head { padding: 88px 0 28px; }
 .block-head h2 { font-size: clamp(32px, 4.6vw, 54px); }
 .block-head p { margin: 14px 0 0; color: var(--muted); max-width: 52ch; }
@@ -107,15 +109,60 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .chip.concept { border-style: dashed; border-color: #e0b24a; background: #fff; }
 
 /* ---------- landenpagina ---------- */
-.c-head { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; padding-top: 24px; }
-.c-head h1 { font-size: clamp(42px, 6vw, 80px); font-weight: 800; letter-spacing: -.035em; line-height: .98; margin-top: 14px; }
-.c-head .tagline { margin: 22px 0 0; font-size: clamp(19px, 2vw, 23px); line-height: 1.5; color: var(--ink); max-width: 26em; }
-.c-head .photo { aspect-ratio: 5 / 4; border-radius: 28px 28px 120px 28px; }
+.stamp { color: #fff; border-color: #fff; outline-color: #fff; margin: 0; flex: none; }
+@media (max-width: 700px) { .hero h1 { max-width: 100%; } .hero .stamp { display: none; } .hero { border-radius: 0 0 24px 24px; } }
+
+/* ---------- gedeelde onderdelen ---------- */
+.label { font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--clay); }
+.photo { background: var(--mist); position: relative; overflow: hidden; border-radius: 14px; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo.empty { background: linear-gradient(135deg, var(--mist), var(--mist-soft)); }
+.photo.empty::after { content: "foto volgt"; position: absolute; inset: 0; display: grid; place-items: center; color: #9db0ab; font-weight: 600; font-size: 15px; }
+figure { margin: 0; }
+figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+.todo { color: #9db0ab; }
+.back { display: inline-flex; align-items: center; gap: 6px; padding-top: 28px; color: var(--accent-deep); font-weight: 600; text-decoration: none; font-size: 16px; }
+.back:hover { text-decoration: underline; text-underline-offset: 5px; }
+.back svg { width: 16px; height: 16px; transform: scaleX(-1); }
+
+/* ---------- home ---------- */
+.block-head { padding: 88px 0 28px; }
+.block-head h2 { font-size: clamp(32px, 4.6vw, 54px); }
+.block-head p { margin: 14px 0 0; color: var(--muted); max-width: 52ch; }
+#map { height: min(62vh, 580px); width: 100%; background: var(--sand); border-radius: 24px; overflow: hidden; }
+#map .leaflet-interactive { cursor: pointer; outline: none; }
+.map-wrap { padding-bottom: 24px; }
+
+/* kaarten: foto boven, tekst eronder */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px 28px; }
+.card { display: block; text-decoration: none; color: inherit; }
+.card .photo { aspect-ratio: 4 / 3; border-radius: var(--radius); }
+.card .photo img { transition: transform .6s ease; }
+.card:hover .photo img { transform: scale(1.04); }
+.card .label { display: block; margin-top: 18px; }
+.card h3 { font-size: clamp(24px, 2.6vw, 30px); margin-top: 8px; line-height: 1.1; }
+.card p { margin: 10px 0 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
+.card .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 700; font-size: 16px; color: var(--accent-deep); }
+.card .more svg { width: 18px; height: 18px; transition: transform .2s; }
+.card:hover .more svg { transform: translateX(4px); }
+.card:hover h3 { color: var(--accent-deep); }
+@media (min-width: 900px) {
+  .card.big { grid-column: 1 / -1; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+  .card.big .photo { aspect-ratio: 3 / 2; }
+  .card.big .label { margin-top: 0; }
+  .card.big h3 { font-size: clamp(34px, 3.6vw, 48px); }
+}
+.soon-list { padding: 64px 0 120px; }
+.soon-list h3 { font-size: clamp(22px, 2.4vw, 28px); margin-bottom: 20px; }
+.soon-list ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { display: inline-block; padding: 10px 18px; border-radius: 10px; background: var(--sand); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; border: 1px solid var(--sand-deep); }
+.chip:hover { background: var(--sand-deep); }
+.chip.concept { border-style: dashed; border-color: #e0b24a; background: #fff; }
+
+/* ---------- landenpagina ---------- */
 .stamp { display: inline-grid; place-items: center; text-align: center; width: 132px; height: 132px; border-radius: 50%; margin-top: 30px; color: var(--clay);
   border: 2px solid var(--clay); outline: 2px solid var(--clay); outline-offset: -8px; transform: rotate(-9deg); font: 700 12px/1.25 var(--body); letter-spacing: .08em; text-transform: uppercase; padding: 18px; }
 .stamp b { display: block; font: 800 22px/1 var(--display); letter-spacing: -.01em; text-transform: none; margin: 4px 0; }
-@media (max-width: 860px) { .c-head { grid-template-columns: 1fr; gap: 28px; } .c-head .photo { border-radius: 22px 22px 70px 22px; } }
-
 .c-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: start; margin-top: 72px; }
 .intro { font-size: clamp(20px, 2.2vw, 24px); line-height: 1.55; color: var(--ink); margin: 0; font-weight: 500; }
 .fact-card { background: var(--sand); border-radius: var(--radius); padding: 26px 26px 18px; }

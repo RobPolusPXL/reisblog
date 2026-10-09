@@ -48,20 +48,16 @@
 
   /* ---------- home ---------- */
 
+  function hero(src, alt, label, title, text, extra) {
+    return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" fetchpriority="high">' +
+      '<div class="wrap hero-text"><div>' + (label ? '<span class="label">' + esc(label) + "</span>" : "") +
+      "<h1>" + esc(title) + "</h1>" + (text ? "<p>" + esc(text) + "</p>" : "") + "</div>" + (extra || "") + "</div>";
+  }
+
   function renderHome() {
-    var first = countries.filter(function (c) { return c.done && c.cover && c.cover.src; })[0];
-    var html = '<div><span class="label">Reisblog van Rob en Joke</span><h1>Waar we al geweest zijn</h1>' +
-      '<p class="lead">Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.</p></div>';
-    if (first) {
-      var extra = places(first).slice(1, 8).filter(function (a, i) { return i === 1 || i === 4; });
-      var picks = [{ src: first.cover.src, alt: first.cover.alt, cap: first.name }]
-        .concat(extra.map(function (a) { return { src: a.photos[0].src, alt: a.photos[0].alt, cap: a.t.split(/:| aan /)[0] }; }));
-      html += '<div class="polaroids" aria-hidden="false">' + picks.map(function (p, i) {
-        return '<figure class="polaroid p' + (i + 1) + '"><div class="photo"><img src="' + esc(p.src) + '" alt="' + esc(p.alt) + '"' +
-          (i ? ' loading="lazy"' : ' fetchpriority="high"') + '></div><figcaption>' + esc(p.cap) + "</figcaption></figure>";
-      }).join("") + "</div>";
-    }
-    $("hero").innerHTML = html;
+    $("hero").innerHTML = hero("images/home/costa-rica-palmen-aan-zee.webp", "Rob tussen palmbomen, kijkend over zee in Costa Rica",
+      "Reisblog van Rob en Joke", "Waar we al geweest zijn",
+      "Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.");
 
     var done = countries.filter(function (c) { return c.done; });
     var soon = countries.filter(function (c) { return !c.done; });
@@ -133,10 +129,8 @@
     var hasConcept = JSON.stringify(c).indexOf('"ok":false') > -1;
     var pl = places(c);
     var rest = (c.activities || []).filter(function (a) { return !(a.photos && a.photos.length); });
-    var html = '<div class="wrap"><a class="back" href="#/landen">' + ARROW + " Alle landen</a>" +
-      '<div class="c-head"><div><span class="label">' + esc(c.visited) + "</span><h1>" + esc(c.name) + "</h1>" +
-      '<p class="tagline">' + esc(c.tagline) + "</p>" + stampHtml(c) + "</div>" +
-      photo({ src: c.cover.src, alt: c.cover.alt }) + "</div>" +
+    var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" +
+      '<div class="wrap">' +
       '<div class="c-body"><div><p class="intro">' + esc(c.intro) + "</p>" +
       (hasConcept ? '<p class="concept-note">Concept: items met een gestippelde streep zijn nog niet bevestigd en kunnen nog wijzigen.</p>' : "") + "</div>" +
       '<aside class="fact-card"><h2>In het kort</h2><dl>' +
@@ -215,6 +209,7 @@
     $("home").hidden = !!c;
     $("country").hidden = !c;
 
+    document.body.classList.toggle("has-hero", !c || (c.done && !parts[1]));
     if (c) {
       var a = parts[1] && places(c).filter(function (x) { return x.slug === parts[1]; })[0];
       if (a) {
