@@ -201,6 +201,9 @@ table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 v
 
 /* ---------- footer ---------- */
 footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15px; padding: 44px 0 56px; }
+.logo-img { display: block; height: 62px; width: auto; }
+body.has-hero:not(.scrolled) .logo-img { filter: drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
+footer .logo-img { height: 72px; }
 footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 
 /* ---------- kaart ---------- */
