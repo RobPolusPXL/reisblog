@@ -168,7 +168,7 @@
         }).join("") + "</div>" +
         (c.costNote ? '<p class="verdict">' + esc(c.costNote) +
           (c.costSource ? ' <a href="' + esc(c.costSource.url) + '" rel="noopener">' + esc(c.costSource.t) + "</a>" : "") + "</p>" : "") + "</div>",
-        "Per dag, voor ons tweeën. Vluchten laten we weg: die hangen af van waar je vertrekt.");
+        "Per dag, voor ons tweeën.");
     }
 
     if (c.gallery && c.gallery.length) {
