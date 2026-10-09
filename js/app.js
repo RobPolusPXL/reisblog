@@ -171,7 +171,9 @@
         (c.transport && c.transport.length ? '<h3 class="subh">Zo deden wij het</h3><ul class="list">' + c.transport.map(item).join("") + "</ul>" : ""),
         "Rechtstreekse vluchten, stand oktober 2026.");
     } else if (c.transport && c.transport.length) html += section("Er geraken", '<ul class="list">' + c.transport.map(item).join("") + "</ul>");
-    if (c.practical && c.practical.length) html += section("Praktisch", '<ul class="list">' + c.practical.map(item).join("") + "</ul>");
+    if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
+      return '<div class="fact' + (f.ok === false ? " concept" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
+    }).join("") + "</div>");
 
     if (c.costPerDay && c.costPerDay.length) {
       html += section("Wat het ons kostte",

@@ -123,15 +123,15 @@ window.COUNTRIES = [
       { t: "Blagaj", ok: false }
     ],
     practical: [
-      { t: "Een Belgische identiteitskaart volstaat, neem het paspoort mee als reserve (zeker bij de huurauto).", ok: true },
-      { t: "Je Belgische rijbewijs is geldig, een internationaal rijbewijs is niet nodig.", ok: true },
-      { t: "Belgische stekkers werken, een reisstekker is niet nodig.", ok: true },
-      { t: "De Bosnische mark (BAM) is vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
-      { t: "Kies bij het pinnen altijd voor betalen in BAM, niet in euro.", ok: false },
-      { t: "Cash is koning: markten en kleine winkels willen vaak contant geld, dus zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen.", ok: true },
-      { t: "Op de snelweg A1 betaal je een paar euro tol bij de uitrit.", ok: true },
-      { t: "Tanken: je tankt eerst en betaalt daarna binnen aan de kassa.", ok: true },
-      { t: "Bosnië valt buiten de EU-roaming. Mobiel internet kost extra, regel dat vooraf.", ok: true }
+      { label: "Identiteit", t: "Belgische identiteitskaart volstaat.", ok: true },
+      { label: "Rijbewijs", t: "Belgisch rijbewijs is geldig. Een internationaal rijbewijs is niet nodig.", ok: true },
+      { label: "Stekker", t: "Belgische stekkers werken. Geen reisstekker nodig.", ok: true },
+      { label: "Munt", t: "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
+      { label: "Cash", t: "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen.", ok: true },
+      { label: "Pinnen", t: "Kies bij het pinnen altijd voor BAM, niet voor euro.", ok: false },
+      { label: "Tol", t: "Op de snelweg A1 betaal je een paar euro bij de uitrit.", ok: true },
+      { label: "Tanken", t: "Eerst tanken, daarna binnen betalen.", ok: true },
+      { label: "Mobiel", t: "Geen EU-roaming. Regel mobiel internet vooraf.", ok: true }
     ],
     // Bedragen in euro, voor ons tweeën samen. Geen totaalbedrag en geen vervoer: enkel dagprijzen.
     costPerDay: [

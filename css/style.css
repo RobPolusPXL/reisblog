@@ -230,3 +230,11 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 .gt p { margin: 18px 0 0; font-size: 16px; line-height: 1.5; }
 .subh { font-size: 22px; margin: 48px 0 8px; }
 @media (max-width: 980px) { .getthere { grid-template-columns: 1fr; } }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.fact { background: var(--sand); border-radius: var(--radius); padding: 22px 24px; }
+.fact b { display: block; color: var(--clay); font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; margin-bottom: 8px; }
+.fact span { display: block; font-size: 17px; line-height: 1.45; }
+.fact.concept { background: #fff; border: 2px dashed #e0b24a; }
+@media (max-width: 980px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }
