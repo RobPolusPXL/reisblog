@@ -27,10 +27,10 @@ window.COUNTRIES = [
     tagline: "De Stari Most in Mostar, de smaragdgroene Una in Nationaal Park Una.",
     intro:
       "Bosnië en Herzegovina, het begint al in de auto. De M17 van Sarajevo naar Mostar kronkelt langs Konjic en de Neretva en is misschien wel de mooiste weg van Europa. " +
-      "In Mostar staat de Stari Most, de oude, bekende brug, 's avonds prachtig verlicht boven het water. " +
+      "In Mostar staat de Stari Most, de oude, bekende brug, 's avonds prachtig verlicht boven het water. " +
       "Daarna reden we naar de Una: smaragdgroen, met watervallen, en raften op een ijskoude rivier waar je op een hete dag zo in springt. " +
       "Een via ferrata boven Mostar, zwemmen bij Kravice, Bosnische koffie op een terras. " +
-      "Twee uur vliegen en je zit in een van de mooiste landen van Europa.",
+      "Twee uur vliegen en je zit in een van de mooiste landen van Europa.",
     cover: { src: "images/bosnie-en-herzegovina/stari-most-schemering.webp", alt: "De Stari Most in Mostar bij schemering" },
     // Vluchten gecontroleerd in oktober 2026 (Ryanair-routelijst, Eurowings, FlightConnections). Dienstregelingen veranderen.
     getThere: [

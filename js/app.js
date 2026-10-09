@@ -124,6 +124,11 @@
     }).join("") + "</div></div>";
   }
 
+  function introHtml(t) {
+    var m = t.match(/^(.+?[.!?])\s+([\s\S]*)$/);
+    return m ? '<strong class="lead">' + esc(m[1]) + "</strong> " + esc(m[2]) : esc(t);
+  }
+
   function section(title, inner, sub) {
     return '<section class="block"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
@@ -145,7 +150,7 @@
     var rest = (c.activities || []).filter(function (a) { return !(a.photos && a.photos.length); });
     var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" + factsStrip(c) +
       '<div class="wrap">' +
-      '<div class="c-body"><div><p class="intro">' + esc(c.intro) + "</p>" +
+      '<div class="c-body"><div><p class="intro">' + introHtml(c.intro) + "</p>" +
       (hasConcept ? '<p class="concept-note">Concept: items met een gestippelde streep zijn nog niet bevestigd en kunnen nog wijzigen.</p>' : "") + "</div>" +
       '<aside class="fact-card"><h2>Onze reis</h2><dl>' +
       "<div><dt>Periode</dt><dd>" + esc(c.visited) + "</dd></div><div><dt>Nachten</dt><dd>" + c.nights + "</dd></div>" +
