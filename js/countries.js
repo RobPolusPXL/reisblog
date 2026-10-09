@@ -66,14 +66,14 @@ window.COUNTRIES = [
         name: "Villa Olea",
         nights: 3,
         text: "Onze basis voor de eerste dagen, dicht genoeg bij het centrum om te voet te gaan.",
-        photo: { src: null, alt: "Villa Olea in Mostar" }
+        photo: { src: "images/bosnie-en-herzegovina/villa-olea-mostar.webp", alt: "De woonkamer en slaapkamer van Villa Olea in Mostar" }
       },
       {
         place: "Kulen Vakuf",
         name: "Bungalov Cozy Una",
         nights: 4,
         text: "Een bungalow in het rustige Kulen Vakuf, vlak bij het Nationaal Park Una.",
-        photo: { src: null, alt: "Bungalov Cozy Una in Kulen Vakuf" }
+        photo: { src: "images/bosnie-en-herzegovina/bungalov-cozy-una-kulen-vakuf.webp", alt: "Bungalov Cozy Una in Kulen Vakuf met houten veranda en tuin" }
       }
     ],
     activities: [
