@@ -66,14 +66,14 @@ window.COUNTRIES = [
     ],
     // Bedragen in euro, voor ons tweeën samen.
     costs: [
-      { post: "Vervoer", amount: "€ 495,28", detail: "Vlucht € 234,04 · huurauto € 199,80 · luchthavenparking € 32,69 · tanken € 24,08 · tol € 4,67" },
-      { post: "Verblijf", amount: "€ 337,32", detail: "Mostar 3 nachten € 157,32 · Kulen Vakuf 4 nachten € 180,00" },
-      { post: "Eten", amount: "€ 137,55", detail: "Restaurants" },
-      { post: "Boodschappen", amount: "€ 60,26", detail: "Supermarkt en tankstation" },
-      { post: "Uitstappen", amount: "€ 130,78", detail: "Raften € 110,00 · Kravice-watervallen € 20,78" },
-      { post: "Overig", amount: "€ 718,27", detail: "Contant afgehaald € 678,85 · eSIM € 15,98 · Potoci € 23,44" }
+      { post: "Vervoer", amount: "€ 495,28" },
+      { post: "Verblijf", amount: "€ 337,32" },
+      { post: "Eten", amount: "€ 137,55" },
+      { post: "Boodschappen", amount: "€ 60,26" },
+      { post: "Uitstappen", amount: "€ 130,78" },
+      { post: "Overig", amount: "€ 718,27" }
     ],
-    costTotal: { amount: "€ 1.879,46", detail: "Voor 7 nachten, ongeveer € 268 per nacht voor twee, vlucht en huurauto inbegrepen." },
+    costTotal: { amount: "€ 1.879,46" },
     costNote:
       "Eten, boodschappen en slapen kostte ons samen ongeveer € 76 per dag voor twee. " +
       "Dat ligt iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
