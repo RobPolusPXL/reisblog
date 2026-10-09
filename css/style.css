@@ -119,7 +119,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
   border: 2px solid var(--clay); outline: 2px solid var(--clay); outline-offset: -8px; transform: rotate(-9deg); font: 700 12px/1.25 var(--body); letter-spacing: .08em; text-transform: uppercase; padding: 18px; }
 .stamp b { display: block; font: 800 22px/1 var(--display); letter-spacing: -.01em; text-transform: none; margin: 4px 0; }
 .c-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: start; margin-top: 56px; }
-.intro { font-size: 19px; line-height: 1.65; color: var(--ink); margin: 0; font-weight: 500; max-width: 60ch; text-wrap: pretty; }
+.intro { font-size: 19px; line-height: 1.65; color: var(--ink); margin: 0; font-weight: 500; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .fact-card { background: var(--sand); border-radius: var(--radius); padding: 26px 26px 18px; }
 .fact-card h2 { font-size: 22px; margin-bottom: 8px; }
 .fact-card dl { margin: 0; }
