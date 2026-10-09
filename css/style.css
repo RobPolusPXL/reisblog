@@ -205,7 +205,7 @@ footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15
 .mark-oranje { display: none; }
 body.has-hero:not(.scrolled) .site-head .mark-oranje { display: block; filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
 body.has-hero:not(.scrolled) .site-head .mark-basis { display: none; }
-body.has-hero:not(.scrolled) .site-head .logo { color: #000; text-shadow: 0 0 12px rgba(255,255,255,.6); }
+body.has-hero:not(.scrolled) .site-head .logo { color: #000; text-shadow: none; }
 footer .mark { height: 28px; }
 footer .logo { color: #fff; display: flex; width: fit-content; margin-bottom: 14px; }
 
