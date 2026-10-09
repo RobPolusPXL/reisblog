@@ -17,6 +17,12 @@ window.COUNTRIES = [
     visited: "21 – 28 juni 2026",
     nights: 7,
     with: "Joke",
+    info: [
+      ["Hoofdstad", "Sarajevo"],
+      ["Taal", "Bosnisch, Kroatisch, Servisch"],
+      ["Munt", "Bosnische mark (BAM)"],
+      ["Tijdzone", "Zelfde als in België"]
+    ],
     tagline: "Een brug in Mostar, groene rivieren in de Una-vallei.",
     intro:
       "Acht dagen in twee delen: eerst Mostar en omgeving, daarna Kulen Vakuf in het Nationaal Park Una. " +
