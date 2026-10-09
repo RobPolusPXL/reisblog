@@ -26,8 +26,10 @@ window.COUNTRIES = [
     ],
     tagline: "De Stari Most in Mostar, de smaragdgroene Una in Nationaal Park Una.",
     intro:
-      "Acht dagen in twee delen: eerst Mostar en omgeving, daarna Kulen Vakuf in het Nationaal Park Una. " +
-      "Een reis voor wie van natuur, water en een beetje avontuur houdt, zonder dat het ver of duur hoeft te zijn.",
+      "Bosnië verraste ons. We begonnen in Mostar, onder de beroemde brug en tussen de terrasjes langs de Neretva, " +
+      "en trokken daarna naar de smaragdgroene Una. We klommen langs de Fortica, zwommen onder de Kravice-watervallen, " +
+      "raftten op de Una en dronken Bosnische koffie in de tuin aan de rivier. " +
+      "Het is maar twee uur vliegen, het hoeft niet veel te kosten, en toch voelt het als een andere wereld.",
     cover: { src: "images/bosnie-en-herzegovina/stari-most-schemering.webp", alt: "De Stari Most in Mostar bij schemering" },
     // Vluchten gecontroleerd in oktober 2026 (Ryanair-routelijst, Eurowings, FlightConnections). Dienstregelingen veranderen.
     getThere: [
