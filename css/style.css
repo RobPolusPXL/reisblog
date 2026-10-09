@@ -136,14 +136,15 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 
 /* route: genummerde plaatskaarten */
 .places { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 24px; counter-reset: p; }
-.place { display: block; text-decoration: none; color: inherit; counter-increment: p; }
-.place .photo { aspect-ratio: 4 / 3; border-radius: var(--radius); }
-.place .photo::before { content: counter(p); position: absolute; z-index: 1; left: 12px; top: 12px; width: 34px; height: 34px; display: grid; place-items: center; background: #fff; color: var(--ink); font: 800 16px/1 var(--display); border-radius: 50%; }
-.place .photo img { transition: transform .6s ease; }
-.place:hover .photo img { transform: scale(1.04); }
-.place h3 { font-size: 24px; margin-top: 16px; line-height: 1.12; }
-.place:hover h3 { color: var(--accent-deep); }
-.place p { margin: 8px 0 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.place { position: relative; display: flex; flex-direction: column; justify-content: flex-end; aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: #fff; counter-increment: p; padding: 24px; }
+.place .photo { position: absolute; inset: 0; aspect-ratio: auto; border-radius: 0; }
+.place .photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.place:hover .photo img { transform: scale(1.05); }
+.place::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(10,18,17,.86) 0%, rgba(10,18,17,.55) 38%, rgba(10,18,17,0) 68%); pointer-events: none; }
+.place .photo::before { content: counter(p); position: absolute; z-index: 2; left: 16px; top: 16px; width: 34px; height: 34px; display: grid; place-items: center; background: #fff; color: var(--ink); font: 800 16px/1 var(--display); border-radius: 50%; }
+.place h3, .place p { position: relative; z-index: 2; }
+.place h3 { font-size: 26px; margin: 0; line-height: 1.1; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.place p { margin: 10px 0 0; color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.45; }
 @media (max-width: 960px) { .places { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .places { grid-template-columns: 1fr; } }
 .also { margin-top: 36px; }
