@@ -111,10 +111,16 @@
     if (c.costs && c.costs.length) {
       html += section("Wat wij betaalden",
         '<table class="costs">' + c.costs.map(function (k) {
-          return "<tr><td>" + esc(k.post) + "</td><td>" +
+          return "<tr><td>" + esc(k.post) + (k.detail ? "<small>" + esc(k.detail) + "</small>" : "") + "</td><td>" +
             (k.amount == null ? '<span class="todo">nog in te vullen</span>' : esc(k.amount)) + "</td></tr>";
-        }).join("") + "</table>" +
-        (c.costNote ? '<p class="verdict">' + esc(c.costNote) + "</p>" : ""));
+        }).join("") +
+        (c.costTotal
+          ? '<tr class="total"><td>Totaal' + (c.costTotal.detail ? "<small>" + esc(c.costTotal.detail) + "</small>" : "") +
+            "</td><td>" + esc(c.costTotal.amount) + "</td></tr>"
+          : "") +
+        "</table>" +
+        (c.costNote ? '<p class="verdict">' + esc(c.costNote) +
+          (c.costSource ? ' <a href="' + esc(c.costSource.url) + '" rel="noopener">' + esc(c.costSource.t) + "</a>" : "") + "</p>" : ""));
     }
 
     if (c.gallery && c.gallery.length) {

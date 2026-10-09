@@ -53,8 +53,9 @@ window.COUNTRIES = [
         text: "De grote waterval op de Una. We hadden prachtig weer.",
         ok: true
       },
-      { t: "Raften op de Una (route R1 met Una Aquarius)", text: "Rond €50 per persoon, alles inbegrepen.", ok: false },
-      { t: "Dagtrips vanuit Mostar: Blagaj, Počitelj en de Kravice-watervallen", ok: false },
+      { t: "Raften op de Una", text: "Samen betaalden we €110.", ok: true },
+      { t: "Kravice-watervallen", text: "Een dagtrip vanuit Mostar.", ok: true },
+      { t: "Blagaj en Počitelj", ok: false },
       { t: "Martin Brod en zijn watervallen", ok: false }
     ],
     practical: [
@@ -63,14 +64,20 @@ window.COUNTRIES = [
       { t: "Je betaalt in Bosnische mark (BAM). Kies bij het pinnen altijd voor betalen in BAM, niet in euro.", ok: false },
       { t: "Op 24 juni vermeden we Medjugorje en Jajce wegens drukte (feestdagen).", ok: false }
     ],
+    // Bedragen in euro, voor ons tweeën samen.
     costs: [
-      { post: "Vlucht", amount: null },
-      { post: "Huurauto", amount: null },
-      { post: "Verblijf", amount: null },
-      { post: "Eten", amount: null },
-      { post: "Activiteiten", amount: null }
+      { post: "Vervoer", amount: "€ 495,28", detail: "Vlucht € 234,04 · huurauto € 199,80 · luchthavenparking € 32,69 · tanken € 24,08 · tol € 4,67" },
+      { post: "Verblijf", amount: "€ 337,32", detail: "Mostar 3 nachten € 157,32 · Kulen Vakuf 4 nachten € 180,00" },
+      { post: "Eten", amount: "€ 137,55", detail: "Restaurants" },
+      { post: "Boodschappen", amount: "€ 60,26", detail: "Supermarkt en tankstation" },
+      { post: "Uitstappen", amount: "€ 130,78", detail: "Raften € 110,00 · Kravice-watervallen € 20,78" },
+      { post: "Overig", amount: "€ 718,27", detail: "Contant afgehaald € 678,85 · eSIM € 15,98 · Potoci € 23,44" }
     ],
-    costNote: null, // bv. "Goedkoper dan een gemiddelde reis naar Zuid-Europa."
+    costTotal: { amount: "€ 1.879,46", detail: "Voor 7 nachten, ongeveer € 268 per nacht voor twee, vlucht en huurauto inbegrepen." },
+    costNote:
+      "Eten, boodschappen en slapen kostte ons samen ongeveer € 76 per dag voor twee. " +
+      "Dat ligt iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
+    costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" },
     gallery: []
   },
 

@@ -73,9 +73,12 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .list li:last-child { border-bottom: 1px solid var(--line); }
 .list strong { font-weight: 600; }
 .list p { margin: 4px 0 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
-table.costs { border-collapse: collapse; width: 100%; max-width: 560px; }
+table.costs { border-collapse: collapse; width: 100%; max-width: 680px; }
 table.costs td { padding: 14px 0; border-top: 1px solid var(--line); }
 table.costs td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+table.costs td small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 2px; max-width: 34ch; }
+table.costs td:last-child { white-space: nowrap; vertical-align: top; padding-left: 24px; }
+table.costs tr.total td { border-top: 2px solid var(--ink); font-weight: 600; }
 table.costs tr:last-child td { border-bottom: 1px solid var(--line); }
 .verdict { margin-top: 20px; font: italic 400 20px/1.5 Georgia, serif; max-width: 560px; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
