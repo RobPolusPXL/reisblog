@@ -110,6 +110,20 @@
 
   /* ---------- landpagina ---------- */
 
+  var ICONS = {
+    pin: '<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
+    talk: '<path d="M4 5h16v10H10l-4 4v-4H4z"/><path d="M8 9h8M8 12h5"/>',
+    coin: '<circle cx="12" cy="12" r="8"/><path d="M15 9.2a3.4 3.4 0 0 0-3-1.2c-1.7 0-3 1.1-3 2.4 0 3.2 6.2 1.6 6.2 4.6 0 1.3-1.4 2.2-3.2 2.2a3.8 3.8 0 0 1-3.2-1.4M12 6v2m0 8v2"/>',
+    plane: '<path d="M3 14l18-9-4 15-5-5-3 3-1-5-5-1z"/><path d="M11 13l10-8"/>',
+    clock: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/>'
+  };
+  function factsStrip(c) {
+    if (!c.facts || !c.facts.length) return "";
+    return '<div class="wrap"><div class="facts-strip">' + c.facts.map(function (f) {
+      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + esc(f.v) + "</span></div>";
+    }).join("") + "</div></div>";
+  }
+
   function section(title, inner, sub) {
     return '<section class="block"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
@@ -129,12 +143,11 @@
     var hasConcept = JSON.stringify(c).indexOf('"ok":false') > -1;
     var pl = places(c);
     var rest = (c.activities || []).filter(function (a) { return !(a.photos && a.photos.length); });
-    var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" +
+    var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" + factsStrip(c) +
       '<div class="wrap">' +
       '<div class="c-body"><div><p class="intro">' + esc(c.intro) + "</p>" +
       (hasConcept ? '<p class="concept-note">Concept: items met een gestippelde streep zijn nog niet bevestigd en kunnen nog wijzigen.</p>' : "") + "</div>" +
-      '<aside class="fact-card"><h2>In het kort</h2><dl>' +
-      (c.info || []).map(function (r) { return "<div><dt>" + esc(r[0]) + "</dt><dd>" + esc(r[1]) + "</dd></div>"; }).join("") +
+      '<aside class="fact-card"><h2>Onze reis</h2><dl>' +
       "<div><dt>Periode</dt><dd>" + esc(c.visited) + "</dd></div><div><dt>Nachten</dt><dd>" + c.nights + "</dd></div>" +
       (c.with ? "<div><dt>Met</dt><dd>" + esc(c.with) + "</dd></div>" : "") + "</dl></aside></div>";
 

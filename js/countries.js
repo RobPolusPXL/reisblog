@@ -17,11 +17,12 @@ window.COUNTRIES = [
     visited: "21 – 28 juni 2026",
     nights: 7,
     with: "Joke",
-    info: [
-      ["Hoofdstad", "Sarajevo"],
-      ["Taal", "Bosnisch, Kroatisch, Servisch"],
-      ["Munt", "Bosnische mark (BAM)"],
-      ["Tijdzone", "Zelfde als in België"]
+    facts: [
+      { icon: "pin", label: "Hoofdstad", v: "Sarajevo" },
+      { icon: "talk", label: "Taal", v: "Bosnisch, Kroatisch, Servisch" },
+      { icon: "coin", label: "Munt", v: "Bosnische mark (BAM)" },
+      { icon: "plane", label: "Vliegtijd", v: "2 u 5 vanaf Charleroi" },
+      { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }
     ],
     tagline: "Een brug in Mostar, groene rivieren in de Una-vallei.",
     intro:
