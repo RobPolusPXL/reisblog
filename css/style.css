@@ -35,21 +35,25 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .narrow { max-width: 680px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; } }
 
+@font-face { font-family: "Playfair"; font-weight: 800; font-display: swap; src: url(../fonts/playfair-display-latin-800-normal.woff2) format("woff2"); }
+
 /* ---------- header ---------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 68px; }
 .site-head a { text-decoration: none; color: var(--ink); }
 .logo { font: 800 22px/1 var(--display); letter-spacing: -.02em; }
-.logo { display: inline-flex; align-items: center; gap: 10px; }
-.mark { width: 44px; height: 17px; flex: none; color: var(--clay); }
+.logo { display: inline-flex; align-items: center; }
+.plate { display: inline-flex; flex-direction: column; align-items: center; gap: 3px; background: #0d0d0f; border-radius: 12px; padding: 7px 16px 8px; box-shadow: 0 2px 14px rgba(0,0,0,.28); }
+.plate .word { font: 800 14px/1 "Playfair", Georgia, serif; letter-spacing: .34em; text-indent: .34em; text-transform: uppercase;
+  background: linear-gradient(100deg, #e3b94f 0%, #d79a3f 45%, #c4673a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.plate img { width: 70px; height: auto; display: block; mix-blend-mode: lighten; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
 body.has-hero .site-head { position: fixed; left: 0; right: 0; background: transparent; border-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; transition: background .25s, border-color .25s; }
 body.has-hero .site-head a { color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); transition: color .25s; }
-body.has-hero .mark { color: #fff; }
 body.has-hero.scrolled .site-head { background: rgba(255,255,255,.94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-color: var(--line); }
 body.has-hero.scrolled .site-head a { color: var(--ink); text-shadow: none; }
-body.has-hero.scrolled .mark { color: var(--clay); }
 
 /* ---------- grote openingsfoto ---------- */
 .hero { position: relative; height: min(90vh, 880px); min-height: 560px; background: #243c38; overflow: hidden; color: #fff; display: flex; align-items: flex-end; }
@@ -254,7 +258,7 @@ table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 v
 
 /* ---------- footer ---------- */
 footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15px; padding: 44px 0 56px; }
-footer .logo { color: #fff; display: flex; width: fit-content; margin-bottom: 10px; }
+footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 
 /* ---------- kaart ---------- */
 .leaflet-container { font-family: var(--body); background: var(--sand); }
