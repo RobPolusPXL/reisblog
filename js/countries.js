@@ -124,15 +124,14 @@ window.COUNTRIES = [
     ],
     practical: [
       { t: "Een Belgische identiteitskaart volstaat, neem het paspoort mee als reserve (zeker bij de huurauto).", ok: true },
-      { t: "Belgische stekkers werken.", ok: true },
+      { t: "Je Belgische rijbewijs is geldig, een internationaal rijbewijs is niet nodig.", ok: true },
+      { t: "Belgische stekkers werken, een reisstekker is niet nodig.", ok: true },
       { t: "De Bosnische mark (BAM) is vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
       { t: "Kies bij het pinnen altijd voor betalen in BAM, niet in euro.", ok: false },
       { t: "Markten en kleine winkels willen vaak contant geld. Zorg voor kleine biljetten.", ok: true },
-      { t: "Bosnië valt buiten de EU-roaming. Mobiel internet kost extra, regel dat vooraf.", ok: true },
-      { t: "Er liggen nog mijnen in sommige streken. Blijf op verharde wegen en bekende paden, en loop niet door verlaten velden of ruïnes.", ok: true },
-      { t: "De wegen zijn vaak slecht en slecht gemarkeerd. Rijd liefst niet in het donker, en vertrouw je navigatie-app niet blind.", ok: true },
-      { t: "Op de snelweg A1 betaal je tol bij de uitrit.", ok: false },
-      { t: "Bij huurauto's wordt weleens ingebroken. Parkeer bewaakt en laat niets zichtbaar liggen.", ok: true }
+      { t: "Op de snelweg A1 betaal je een paar euro tol bij de uitrit.", ok: true },
+      { t: "Tanken: je tankt eerst en betaalt daarna binnen aan de kassa.", ok: true },
+      { t: "Bosnië valt buiten de EU-roaming. Mobiel internet kost extra, regel dat vooraf.", ok: true }
     ],
     // Bedragen in euro, voor ons tweeën samen. Geen totaalbedrag en geen vervoer: enkel dagprijzen.
     costPerDay: [
