@@ -37,10 +37,10 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 
 /* ---------- header ---------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 76px; }
+.site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 104px; transition: height .25s; }
 .site-head a { text-decoration: none; color: var(--ink); }
 .logo { display: inline-flex; align-items: center; }
-.lk { display: block; height: 40px; width: auto; }
+.lk { display: block; height: 84px; width: auto; transition: height .25s; }
 .lk-wit { display: none; }
 body.has-hero:not(.scrolled) .site-head .lk-wit { display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.4)); }
 body.has-hero:not(.scrolled) .site-head .lk-donker { display: none; }
@@ -210,3 +210,7 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 /* ---------- kaart ---------- */
 .leaflet-container { font-family: var(--body); background: var(--sand); }
 .leaflet-control-zoom a { color: var(--ink); }
+
+body.has-hero:not(.scrolled) .site-head .wrap { height: 148px; }
+body.has-hero:not(.scrolled) .site-head .lk { height: 128px; }
+@media (max-width: 700px) { .lk { height: 64px; } .site-head .wrap { height: 80px; } body.has-hero:not(.scrolled) .site-head .wrap { height: 104px; } body.has-hero:not(.scrolled) .site-head .lk { height: 88px; } }
