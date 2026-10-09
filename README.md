@@ -21,7 +21,7 @@ Statische site zonder build-stap: open `index.html` in een browser, of draai lok
 
 - `main`: stabiel, wat gehost wordt.
 - `dev`: ontwikkelbranch.
-- `feature/<naam>`, `content/<land>`, `fix/<naam>`: werkbranches die terug naar `dev` gaan.
+- `content/<land>`: één branch per land, met alle commits van dat land. Gaat daarna naar `dev`.
 - Commits: `feat:`, `content:`, `fix:`, `chore:` gevolgd door een korte beschrijving.
 
-De kaart gebruikt Leaflet en tegels van OpenStreetMap/CARTO.
+De kaart gebruikt Leaflet (in `vendor/leaflet`) en landgrenzen van Natural Earth (`js/world.js`). Alles zit in de repo, er zijn geen externe kaartdiensten of sleutels nodig.

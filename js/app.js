@@ -40,22 +40,36 @@
   }
 
   function renderMap() {
-    if (!window.L) {
-      $("map").style.display = "none"; // zonder internet blijft het overzicht eronder werken
+    if (!window.L || !window.WORLD) {
+      $("map").style.display = "none"; // het landenoverzicht eronder blijft werken
       return;
     }
-    map = L.map("map", { scrollWheelZoom: false, worldCopyJump: true }).setView([36, 5], 3);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-      maxZoom: 8,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }).addTo(map);
-    countries.forEach(function (c) {
-      var icon = L.divIcon({ className: "", html: '<div class="pin' + (c.done ? " done" : "") + '"></div>', iconSize: [16, 16] });
-      L.marker(c.pin, { icon: icon, title: c.name, keyboard: true })
-        .addTo(map)
-        .bindTooltip(c.name, { direction: "top", offset: [0, -8] })
-        .on("click", function () { location.hash = "#/" + c.slug; });
+    var byIso = {};
+    countries.forEach(function (c) { byIso[c.iso] = c; });
+
+    map = L.map("map", {
+      scrollWheelZoom: false, worldCopyJump: false, zoomSnap: 0.25,
+      minZoom: 2, maxBounds: [[-60, -200], [85, 200]], attributionControl: false
     });
+    L.control.attribution({ prefix: false }).addAttribution("Landgrenzen: Natural Earth").addTo(map);
+
+    L.geoJSON(window.WORLD, {
+      style: function (f) {
+        var c = byIso[f.id];
+        return { color: "#ffffff", weight: 0.8, fillColor: c ? (c.done ? "#9fc9bb" : "#cfe3dc") : "#ebebe8", fillOpacity: 1 };
+      },
+      onEachFeature: function (f, layer) {
+        var c = byIso[f.id];
+        if (!c) return;
+        layer.bindTooltip(c.name, { sticky: true });
+        layer.on("click", function () { location.hash = "#/" + c.slug; });
+        layer.on("mouseover", function () { layer.setStyle({ fillColor: "#1f5f4d" }); });
+        layer.on("mouseout", function () { layer.setStyle({ fillColor: c.done ? "#9fc9bb" : "#cfe3dc" }); });
+      }
+    }).addTo(map);
+
+    var pts = countries.map(function (c) { return c.pin; });
+    map.fitBounds(L.latLngBounds(pts), { padding: [40, 40], maxZoom: 4 });
   }
 
   /* ---------- landpagina ---------- */

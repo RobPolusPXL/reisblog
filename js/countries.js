@@ -10,7 +10,7 @@
 
 window.COUNTRIES = [
   {
-    slug: "bosnie-en-herzegovina",
+    slug: "bosnie-en-herzegovina", iso: "070",
     name: "Bosnië en Herzegovina",
     done: true,
     pin: [43.9, 17.7],
@@ -112,14 +112,14 @@ window.COUNTRIES = [
     gallery: []
   },
 
-  { slug: "costa-rica", name: "Costa Rica", done: false, pin: [9.9, -84.1], visited: "2025" },
-  { slug: "italie", name: "Italië", done: false, pin: [42.5, 12.5] },
-  { slug: "slovenie", name: "Slovenië", done: false, pin: [46.1, 14.8] },
-  { slug: "kroatie", name: "Kroatië", done: false, pin: [45.1, 15.2] },
-  { slug: "montenegro", name: "Montenegro", done: false, pin: [42.7, 19.3] },
-  { slug: "verenigde-staten", name: "Verenigde Staten", done: false, pin: [25.76, -80.19] },
-  { slug: "bahamas", name: "Bahamas", done: false, pin: [25.03, -77.4] },
-  { slug: "frankrijk", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
-  { slug: "polen", name: "Polen", done: false, pin: [50.3, 19.0], visited: "september 2026" },
-  { slug: "slowakije", name: "Slowakije", done: false, pin: [49.0, 20.0], visited: "september 2026" }
+  { slug: "costa-rica", iso: "188", name: "Costa Rica", done: false, pin: [9.9, -84.1], visited: "2025" },
+  { slug: "italie", iso: "380", name: "Italië", done: false, pin: [42.5, 12.5] },
+  { slug: "slovenie", iso: "705", name: "Slovenië", done: false, pin: [46.1, 14.8] },
+  { slug: "kroatie", iso: "191", name: "Kroatië", done: false, pin: [45.1, 15.2] },
+  { slug: "montenegro", iso: "499", name: "Montenegro", done: false, pin: [42.7, 19.3] },
+  { slug: "verenigde-staten", iso: "840", name: "Verenigde Staten", done: false, pin: [25.76, -80.19] },
+  { slug: "bahamas", iso: "044", name: "Bahamas", done: false, pin: [25.03, -77.4] },
+  { slug: "frankrijk", iso: "250", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
+  { slug: "polen", iso: "616", name: "Polen", done: false, pin: [50.3, 19.0], visited: "september 2026" },
+  { slug: "slowakije", iso: "703", name: "Slowakije", done: false, pin: [49.0, 20.0], visited: "september 2026" }
 ];

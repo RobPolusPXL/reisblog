@@ -28,7 +28,8 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; l
 .hero { padding: 56px 0 40px; }
 .hero h1 { font-size: clamp(44px, 8vw, 96px); max-width: 12ch; }
 .hero p { color: var(--muted); max-width: 520px; margin: 20px 0 0; }
-#map { height: min(68vh, 620px); background: var(--soft); width: 100%; }
+#map { height: min(68vh, 620px); background: #f7f7f5; width: 100%; }
+#map .leaflet-interactive { cursor: pointer; outline: none; }
 .section-title { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-family: system-ui, sans-serif; margin: 88px 0 28px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px 28px; padding-bottom: 120px; }
 .tile { text-decoration: none; display: block; }
