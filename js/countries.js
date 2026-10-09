@@ -34,6 +34,7 @@ window.COUNTRIES = [
         from: "Vanuit België",
         routes: [
           { airport: "Brussels South Charleroi (CRL)", airline: "Ryanair", to: "Sarajevo", ours: true },
+          { airport: "Brussels South Charleroi (CRL)", airline: "Ryanair", to: "Banja Luka", seasonal: true },
           { airport: "Maastricht Aachen (MST)", airline: "Wizz Air", to: "Tuzla", seasonal: true }
         ]
       },
