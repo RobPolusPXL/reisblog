@@ -41,7 +41,8 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .site-head a { text-decoration: none; color: var(--ink); }
 .logo { font: 800 22px/1 var(--display); letter-spacing: -.02em; }
 .logo { display: inline-flex; align-items: center; }
-.logo-img { display: block; height: 60px; width: auto; border-radius: 10px; box-shadow: 0 2px 14px rgba(0,0,0,.3); }
+.logo-img { display: block; height: 58px; width: auto; }
+body.has-hero:not(.scrolled) .logo-img, footer .logo-img { filter: drop-shadow(0 1px 8px rgba(0,0,0,.45)); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
