@@ -167,15 +167,16 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 li.concept { border-left: 3px dashed #e0b24a; padding-left: 16px; }
 
 /* kosten */
-.cost-panel { background: var(--sand); border-radius: 24px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start; }
+.cost-panel { background: var(--sand); border-radius: 24px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
 table.costs { border-collapse: collapse; width: 100%; }
 table.costs td { padding: 14px 0; border-top: 1px solid var(--sand-deep); }
 table.costs tr:first-child td { border-top: 0; }
 table.costs td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 24px; font-weight: 600; color: var(--ink); }
 table.costs td small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 2px; font-weight: 400; }
 table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 var(--display); }
-.perday { display: grid; gap: 28px; }
-.perday > div { display: flex; align-items: baseline; gap: 20px; }
+.perday { display: grid; grid-template-columns: max-content 1fr; gap: 28px 22px; align-items: center; }
+.perday > div { display: contents; }
+.perday b { text-align: right; }
 .perday b { font: 800 clamp(40px, 5vw, 60px)/1 var(--display); letter-spacing: -.03em; color: var(--accent-deep); white-space: nowrap; }
 .perday span { font-weight: 600; line-height: 1.35; }
 .perday small { display: block; font-weight: 400; font-size: 15px; color: var(--muted); }
