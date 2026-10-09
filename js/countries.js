@@ -101,19 +101,13 @@ window.COUNTRIES = [
       { t: "Je betaalt in Bosnische mark (BAM). Kies bij het pinnen altijd voor betalen in BAM, niet in euro.", ok: false },
       { t: "Op 24 juni vermeden we Medjugorje en Jajce wegens drukte (feestdagen).", ok: false }
     ],
-    // Bedragen in euro, voor ons tweeën samen.
-    costs: [
-      { post: "Vervoer", amount: "€ 495,28" },
-      { post: "Verblijf", amount: "€ 337,32" },
-      { post: "Eten", amount: "€ 137,55" },
-      { post: "Boodschappen", amount: "€ 60,26" },
-      { post: "Uitstappen", amount: "€ 130,78" },
-      { post: "Overig", amount: "€ 718,27" }
+    // Bedragen in euro, voor ons tweeën samen. Geen totaalbedrag en geen vervoer: enkel dagprijzen.
+    costPerDay: [
+      { label: "Eten, boodschappen en slapen", amount: "€ 76", sub: "per dag, voor ons tweeën" },
+      { label: "Verblijf", amount: "€ 48", sub: "gemiddeld per nacht, voor ons tweeën" }
     ],
-    costTotal: { amount: "€ 1.879,46" },
     costNote:
-      "Eten, boodschappen en slapen kostte ons samen ongeveer € 76 per dag voor twee. " +
-      "Dat ligt iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
+      "Daarmee zitten we iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
     costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" },
     gallery: []
   },

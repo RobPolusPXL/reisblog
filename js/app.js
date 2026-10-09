@@ -153,24 +153,22 @@
       html += section("Waar we verbleven", '<div class="stays">' + c.stays.map(function (s) {
         return '<div class="stay">' + photo(s.photo) +
           '<div class="where">' + esc(s.place) + " · " + s.nights + " nachten</div>" +
-          "<h3>" + esc(s.name) + "</h3><p>" + esc(s.text) + "</p></div>";
+          "<h3>" + esc(s.name) + "</h3><p>" + esc(s.text) + "</p>" +
+          (s.perNight ? '<p class="pernight"><b>' + esc(s.perNight) + "</b> per nacht, voor ons tweeën</p>" : "") + "</div>";
       }).join("") + "</div>");
     }
 
     if (c.transport && c.transport.length) html += section("Er geraken", '<ul class="list">' + c.transport.map(item).join("") + "</ul>");
     if (c.practical && c.practical.length) html += section("Praktisch", '<ul class="list">' + c.practical.map(item).join("") + "</ul>");
 
-    if (c.costs && c.costs.length) {
-      html += section("Wat wij betaalden",
-        '<div class="cost-panel"><table class="costs">' + c.costs.map(function (k) {
-          return "<tr><td>" + esc(k.post) + (k.detail ? "<small>" + esc(k.detail) + "</small>" : "") + "</td><td>" +
-            (k.amount == null ? '<span class="todo">nog in te vullen</span>' : esc(k.amount)) + "</td></tr>";
-        }).join("") +
-        (c.costTotal ? '<tr class="total"><td>Totaal' + (c.costTotal.detail ? "<small>" + esc(c.costTotal.detail) + "</small>" : "") + "</td><td>" + esc(c.costTotal.amount) + "</td></tr>" : "") +
-        "</table>" +
+    if (c.costPerDay && c.costPerDay.length) {
+      html += section("Wat het ons kostte",
+        '<div class="cost-panel"><div class="perday">' + c.costPerDay.map(function (k) {
+          return "<div><b>" + esc(k.amount) + "</b><span>" + esc(k.label) + "<small>" + esc(k.sub) + "</small></span></div>";
+        }).join("") + "</div>" +
         (c.costNote ? '<p class="verdict">' + esc(c.costNote) +
           (c.costSource ? ' <a href="' + esc(c.costSource.url) + '" rel="noopener">' + esc(c.costSource.t) + "</a>" : "") + "</p>" : "") + "</div>",
-        "Bedragen voor ons tweeën samen.");
+        "Per dag, voor ons tweeën. Vluchten laten we weg: die hangen af van waar je vertrekt.");
     }
 
     if (c.gallery && c.gallery.length) {
