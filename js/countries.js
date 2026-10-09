@@ -128,7 +128,7 @@ window.COUNTRIES = [
       { t: "Belgische stekkers werken, een reisstekker is niet nodig.", ok: true },
       { t: "De Bosnische mark (BAM) is vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
       { t: "Kies bij het pinnen altijd voor betalen in BAM, niet in euro.", ok: false },
-      { t: "Markten en kleine winkels willen vaak contant geld. Zorg voor kleine biljetten.", ok: true },
+      { t: "Cash is koning: markten en kleine winkels willen vaak contant geld, dus zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen.", ok: true },
       { t: "Op de snelweg A1 betaal je een paar euro tol bij de uitrit.", ok: true },
       { t: "Tanken: je tankt eerst en betaalt daarna binnen aan de kassa.", ok: true },
       { t: "Bosnië valt buiten de EU-roaming. Mobiel internet kost extra, regel dat vooraf.", ok: true }
