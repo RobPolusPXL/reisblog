@@ -24,7 +24,7 @@ window.COUNTRIES = [
       { icon: "plane", label: "Vliegtijd", v: "2 u 5 vanaf Charleroi" },
       { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }
     ],
-    tagline: "Een brug in Mostar, groene rivieren in de Una-vallei.",
+    tagline: "De Stari Most in Mostar, de smaragdgroene Una in Nationaal Park Una.",
     intro:
       "Acht dagen in twee delen: eerst Mostar en omgeving, daarna Kulen Vakuf in het Nationaal Park Una. " +
       "Een reis voor wie van natuur, water en een beetje avontuur houdt, zonder dat het ver of duur hoeft te zijn.",
