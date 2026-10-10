@@ -40,11 +40,11 @@ h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; font-wei
 .site-head .wrap { display: flex; justify-content: space-between; align-items: center; height: 76px; }
 .site-head a { text-decoration: none; color: var(--ink); }
 .logo { display: inline-flex; align-items: center; }
-.lk { display: block; height: 34px; width: auto; }
+.lk { display: block; height: 44px; width: auto; }
 .lk-wit { display: none; }
 body.has-hero:not(.scrolled) .site-head .lk-wit { display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.4)); }
 body.has-hero:not(.scrolled) .site-head .lk-donker { display: none; }
-footer .lk { height: 46px; }
+footer .lk { height: 58px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .site-head nav { display: flex; gap: 28px; font-weight: 600; font-size: 16px; }
 .site-head nav a:hover { color: var(--accent); }
