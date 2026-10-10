@@ -142,6 +142,7 @@
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
+  function hikeData(d) { return d.strava && window.STRAVA ? window.STRAVA[d.strava] : d.hike; }
   function hikeHtml(h, id) {
     if (!h) return "";
     var a = h.alt, mn = Math.min.apply(null, a), mx = Math.max.apply(null, a);
@@ -154,13 +155,13 @@
   function initHikes(t) {
     if (window.__PRERENDER || !window.L) return;
     t.days.forEach(function (d, i) {
-      var el = d.hike && document.getElementById("hike-" + (i + 1));
+      var hk = hikeData(d), el = hk && document.getElementById("hike-" + (i + 1));
       if (!el || el._leaflet_id) return;
       var m = L.map(el, { scrollWheelZoom: false });
-      setTimeout(function () { m.invalidateSize(); m.fitBounds(L.polyline(d.hike.route).getBounds(), { padding: [20, 20] }); }, 300);
+      setTimeout(function () { m.invalidateSize(); m.fitBounds(L.polyline(hk.route).getBounds(), { padding: [20, 20] }); }, 300);
       L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: "© OpenStreetMap-bijdragers, © OpenTopoMap (CC-BY-SA)" }).addTo(m);
-      var line = L.polyline(d.hike.route, { color: "#0f766e", weight: 4, opacity: .95 }).addTo(m);
-      L.circleMarker(d.hike.route[0], { radius: 7, color: "#fff", weight: 2, fillColor: "#c2410c", fillOpacity: 1 }).addTo(m).bindTooltip("Start en finish");
+      var line = L.polyline(hk.route, { color: "#0f766e", weight: 4, opacity: .95 }).addTo(m);
+      L.circleMarker(hk.route[0], { radius: 7, color: "#fff", weight: 2, fillColor: "#c2410c", fillOpacity: 1 }).addTo(m).bindTooltip("Start en finish");
       m.fitBounds(line.getBounds(), { padding: [20, 20] });
     });
   }
@@ -279,7 +280,7 @@
           (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
-          dayPhotos(d.photos) + hikeHtml(d.hike, i + 1) +
+          dayPhotos(d.photos) + hikeHtml(hikeData(d), i + 1) +
           (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
