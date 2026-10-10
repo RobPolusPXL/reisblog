@@ -132,7 +132,7 @@ window.COUNTRIES = [
       { label: "Stekker", t: "Belgische stekkers werken. Geen reisstekker nodig.", ok: true },
       { label: "Munt", t: "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
       { label: "Cash", t: "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen.", ok: true },
-      { label: "Pinnen", t: "Kies bij het pinnen altijd voor BAM, niet voor euro.", ok: false },
+      { label: "Pinnen", t: "Kies bij het pinnen altijd voor BAM, niet voor euro." },
       { label: "Tol", t: "Op de snelweg A1 betaal je een paar euro bij de uitrit.", ok: true },
       { label: "Tanken", t: "Eerst tanken, daarna binnen betalen.", ok: true },
       { label: "Mobiel", t: "Geen EU-roaming. Regel mobiel internet vooraf.", ok: true }

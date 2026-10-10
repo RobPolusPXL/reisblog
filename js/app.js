@@ -124,8 +124,8 @@
     }).join("") + "</div></div>";
   }
 
-  function section(title, inner, sub) {
-    return '<section class="block"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
+  function section(title, inner, sub, cls) {
+    return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
   function stampHtml(c) {
@@ -140,26 +140,25 @@
       return;
     }
 
-    var hasConcept = JSON.stringify(c).indexOf('"ok":false') > -1;
     var pl = places(c);
     var rest = (c.activities || []).filter(function (a) { return !(a.photos && a.photos.length); });
     var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" + factsStrip(c) +
       '<div class="wrap">' +
       '<div class="c-body"><div><p class="intro">' + esc(c.intro) + "</p>" +
-      (hasConcept ? '<p class="concept-note">Concept: items met een gestippelde streep zijn nog niet bevestigd en kunnen nog wijzigen.</p>' : "") + "</div>" +
+      "</div>" +
       '<aside class="fact-card"><h2>Onze reis</h2><dl>' +
       "<div><dt>Periode</dt><dd>" + esc(c.visited) + "</dd></div><div><dt>Nachten</dt><dd>" + c.nights + "</dd></div>" +
       (c.with ? "<div><dt>Met</dt><dd>" + esc(c.with) + "</dd></div>" : "") + "</dl></aside></div>";
 
     if (pl.length) {
-      html += section("Wat we deden", '<div class="places">' + pl.map(function (a) {
+      html += section("Dingen die we deden", '<div class="places">' + pl.map(function (a) {
         return '<a class="place" href="#/' + c.slug + "/" + a.slug + '">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
       }).join("") + "</div>" + (rest.length
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
             return '<li><span class="chip' + (a.ok === false ? " concept" : "") + '">' + esc(a.t) + "</span></li>";
           }).join("") + "</ul></div>" : ""),
-        "Klik op een plaats voor foto's en uitleg.");
+        "Klik op een plaats voor foto's en uitleg.", "center");
     }
 
     if (c.stays && c.stays.length) {
