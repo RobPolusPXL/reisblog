@@ -142,28 +142,15 @@
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
-  function hikeData(d) { return d.strava && window.STRAVA ? window.STRAVA[d.strava] : d.hike; }
-  function hikeHtml(h, id) {
-    if (!h) return "";
-    var a = h.alt, mn = Math.min.apply(null, a), mx = Math.max.apply(null, a);
-    var prof = a.map(function (v, i) { return (i / (a.length - 1) * 300).toFixed(1) + "," + (60 - (v - mn) / (mx - mn) * 56).toFixed(1); }).join(" ");
-    return '<div class="hike"><div class="hike-map" id="hike-' + id + '" data-hike="' + id + '"></div>' +
-      '<div class="hike-info"><h4>' + esc(h.label) + '</h4><dl><div><dt>Afstand</dt><dd>' + String(h.km).replace(".", ",") + ' km</dd></div><div><dt>Tijd</dt><dd>' + esc(h.tijd) +
-      '</dd></div><div><dt>Hoogtewinst</dt><dd>' + h.omhoog + ' m</dd></div><div><dt>Hoogste punt</dt><dd>' + h.hoogste + ' m</dd></div></dl>' +
-      '<svg class="hike-prof" viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,64 ' + prof + ' 300,64" fill="#bfdad4"/><polyline points="' + prof + '" fill="none" stroke="#0f766e" stroke-width="1.5"/></svg></div></div>';
+  function stravaHtml(d) {
+    return d.strava ? '<div class="strava-wrap"><div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="' + esc(d.strava) + '" data-style="standard" data-from-embed="false"></div></div>' : "";
   }
-  function initHikes(t) {
-    if (window.__PRERENDER || !window.L) return;
-    t.days.forEach(function (d, i) {
-      var hk = hikeData(d), el = hk && document.getElementById("hike-" + (i + 1));
-      if (!el || el._leaflet_id) return;
-      var m = L.map(el, { scrollWheelZoom: false });
-      setTimeout(function () { m.invalidateSize(); m.fitBounds(L.polyline(hk.route).getBounds(), { padding: [20, 20] }); }, 300);
-      L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: "© OpenStreetMap-bijdragers, © OpenTopoMap (CC-BY-SA)" }).addTo(m);
-      var line = L.polyline(hk.route, { color: "#0f766e", weight: 4, opacity: .95 }).addTo(m);
-      L.circleMarker(hk.route[0], { radius: 7, color: "#fff", weight: 2, fillColor: "#c2410c", fillOpacity: 1 }).addTo(m).bindTooltip("Start en finish");
-      m.fitBounds(line.getBounds(), { padding: [20, 20] });
-    });
+  function initStrava(t) {
+    if (window.__PRERENDER || document.getElementById("strava-embed-js")) return;
+    if (!t.days.some(function (d) { return d.strava; })) return;
+    var sc = document.createElement("script");
+    sc.id = "strava-embed-js"; sc.src = "https://strava-embeds.com/embed.js"; sc.async = true;
+    document.body.appendChild(sc);
   }
   function tripStamp(t) {
     var m = t.period.match(/([a-z]+) (\d{4})\s*$/i);
@@ -280,7 +267,7 @@
           (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
-          dayPhotos(d.photos) + hikeHtml(hikeData(d), i + 1) +
+          dayPhotos(d.photos) + stravaHtml(d) +
           (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
@@ -317,7 +304,7 @@
 
     html += "</div>";
     $("trip").innerHTML = html;
-    setTimeout(function () { initHikes(t); }, 0);
+    setTimeout(function () { initStrava(t); }, 0);
   }
 
   /* ---------- router ---------- */
