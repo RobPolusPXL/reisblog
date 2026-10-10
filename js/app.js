@@ -238,6 +238,13 @@
 
   /* ---------- reis ---------- */
 
+  function dayGallery(d) {
+    var g = d.gallery;
+    if (!g) return "";
+    return '<div class="d-photos hike-gal">' + g.map(function (x) {
+      return x.embed ? '<figure class="full strava-cell">' + (d.stravaEmbed || "") + "</figure>" : figure(x);
+    }).join("") + "</div>";
+  }
   function dayPhotos(ph) {
     if (!ph || !ph.length) return "";
     return '<div class="d-photos n' + Math.min(ph.length, 5) + '">' + ph.map(figure).join("") + "</div>";
@@ -268,7 +275,7 @@
           (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
-          dayPhotos(d.photos) + stravaHtml(d) +
+          dayPhotos(d.photos) + dayGallery(d) + (d.gallery ? "" : stravaHtml(d)) +
           (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
