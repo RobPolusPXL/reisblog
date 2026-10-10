@@ -55,7 +55,7 @@
   }
 
   function renderHome() {
-    $("hero").innerHTML = hero("images/home/costa-rica-palmen-aan-zee.webp", "Rob tussen palmbomen, kijkend over zee in Costa Rica",
+    $("hero").innerHTML = hero("images/home/hangmat-zicht-op-zee.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
       "Reisblog van Rob en Joke", "Waar we al geweest zijn",
       "Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.");
 
