@@ -274,3 +274,4 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
   #hero:not(.short) .hero-text > div { max-width: 100%; }
   #hero:not(.short)::before { background: linear-gradient(to bottom, rgba(6,22,20,.62) 0%, rgba(6,22,20,.3) 48%, rgba(6,22,20,0) 70%); }
 }
+@media (min-width: 901px) { #hero:not(.short) .hero-text > div { transform: translateX(min(7vw, 110px)); } }
