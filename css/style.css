@@ -217,6 +217,9 @@ table.costs tr.total td { border-top: 2px solid var(--ink); font: 700 24px/1.2 v
 /* ---------- footer ---------- */
 footer { margin-top: 96px; background: var(--ink); color: #b4c4bf; font-size: 15px; padding: 44px 0 56px; }
 footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
+footer .foot-line { margin: 0; }
+footer .insta { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; color: #fff; text-decoration: none; font-weight: 600; }
+footer .insta:hover span { text-decoration: underline; }
 
 /* ---------- kaart ---------- */
 .leaflet-container { font-family: var(--body); background: var(--sand); }
