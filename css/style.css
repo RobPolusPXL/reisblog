@@ -348,10 +348,16 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 .strava-wrap { margin-top: 26px; max-width: 620px; }
 .strava-wrap iframe { width: 100%; height: 470px; border: 0; display: block; }
 @media (max-width: 700px) { .strava-wrap iframe { height: 520px; } }
-.hike-gal figure.full { grid-column: span 6; }
+.hike-gal figure.sp6 { grid-column: span 6; }
+.hike-gal figure.sp2 { grid-column: span 2; }
+.hike-gal figure.sp6 .photo { aspect-ratio: 16 / 9; }
+.hike-gal figure.tall .photo { aspect-ratio: 2 / 3; }
 .hike-gal .video-cell video { width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; display: block; background: #0b1f1c; }
-.hike-gal .strava-cell { grid-column: span 3; border-radius: 14px; overflow: hidden; background: #f4f1ea; min-height: 0; }
-.hike-gal .strava-cell > *, .hike-gal .strava-cell iframe { max-width: 100% !important; border: 0; }
-@media (max-width: 700px) { .hike-gal figure.full { grid-column: span 6; } .hike-gal .strava-cell { grid-column: span 6; } .hike-gal .photo { aspect-ratio: 4 / 3; } .hike-gal figure:first-child .photo { aspect-ratio: 16 / 10; } }
-.hike-gal figure:first-child { grid-column: span 6; }
-.hike-gal figure:first-child .photo { aspect-ratio: 16 / 9; }
+.hike-gal .strava-cell { position: relative; border-radius: 14px; overflow: hidden; background: #f4f1ea; min-height: 0; }
+.hike-gal .strava-cell > *, .hike-gal .strava-cell iframe { position: absolute !important; inset: 0; width: 100% !important; height: 100% !important; max-width: none !important; border: 0; }
+.s-tips { margin-top: 28px; }
+@media (max-width: 700px) {
+  .hike-gal figure.sp2 { grid-column: span 3; }
+  .hike-gal { grid-auto-flow: dense; }
+  .hike-gal figure.strava-cell, .hike-gal figure.strava-cell.sp2 { grid-column: span 6; aspect-ratio: 4 / 3; }
+}

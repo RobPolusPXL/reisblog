@@ -142,13 +142,8 @@
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
-  function stravaHtml(d) {
-    if (d.stravaEmbed) return '<div class="strava-wrap">' + d.stravaEmbed + "</div>";
-    return d.strava ? '<div class="strava-wrap"><iframe src="https://strava-embeds.com/activity/' + esc(d.strava) + '" title="Strava-activiteit" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true"></iframe></div>' : "";
-  }
-  function initStrava(t) {
+  function loadStravaEmbeds() {
     if (window.__PRERENDER || document.getElementById("strava-embed-js")) return;
-    if (!t.days.some(function (d) { return d.stravaEmbed; })) return;
     var sc = document.createElement("script");
     sc.id = "strava-embed-js"; sc.src = "https://strava-embeds.com/embed.js"; sc.async = true;
     document.body.appendChild(sc);
@@ -227,23 +222,26 @@
       '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>" +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
-      '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>" +
+      (a.gallery ? gallery(a.gallery, a.stravaEmbed) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
+      (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
       (prev ? '<a class="prev" href="' + cpath(c) + prev.slug + '/"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
       (next ? '<a class="next" href="' + cpath(c) + next.slug + '/"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
       '</div><a class="back" href="' + cpath(c) + '">' + ARROW + " Terug naar " + esc(c.name) + "</a></div></div>";
     $("country").innerHTML = html;
+    if (a.stravaEmbed) setTimeout(loadStravaEmbeds, 0);
   }
 
 
   /* ---------- reis ---------- */
 
-  function dayGallery(d) {
-    var g = d.gallery;
+  function gallery(g, embedHtml) {
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
-      if (x.video) return '<figure class="full video-cell"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
-      return x.embed ? '<figure class="strava-cell">' + (d.stravaEmbed || "") + "</figure>" : figure(x);
+      var cls = (x.span ? " sp" + x.span : "") + (x.tall ? " tall" : "");
+      if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
+      if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
+      return '<figure class="' + cls.trim() + '">' + photo(x) + "</figure>";
     }).join("") + "</div>";
   }
   function dayPhotos(ph) {
@@ -276,7 +274,7 @@
           (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
-          dayPhotos(d.photos) + dayGallery(d) + (d.gallery ? "" : stravaHtml(d)) +
+          dayPhotos(d.photos) +
           (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
@@ -313,7 +311,6 @@
 
     html += "</div>";
     $("trip").innerHTML = html;
-    setTimeout(function () { initStrava(t); }, 0);
   }
 
   /* ---------- router ---------- */
