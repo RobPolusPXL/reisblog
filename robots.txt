@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://robpoluspxl.github.io/reisblog/sitemap.xml

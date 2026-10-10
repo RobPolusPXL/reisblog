@@ -62,7 +62,7 @@
     var done = countries.filter(function (c) { return c.done; });
     var soon = countries.filter(function (c) { return !c.done; });
     $("grid").innerHTML = done.map(function (c, i) {
-      return '<a class="card' + (i === 0 ? " big" : "") + '" href="#/' + c.slug + '">' +
+      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + c.slug + '/">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
         "<div><span class=\"label\">" + esc(c.name) + " · " + c.nights + " nachten</span>" +
         "<h3>" + esc(c.tagline || c.name) + "</h3>" +
@@ -71,7 +71,7 @@
     }).join("");
     $("soon").innerHTML = soon.length
       ? "<h3>Hier volgen nog meer landen</h3><ul>" + soon.map(function (c) {
-          return '<li><a class="chip" href="#/' + c.slug + '">' + esc(c.name) + "</a></li>";
+          return '<li><a class="chip" href="' + c.slug + '/">' + esc(c.name) + "</a></li>";
         }).join("") + "</ul>"
       : "";
   }
@@ -99,7 +99,7 @@
         var c = byIso[f.id];
         if (!c) return;
         layer.bindTooltip(c.name, { sticky: true });
-        layer.on("click", function () { geoLayer.resetStyle(layer); location.hash = "#/" + c.slug; });
+        layer.on("click", function () { geoLayer.resetStyle(layer); location.href = c.slug + "/"; });
         layer.on("mouseover", function () { layer.setStyle({ fillColor: "#0f766e" }); });
         layer.on("mouseout", function () { geoLayer.resetStyle(layer); });
       }
@@ -134,7 +134,7 @@
 
   function renderCountry(c) {
     if (!c.done) {
-      $("country").innerHTML = '<div class="wrap"><a class="back" href="#/landen">' + ARROW + " Alle landen</a>" +
+      $("country").innerHTML = '<div class="wrap"><a class="back" href="./#landen">' + ARROW + " Alle landen</a>" +
         '<h1 style="font-size:clamp(40px,7vw,88px);margin-top:28px">' + esc(c.name) + "</h1>" +
         '<p class="intro narrow" style="margin-top:24px">Deze pagina volgt binnenkort.</p></div>';
       return;
@@ -152,7 +152,7 @@
 
     if (pl.length) {
       html += section("Dingen die we deden", '<div class="places">' + pl.map(function (a) {
-        return '<a class="place" href="#/' + c.slug + "/" + a.slug + '">' + photo(a.photos[0]) +
+        return '<a class="place" href="' + c.slug + "/" + a.slug + '/">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
       }).join("") + "</div>" + (rest.length
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
@@ -210,25 +210,54 @@
     var i = pl.indexOf(a);
     var prev = pl[i - 1], next = pl[i + 1];
     var n = a.photos.length;
-    var html = '<div class="wrap"><div class="crumbs"><a href="#/landen">Landen</a> › <a href="#/' + c.slug + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>" +
+    var html = '<div class="wrap"><div class="crumbs"><a href="./#landen">Landen</a> › <a href="' + c.slug + '/">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>" +
       '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>" +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>" +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
-      (prev ? '<a class="prev" href="#/' + c.slug + "/" + prev.slug + '"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
-      (next ? '<a class="next" href="#/' + c.slug + "/" + next.slug + '"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
-      '</div><a class="back" href="#/' + c.slug + '">' + ARROW + " Terug naar " + esc(c.name) + "</a></div></div>";
+      (prev ? '<a class="prev" href="' + c.slug + "/" + prev.slug + '/"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
+      (next ? '<a class="next" href="' + c.slug + "/" + next.slug + '/"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
+      '</div><a class="back" href="' + c.slug + '/">' + ARROW + " Terug naar " + esc(c.name) + "</a></div></div>";
     $("country").innerHTML = html;
   }
 
   /* ---------- router ---------- */
 
+  var BASE = new URL(document.baseURI).pathname;
+  var SITE = (window.SITE_URL || "").replace(/\/?$/, "/");
+
+  function setMeta(title, desc, path, noindex) {
+    document.title = title;
+    function tag(sel, make, attr, val) {
+      var el = document.head.querySelector(sel);
+      if (!el) { el = document.createElement(make); document.head.appendChild(el); }
+      Object.keys(attr).forEach(function (k) { el.setAttribute(k, attr[k]); });
+      return el;
+    }
+    tag('meta[name="description"]', "meta", { name: "description", content: desc });
+    tag('link[rel="canonical"]', "link", { rel: "canonical", href: SITE + path });
+    tag('meta[property="og:title"]', "meta", { property: "og:title", content: title });
+    tag('meta[property="og:description"]', "meta", { property: "og:description", content: desc });
+    tag('meta[property="og:url"]', "meta", { property: "og:url", content: SITE + path });
+    var r = document.head.querySelector('meta[name="robots"]');
+    if (noindex) tag('meta[name="robots"]', "meta", { name: "robots", content: "noindex" });
+    else if (r) r.remove();
+  }
+
+  var HOME_DESC = "Travel Mustache: reisinspiratie per land, van plaatsen waar Rob en Joke zelf verbleven.";
+
   function route() {
-    var parts = location.hash.replace(/^#\/?/, "").split("/");
+    // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
+    if (/^#\//.test(location.hash)) {
+      var h = location.hash.replace(/^#\/?/, "");
+      location.replace(BASE + (h === "kaart" || h === "landen" ? "#" + h : h ? h.replace(/\/?$/, "/") : ""));
+      return;
+    }
+    var parts = location.pathname.slice(BASE.length).split("/").filter(Boolean);
     var slug = parts[0];
     var c = countries.filter(function (x) { return x.slug === slug; })[0];
-    var anchor = slug === "kaart" || slug === "landen" ? slug : null;
+    var anchor = !c && /^#(kaart|landen)$/.test(location.hash) ? location.hash.slice(1) : null;
 
     $("home").hidden = !!c;
     $("country").hidden = !c;
@@ -238,17 +267,17 @@
       var a = parts[1] && places(c).filter(function (x) { return x.slug === parts[1]; })[0];
       if (a) {
         renderPlace(c, a);
-        document.title = a.t + " · " + c.name + " · Travel Mustache";
+        setMeta(a.t + " · " + c.name + " · Travel Mustache", excerpt(a.text || c.tagline || c.intro || "", 155), c.slug + "/" + a.slug + "/");
       } else {
         renderCountry(c);
-        document.title = c.name + " · Travel Mustache";
+        setMeta(c.name + " · Travel Mustache", c.done ? (c.tagline || excerpt(c.intro || "", 155)) : c.name + ": deze pagina volgt binnenkort.", c.slug + "/", !c.done);
       }
       window.scrollTo(0, 0);
       return;
     }
 
-    document.title = "Travel Mustache";
-    if (geoLayer) geoLayer.eachLayer(function (l) { geoLayer.resetStyle(l); }); // blijft anders donker na terugkeren
+    setMeta("Travel Mustache", HOME_DESC, "");
+    if (geoLayer) geoLayer.eachLayer(function (l) { geoLayer.resetStyle(l); });
     if (map) setTimeout(function () { map.invalidateSize(); }, 0);
     if (anchor) setTimeout(function () { $(anchor).scrollIntoView(); }, 30);
     else window.scrollTo(0, 0);
@@ -258,8 +287,11 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  window.__routes = function () { return countries.map(function (c) { return { slug: c.slug, done: !!c.done, acts: places(c).map(function (a) { return a.slug; }) }; }); };
+
   renderHome();
   renderMap();
   window.addEventListener("hashchange", route);
+  window.addEventListener("popstate", route);
   route();
 })();

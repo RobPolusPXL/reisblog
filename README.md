@@ -2,12 +2,20 @@
 
 Reisblog per land, met foto's en tips van plaatsen waar ik echt geweest ben. Alleen in het Nederlands.
 
-Statische site zonder build-stap: open `index.html` in een browser, of draai lokaal `python3 -m http.server` en ga naar http://localhost:8000.
+Statische site met echte adressen per land en activiteit (bv. `/bosnie-en-herzegovina/kravice-watervallen/`), zodat Google ze apart kan indexeren.
+
+Lokaal bekijken: `python3 -m http.server` en ga naar http://localhost:8000.
+
+## Pagina's genereren (na elke wijziging)
+
+`python3 build.py` maakt uit `template.html` en `js/countries.js` alle pagina's (`index.html`, `<land>/index.html`, `<land>/<activiteit>/index.html`), `404.html`, `sitemap.xml` en `robots.txt`. Draai dit na elke wijziging aan `js/countries.js`, `js/app.js` of `template.html` en commit de gegenereerde bestanden mee. Vereist: `pip install playwright` en `playwright install chromium`.
+
+Bewerk dus nooit `index.html` of de land-mappen met de hand, maar `template.html`. Het adres van de site (voor canonical-links en sitemap) staat in `site.js`; pas dat aan zodra je een eigen domein hebt en draai `build.py` opnieuw.
 
 ## Structuur
 
 - `js/countries.js`: alle landen en hun inhoud. Hier voeg je een land of tekst toe.
-- `js/app.js`: kaart, overzicht en landenpagina's (adressen zoals `#/bosnie-en-herzegovina`).
+- `js/app.js`: kaart, overzicht en landenpagina's (routing op basis van het pad).
 - `css/style.css`: opmaak.
 - `images/<land>/`: foto's per land (verkleind naar ongeveer 1600 px, bij voorkeur WebP).
 
