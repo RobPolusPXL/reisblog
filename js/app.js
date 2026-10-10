@@ -341,7 +341,7 @@
     else if (r) r.remove();
   }
 
-  var HOME_DESC = "Traveling Mustache: reisinspiratie per land, van plaatsen waar Rob en Joke zelf verbleven.";
+  var HOME_DESC = "Traveling Mustache: reisinspiratie per land, van plaatsen die Rob en Joke zelf beleefden.";
 
   function route() {
     // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
