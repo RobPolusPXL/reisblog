@@ -61,7 +61,7 @@
 
   function renderHome() {
     $("hero").innerHTML = hero("images/home/hangmat-panorama.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
-      "Reisblog van Rob en Joke", "Waar we al geweest zijn",
+      "Reisblog van Rob en Joke", "Op zoek naar unieke plaatsen",
       "Reisinspiratie per land, enkel over plaatsen en dingen die we zelf beleefden.");
 
     $("trips").innerHTML = trips.map(function (t, i) {
