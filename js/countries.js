@@ -82,7 +82,7 @@ window.COUNTRIES = [
         tips: ["Neem waterschoenen mee, want de rotsen onder water zijn glad.", "Neem contant geld mee voor parkeren en eventuele kassa-aankopen, want er is aan de watervallen weinig kaartbetaling. De dichtstbijzijnde geldautomaat staat in Ljubuški. Een online ticket kan je op voorhand kopen.", "Combineer het met een verblijf in Mostar: ga overdag naar Kravice als het in de stad het drukst is, en geniet 's avonds van de rustige oude stad."]
       },
       {
-        t: "Via ferrata aan de Fortica in Mostar",
+        t: "Via ferrata Fortica in Mostar",
         text: "Steil en pittig, met onder meer een hangbrug. Materiaal huur je ter plaatse, een gids is niet verplicht.",
         ok: true,
         photos: [{ src: "images/bosnie-en-herzegovina/fortica-via-ferrata-hangbrug.webp", alt: "Klimmer op de hangbrug van de via ferrata aan de Fortica" }, { src: "images/bosnie-en-herzegovina/fortica-via-ferrata-wand.webp", alt: "Klimmer op een steile rotswand van de via ferrata" }],

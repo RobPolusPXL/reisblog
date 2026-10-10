@@ -47,7 +47,7 @@ window.TRIPS = [
       },
       {
         title: "Avontuurlijk dagje", date: "23 juni", temp: 38,
-        places: ["via-ferrata-aan-de-fortica-in-mostar", "pocitelj"],
+        places: ["via-ferrata-fortica-in-mostar", "pocitelj"],
         text: [
           "We stonden op ons gemak op en reden richting de via ferrata. Onderweg stopten we bij de Bingo, een supergrote winkel waar ze alles hebben, een beetje zoals de Makro maar zonder Makrokaart. Eten en drinken ingeslagen en verder.",
           "Eerst reden we helemaal naar boven en liepen we even over de glazen brug, niet super spectaculair. In het horecazaakje huurden we een klimgordel en een helm. Daarna zochten we de weg naar het startpunt en parkeerden de auto. Het deed ons denken aan onze avonturen in de Dolomieten: de route is aangeduid met rode bollen op de rotsen.",
