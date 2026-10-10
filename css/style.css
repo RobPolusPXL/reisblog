@@ -339,3 +339,4 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
   .site-head .logo { flex: 0 0 auto; width: 240px; max-width: 100%; }
   .site-head nav { flex: 0 0 100%; gap: 22px; font-size: 15px; }
 }
+.dbody, .tips { max-width: none; }
