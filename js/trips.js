@@ -34,7 +34,7 @@ window.TRIPS = [
       },
       {
         title: "Watervallendagje", date: "22 juni", temp: 36,
-        places: ["kravice-watervallen"],
+        places: ["kravice-watervallen","kocusa"],
         text: [
           "Na een goede nacht vertrokken we rond acht uur naar de Kravice-watervallen, een rit van ongeveer vijftig minuten, met airco in de auto. De huurauto was een Hyundai i20: niet te groot en ideaal voor de smalle straatjes.",
           "We waren vroeg, dus het was nog rustig. Eerst een broodje en een wrap, daarna een plekje voor onze handdoeken. Die grote microvezelhanddoeken van Action zijn een aanrader: groot, mooie kleuren en ze drogen snel. Daarna het water in, heerlijk bij bijna 39 graden.",
