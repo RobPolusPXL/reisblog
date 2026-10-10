@@ -262,19 +262,13 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 }
 .card .photo, .card .photo img { max-width: 100%; }
 
-/* home-hero: tekst naast het stel, niet erover */
-#hero:not(.short) .hero-text { justify-content: flex-end; }
-#hero:not(.short) .hero-text > div { max-width: min(46vw, 640px); }
-#hero:not(.short) h1 { max-width: 100%; }
+/* home-hero: foto onderaan afsnijden, tekst links; op mobiel tekst bovenaan */
+#hero:not(.short) > img { object-position: 50% 0; }
+#hero:not(.short) .hero-text > div { max-width: min(40vw, 520px); }
+#hero:not(.short) h1 { max-width: 100%; font-size: clamp(44px, 5.4vw, 80px); }
 @media (max-width: 900px) {
   #hero:not(.short) { align-items: flex-start; }
-  #hero:not(.short) .hero-text { padding-top: 96px; padding-bottom: 0; justify-content: flex-start; }
+  #hero:not(.short) .hero-text { padding-top: 96px; padding-bottom: 0; }
   #hero:not(.short) .hero-text > div { max-width: 100%; }
   #hero:not(.short)::before { background: linear-gradient(to bottom, rgba(6,22,20,.62) 0%, rgba(6,22,20,.3) 48%, rgba(6,22,20,0) 70%); }
-}
-#hero:not(.short) .hero-text > div { max-width: min(36vw, 500px); }
-#hero:not(.short) h1 { font-size: clamp(44px, 5.4vw, 80px); }
-@media (max-width: 900px) {
-  #hero:not(.short) > img { object-position: 28% 50%; }
-  #hero:not(.short) .hero-text > div { max-width: 100%; }
 }
