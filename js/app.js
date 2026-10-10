@@ -55,7 +55,7 @@
   }
 
   function renderHome() {
-    $("hero").innerHTML = hero("images/home/stel-in-de-bergen.webp", "Rob en Joke kijken uit over besneeuwde bergtoppen",
+    $("hero").innerHTML = hero("images/home/hangmat-panorama.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
       "Reisblog van Rob en Joke", "Waar we al geweest zijn",
       "Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.");
 
