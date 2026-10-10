@@ -219,7 +219,7 @@
     var prev = pl[i - 1], next = pl[i + 1];
     var n = a.photos.length;
     var crumbs = '<div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>";
-    var html = (a.hero ? '<section class="hero short">' + hero(a.hero.src, a.hero.alt, c.name, a.t, a.text) + "</section>" : "") +
+    var html = (a.hero ? '<section class="hero short place-hero">' + hero(a.hero.src, a.hero.alt, c.name, a.t, a.text) + "</section>" : "") +
       '<div class="wrap">' + crumbs +
       (a.hero ? "" : '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>") +

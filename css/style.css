@@ -381,3 +381,8 @@ footer .insta:hover span { text-decoration: underline; }
 .hike-gal .frame-cell { grid-column: span 6; border-radius: 14px; overflow: hidden; background: #f4f1ea; }
 .hike-gal .frame-cell iframe { display: block; width: 100%; height: 640px; border: 0; }
 @media (max-width: 700px) { .hike-gal .frame-cell iframe { height: 520px; } }
+
+/* bestemmingspagina's: lange titels mogen breder en kleiner, en botsen niet met de header */
+.place-hero .hero-text { padding-top: 120px; }
+.place-hero h1 { font-size: clamp(36px, 5vw, 72px); max-width: min(62vw, 900px); }
+@media (max-width: 700px) { .place-hero h1 { max-width: 100%; } .place-hero .hero-text { padding-bottom: 40px; } }
