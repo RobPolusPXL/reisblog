@@ -367,3 +367,7 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
 @media (min-width: 701px) { .s-body p { text-align: justify; hyphens: none; -webkit-hyphens: none; } }
 .s-sources { margin: 22px 0 0; font-size: 14px; color: var(--muted); }
 .s-sources a { color: inherit; text-decoration: underline; }
+.hike-gal .gal-text { grid-column: span 6; margin: 22px 0 10px; }
+.hike-gal .gal-text h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 12px; }
+.hike-gal .gal-text p { margin: 0 0 1.1em; line-height: 1.7; }
+@media (min-width: 701px) { .hike-gal .gal-text p { text-align: justify; hyphens: none; -webkit-hyphens: none; } }

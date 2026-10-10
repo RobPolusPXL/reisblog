@@ -218,9 +218,11 @@
     var i = pl.indexOf(a);
     var prev = pl[i - 1], next = pl[i + 1];
     var n = a.photos.length;
-    var html = '<div class="wrap"><div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>" +
-      '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
-      (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>" +
+    var crumbs = '<div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>";
+    var html = (a.hero ? '<section class="hero short">' + hero(a.hero.src, a.hero.alt, c.name, a.t, a.text) + "</section>" : "") +
+      '<div class="wrap">' + crumbs +
+      (a.hero ? "" : '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
+      (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>") +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
@@ -241,6 +243,7 @@
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
       var cls = (x.span ? " sp" + x.span : "") + (x.tall ? " tall" : "");
+      if (x.section) return '<div class="gal-text">' + "<h2>" + esc(x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>";
       if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
       if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
       return '<figure class="' + cls.trim() + '">' + photo(x) + "</figure>";
@@ -362,7 +365,8 @@
     $("trip").hidden = !t;
 
     var act = parts[2];
-    document.body.classList.toggle("has-hero", !c || (c.done && !act));
+    var a0 = c && act ? places(c).filter(function (x) { return x.slug === act; })[0] : null;
+    document.body.classList.toggle("has-hero", !c || (c.done && (!act || !!(a0 && a0.hero))));
     if (t) {
       document.body.classList.add("has-hero");
       renderTrip(t);
