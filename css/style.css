@@ -283,3 +283,5 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
   #hero:not(.short)::before { background: linear-gradient(to bottom, rgba(6,22,20,.5) 0%, rgba(6,22,20,.22) 45%, rgba(6,22,20,0) 70%); }
 }
 .block.center > h2, .block.center > .sub { text-align: center; margin-left: auto; margin-right: auto; }
+.c-body + .block { margin-top: 64px; }
+@media (max-width: 700px) { .c-body + .block { margin-top: 48px; } }
