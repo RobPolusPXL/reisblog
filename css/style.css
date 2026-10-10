@@ -274,4 +274,10 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
   #hero:not(.short) .hero-text > div { max-width: 100%; }
   #hero:not(.short)::before { background: linear-gradient(to bottom, rgba(6,22,20,.62) 0%, rgba(6,22,20,.3) 48%, rgba(6,22,20,0) 70%); }
 }
-@media (min-width: 901px) { #hero:not(.short) .hero-text > div { transform: translateX(min(7vw, 110px)); } }
+@media (min-width: 901px) {
+  #hero:not(.short) { align-items: flex-start; }
+  #hero:not(.short) .hero-text { padding-top: 120px; padding-bottom: 0; }
+  #hero:not(.short) .hero-text > div { max-width: min(38vw, 520px); transform: translateX(min(7vw, 100px)); }
+  #hero:not(.short) .hero-text p { text-shadow: 0 1px 14px rgba(0,0,0,.55); }
+  #hero:not(.short)::before { background: linear-gradient(to bottom, rgba(6,22,20,.5) 0%, rgba(6,22,20,.22) 45%, rgba(6,22,20,0) 70%); }
+}
