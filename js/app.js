@@ -242,7 +242,8 @@
     var g = d.gallery;
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
-      return x.embed ? '<figure class="full strava-cell">' + (d.stravaEmbed || "") + "</figure>" : figure(x);
+      if (x.video) return '<figure class="full video-cell"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
+      return x.embed ? '<figure class="strava-cell">' + (d.stravaEmbed || "") + "</figure>" : figure(x);
     }).join("") + "</div>";
   }
   function dayPhotos(ph) {
