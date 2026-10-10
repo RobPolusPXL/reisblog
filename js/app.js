@@ -83,7 +83,7 @@
     }
     var byIso = {};
     countries.forEach(function (c) { byIso[c.iso] = c; });
-    var fill = function (c) { return c.done ? "#3f9a8f" : "#bfdad4"; };
+    var fill = function () { return "#bfdad4"; }; // donkergroen enkel bij hover
 
     map = L.map("map", {
       scrollWheelZoom: false, worldCopyJump: false, zoomSnap: 0.25,
