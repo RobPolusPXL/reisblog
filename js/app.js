@@ -428,7 +428,15 @@
       box.querySelector(".lb-count").textContent = list.length > 1 ? (idx + 1) + " / " + list.length : "";
     }
     function step(d) { if (list.length < 2) return; idx = (idx + d + list.length) % list.length; show(); }
-    function close() { if (!box) return; box.classList.remove("open"); document.body.classList.remove("lb-open"); }
+    function fsEl() { return document.fullscreenElement || document.webkitFullscreenElement; }
+    function close() {
+      if (!box) return;
+      box.classList.remove("open"); document.body.classList.remove("lb-open");
+      if (fsEl()) { try { (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) {} }
+    }
+    function onFs() { if (box && box.classList.contains("open") && !fsEl()) close(); }
+    document.addEventListener("fullscreenchange", onFs);
+    document.addEventListener("webkitfullscreenchange", onFs);
     document.addEventListener("keydown", function (e) {
       if (!box || !box.classList.contains("open")) return;
       if (e.key === "Escape") close(); else if (e.key === "ArrowRight") step(1); else if (e.key === "ArrowLeft") step(-1);
@@ -444,6 +452,8 @@
       show();
       box.classList.add("open");
       document.body.classList.add("lb-open");
+      var rq = box.requestFullscreen || box.webkitRequestFullscreen;
+      if (rq) { try { var r = rq.call(box, { navigationUI: "hide" }); if (r && r.catch) r.catch(function () {}); } catch (e) {} }
     });
   })();
 
