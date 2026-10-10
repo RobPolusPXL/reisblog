@@ -222,8 +222,10 @@
       '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>" +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
+      (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
+      (a.sources && a.sources.length ? '<p class="s-sources">Bronnen: ' + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
       (prev ? '<a class="prev" href="' + cpath(c) + prev.slug + '/"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
       (next ? '<a class="next" href="' + cpath(c) + next.slug + '/"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
