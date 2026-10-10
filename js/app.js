@@ -3,7 +3,7 @@
 
   var countries = window.COUNTRIES;
   var $ = function (id) { return document.getElementById(id); };
-  var map = null;
+  var map = null, geoLayer = null;
 
   var PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
@@ -90,7 +90,7 @@
       minZoom: 2, maxBounds: [[-60, -200], [85, 200]], attributionControl: false
     });
 
-    L.geoJSON(window.WORLD, {
+    geoLayer = L.geoJSON(window.WORLD, {
       style: function (f) {
         var c = byIso[f.id];
         return { color: "#ffffff", weight: 0.8, fillColor: c ? fill(c) : "#e9e1d2", fillOpacity: 1 };
@@ -99,9 +99,9 @@
         var c = byIso[f.id];
         if (!c) return;
         layer.bindTooltip(c.name, { sticky: true });
-        layer.on("click", function () { location.hash = "#/" + c.slug; });
+        layer.on("click", function () { geoLayer.resetStyle(layer); location.hash = "#/" + c.slug; });
         layer.on("mouseover", function () { layer.setStyle({ fillColor: "#0f766e" }); });
-        layer.on("mouseout", function () { layer.setStyle({ fillColor: fill(c) }); });
+        layer.on("mouseout", function () { geoLayer.resetStyle(layer); });
       }
     }).addTo(map);
 
@@ -249,6 +249,7 @@
     }
 
     document.title = "Travel Mustache";
+    if (geoLayer) geoLayer.eachLayer(function (l) { geoLayer.resetStyle(l); }); // blijft anders donker na terugkeren
     if (map) setTimeout(function () { map.invalidateSize(); }, 0);
     if (anchor) setTimeout(function () { $(anchor).scrollIntoView(); }, 30);
     else window.scrollTo(0, 0);
