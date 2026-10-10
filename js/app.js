@@ -403,6 +403,50 @@
 
   window.__routes = function () { return { countries: countries.map(function (c) { return { slug: c.slug, done: !!c.done, acts: places(c).map(function (a) { return a.slug; }) }; }), trips: trips.map(function (t) { return t.slug; }) }; };
 
+  /* ---------- schermvullende foto's ---------- */
+  (function () {
+    var box = null, imgEl = null, list = [], idx = 0, sx = 0, sy = 0;
+    function build() {
+      box = document.createElement("div");
+      box.className = "lightbox";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-modal", "true");
+      box.innerHTML = '<button class="lb-close" aria-label="Sluiten">&times;</button><img alt=""><div class="lb-count"></div>';
+      imgEl = box.querySelector("img");
+      document.body.appendChild(box);
+      box.addEventListener("click", function (e) { if (e.target !== imgEl) close(); });
+      box.addEventListener("touchstart", function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+      box.addEventListener("touchend", function (e) {
+        var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+        else if (dy > 90 && Math.abs(dy) > Math.abs(dx) * 1.5) close();
+      }, { passive: true });
+    }
+    function show() {
+      imgEl.src = list[idx].src;
+      imgEl.alt = list[idx].alt || "";
+      box.querySelector(".lb-count").textContent = list.length > 1 ? (idx + 1) + " / " + list.length : "";
+    }
+    function step(d) { if (list.length < 2) return; idx = (idx + d + list.length) % list.length; show(); }
+    function close() { if (!box) return; box.classList.remove("open"); document.body.classList.remove("lb-open"); }
+    document.addEventListener("keydown", function (e) {
+      if (!box || !box.classList.contains("open")) return;
+      if (e.key === "Escape") close(); else if (e.key === "ArrowRight") step(1); else if (e.key === "ArrowLeft") step(-1);
+    });
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!t || t.tagName !== "IMG" || !t.closest(".photo") || t.closest("a, header, footer, .lightbox")) return;
+      var scope = t.closest(".hike-gal, .d-photos, .s-photos") || t.parentNode;
+      var imgs = Array.prototype.slice.call(scope.querySelectorAll(".photo img"));
+      list = imgs.map(function (i) { return { src: i.currentSrc || i.src, alt: i.alt }; });
+      idx = Math.max(0, imgs.indexOf(t));
+      if (!box) build();
+      show();
+      box.classList.add("open");
+      document.body.classList.add("lb-open");
+    });
+  })();
+
   renderHome();
   renderMap();
   window.addEventListener("hashchange", route);
