@@ -142,6 +142,10 @@
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
+  function tripStamp(t) {
+    var m = t.period.match(/([a-z]+) (\d{4})\s*$/i);
+    return '<div class="stamp" aria-hidden="true"><div>Bezocht<b>' + esc(m ? m[1] + " " + m[2] : t.period) + "</b>" + t.nights + " nachten</div></div>";
+  }
   function stampHtml(c) {
     return '<div class="stamp" aria-hidden="true"><div>Bezocht<b>' + esc(c.visited.replace(/^.*?(\d+ [a-z]+ \d{4})$/i, "$1").replace(/^\d+ /, "")) + "</b>" + c.nights + " nachten</div></div>";
   }
@@ -230,7 +234,7 @@
 
   function renderTrip(t) {
     var cs = t.countries.map(countryBySlug).filter(Boolean);
-    var html = '<section class="hero short">' + hero(t.cover.src, t.cover.alt, t.period, t.title, t.tagline) + "</section>" +
+    var html = '<section class="hero short">' + hero(t.cover.src, t.cover.alt, t.period, t.title, t.tagline, tripStamp(t)) + "</section>" +
       '<div class="wrap"><div class="c-body"><div><p class="intro">' + esc(t.intro) + "</p>" +
       (t.route && t.route.length ? '<ol class="route" aria-label="Route">' + t.route.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ol>" : "") +
       '</div><aside class="fact-card"><h2>Onze reis</h2><dl>' +
