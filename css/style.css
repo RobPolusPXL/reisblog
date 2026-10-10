@@ -371,3 +371,13 @@ footer .insta:hover span { text-decoration: underline; }
 .hike-gal .gal-text h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 12px; }
 .hike-gal .gal-text p { margin: 0 0 1.1em; line-height: 1.7; }
 .hike-gal .gal-text p { text-align: justify; hyphens: none; -webkit-hyphens: none; }
+
+/* waarschuwing en kaartframe */
+.warn-box { margin: 28px 0 0; padding: 18px 22px; background: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 12px 12px 0; color: #5c1a14; }
+.warn-box b { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #c0392b; margin-bottom: 4px; }
+.warn-box p { margin: 0; line-height: 1.55; }
+.warn-box p:first-of-type { font-weight: 700; font-size: 18px; }
+.warn-box p + p { margin-top: 6px; }
+.hike-gal .frame-cell { grid-column: span 6; border-radius: 14px; overflow: hidden; background: #f4f1ea; }
+.hike-gal .frame-cell iframe { display: block; width: 100%; height: 640px; border: 0; }
+@media (max-width: 700px) { .hike-gal .frame-cell iframe { height: 520px; } }

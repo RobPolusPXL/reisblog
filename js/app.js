@@ -225,7 +225,8 @@
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>") +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
-      (a.gallery ? gallery(a.gallery, a.stravaEmbed) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
+      (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
+      (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
       (a.sources && a.sources.length ? '<p class="s-sources">Bronnen: ' + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
@@ -239,12 +240,13 @@
 
   /* ---------- reis ---------- */
 
-  function gallery(g, embedHtml) {
+  function gallery(g, embedHtml, frameHtml) {
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
       var cls = (x.span ? " sp" + x.span : "") + (x.tall ? " tall" : "");
       if (x.section) return '<div class="gal-text">' + "<h2>" + esc(x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>";
       if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
+      if (x.frame) return '<figure class="frame-cell sp6">' + (frameHtml || "") + "</figure>";
       if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
       return '<figure class="' + cls.trim() + '">' + photo(x) + "</figure>";
     }).join("") + "</div>";
