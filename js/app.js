@@ -2,11 +2,16 @@
   "use strict";
 
   var countries = window.COUNTRIES;
+  var trips = window.TRIPS || [];
   var $ = function (id) { return document.getElementById(id); };
   var map = null, geoLayer = null;
 
   var PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  function cpath(c) { return "bestemmingen/" + c.slug + "/"; }
+  function tpath(t) { return "reizen/" + t.slug + "/"; }
+  function countryBySlug(slug) { return countries.filter(function (x) { return x.slug === slug; })[0]; }
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -59,19 +64,28 @@
       "Reisblog van Rob en Joke", "Waar we al geweest zijn",
       "Reisinspiratie per land, enkel over plaatsen waar we zelf verbleven en dingen die we zelf deden.");
 
+    $("trips").innerHTML = trips.map(function (t, i) {
+      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + tpath(t) + '">' +
+        photo(t.cover) +
+        '<div><span class="label">' + esc(t.period) + " · " + t.nights + " nachten</span>" +
+        "<h3>" + esc(t.title) + "</h3>" +
+        (t.intro ? "<p>" + esc(excerpt(t.intro, 150)) + "</p>" : "") +
+        '<span class="more">Lees de reis ' + ARROW + "</span></div></a>";
+    }).join("");
+
     var done = countries.filter(function (c) { return c.done; });
     var soon = countries.filter(function (c) { return !c.done; });
     $("grid").innerHTML = done.map(function (c, i) {
-      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + c.slug + '/">' +
+      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + cpath(c) + '">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
-        "<div><span class=\"label\">" + esc(c.name) + " · " + c.nights + " nachten</span>" +
-        "<h3>" + esc(c.tagline || c.name) + "</h3>" +
-        (c.intro ? "<p>" + esc(excerpt(c.intro, 150)) + "</p>" : "") +
+        "<div><span class=\"label\">Bestemming</span>" +
+        "<h3>" + esc(c.name) + "</h3>" +
+        (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") +
         '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
     }).join("");
     $("soon").innerHTML = soon.length
-      ? "<h3>Hier volgen nog meer landen</h3><ul>" + soon.map(function (c) {
-          return '<li><a class="chip" href="' + c.slug + '/">' + esc(c.name) + "</a></li>";
+      ? "<h3>Hier volgen nog meer bestemmingen</h3><ul>" + soon.map(function (c) {
+          return '<li><a class="chip" href="' + cpath(c) + '">' + esc(c.name) + "</a></li>";
         }).join("") + "</ul>"
       : "";
   }
@@ -99,7 +113,7 @@
         var c = byIso[f.id];
         if (!c) return;
         layer.bindTooltip(c.name, { sticky: true });
-        layer.on("click", function () { geoLayer.resetStyle(layer); location.href = c.slug + "/"; });
+        layer.on("click", function () { geoLayer.resetStyle(layer); location.href = cpath(c); });
         layer.on("mouseover", function () { layer.setStyle({ fillColor: "#0f766e" }); });
         layer.on("mouseout", function () { geoLayer.resetStyle(layer); });
       }
@@ -134,7 +148,7 @@
 
   function renderCountry(c) {
     if (!c.done) {
-      $("country").innerHTML = '<div class="wrap"><a class="back" href="./#landen">' + ARROW + " Alle landen</a>" +
+      $("country").innerHTML = '<div class="wrap"><a class="back" href="./#bestemmingen">' + ARROW + " Alle bestemmingen</a>" +
         '<h1 style="font-size:clamp(40px,7vw,88px);margin-top:28px">' + esc(c.name) + "</h1>" +
         '<p class="intro narrow" style="margin-top:24px">Deze pagina volgt binnenkort.</p></div>';
       return;
@@ -142,32 +156,27 @@
 
     var pl = places(c);
     var rest = (c.activities || []).filter(function (a) { return !(a.photos && a.photos.length); });
-    var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, c.visited, c.name, c.tagline, stampHtml(c)) + "</section>" + factsStrip(c) +
+    var html = '<section class="hero short">' + hero(c.cover.src, c.cover.alt, "Bestemming", c.name, c.tagline) + "</section>" + factsStrip(c) +
       '<div class="wrap">' +
       '<div class="c-body"><div><p class="intro">' + esc(c.intro) + "</p>" +
       "</div>" +
-      '<aside class="fact-card"><h2>Onze reis</h2><dl>' +
-      "<div><dt>Periode</dt><dd>" + esc(c.visited) + "</dd></div><div><dt>Nachten</dt><dd>" + c.nights + "</dd></div>" +
-      (c.with ? "<div><dt>Met</dt><dd>" + esc(c.with) + "</dd></div>" : "") + "</dl></aside></div>";
+      (function () {
+        var ts = trips.filter(function (t) { return t.countries.indexOf(c.slug) > -1; });
+        if (!ts.length) return "";
+        return '<aside class="fact-card"><h2>Onze reizen hier</h2><dl>' + ts.map(function (t) {
+          return '<div><dt><a href="' + tpath(t) + '">' + esc(t.period) + '</a></dt><dd>' + t.nights + " nachten</dd></div>";
+        }).join("") + "</dl></aside>";
+      })() + "</div>";
 
     if (pl.length) {
       html += section("Dingen die we deden", '<div class="places">' + pl.map(function (a) {
-        return '<a class="place" href="' + c.slug + "/" + a.slug + '/">' + photo(a.photos[0]) +
+        return '<a class="place" href="' + cpath(c) + a.slug + '/">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
       }).join("") + "</div>" + (rest.length
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
             return '<li><span class="chip' + (a.ok === false ? " concept" : "") + '">' + esc(a.t) + "</span></li>";
           }).join("") + "</ul></div>" : ""),
         "Klik op een plaats voor foto's en uitleg.", "center");
-    }
-
-    if (c.stays && c.stays.length) {
-      html += section("Waar we verbleven", '<div class="stays">' + c.stays.map(function (s) {
-        return '<div class="stay">' + photo(s.photo) +
-          '<div class="where">' + esc(s.place) + " · " + s.nights + " nachten</div>" +
-          "<h3>" + esc(s.name) + "</h3><p>" + esc(s.text) + "</p>" +
-          (s.perNight ? '<p class="pernight"><b>' + esc(s.perNight) + "</b> per nacht, voor ons tweeën</p>" : "") + "</div>";
-      }).join("") + "</div>");
     }
 
     if (c.getThere && c.getThere.length) {
@@ -179,23 +188,12 @@
                 (r.seasonal ? " · seizoensgebonden" : "") + (r.ours ? " · zo vlogen wij" : "") + "</span></li>";
             }).join("") + "</ul>" : "") +
             (g.note ? "<p>" + esc(g.note) + "</p>" : "") + "</div>";
-        }).join("") + "</div>" +
-        (c.transport && c.transport.length ? '<h3 class="subh">Zo deden wij het</h3><ul class="list">' + c.transport.map(item).join("") + "</ul>" : ""),
+        }).join("") + "</div>",
         "Rechtstreekse vluchten, stand oktober 2026.");
-    } else if (c.transport && c.transport.length) html += section("Er geraken", '<ul class="list">' + c.transport.map(item).join("") + "</ul>");
+    }
     if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
       return '<div class="fact' + (f.ok === false ? " concept" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
-
-    if (c.costPerDay && c.costPerDay.length) {
-      html += section("Wat het ons kostte",
-        '<div class="cost-panel"><div class="perday">' + c.costPerDay.map(function (k) {
-          return "<div><b>" + esc(k.amount) + "</b><span>" + esc(k.label) + "<small>" + esc(k.sub) + "</small></span></div>";
-        }).join("") + "</div>" +
-        (c.costNote ? '<p class="verdict">' + esc(c.costNote) +
-          (c.costSource ? ' <a href="' + esc(c.costSource.url) + '" rel="noopener">' + esc(c.costSource.t) + "</a>" : "") + "</p>" : "") + "</div>",
-        "Per dag, voor ons tweeën.");
-    }
 
     if (c.gallery && c.gallery.length) {
       html += section("Meer foto's", '<div class="gallery">' + c.gallery.map(figure).join("") + "</div>");
@@ -210,16 +208,88 @@
     var i = pl.indexOf(a);
     var prev = pl[i - 1], next = pl[i + 1];
     var n = a.photos.length;
-    var html = '<div class="wrap"><div class="crumbs"><a href="./#landen">Landen</a> › <a href="' + c.slug + '/">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>" +
+    var html = '<div class="wrap"><div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>" +
       '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>" +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>" +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
-      (prev ? '<a class="prev" href="' + c.slug + "/" + prev.slug + '/"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
-      (next ? '<a class="next" href="' + c.slug + "/" + next.slug + '/"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
-      '</div><a class="back" href="' + c.slug + '/">' + ARROW + " Terug naar " + esc(c.name) + "</a></div></div>";
+      (prev ? '<a class="prev" href="' + cpath(c) + prev.slug + '/"><small>Vorige</small><b>' + esc(prev.t) + "</b></a>" : "") +
+      (next ? '<a class="next" href="' + cpath(c) + next.slug + '/"><small>Volgende</small><b>' + esc(next.t) + "</b></a>" : "") +
+      '</div><a class="back" href="' + cpath(c) + '">' + ARROW + " Terug naar " + esc(c.name) + "</a></div></div>";
     $("country").innerHTML = html;
+  }
+
+
+  /* ---------- reis ---------- */
+
+  function dayPhotos(ph) {
+    if (!ph || !ph.length) return "";
+    return '<div class="d-photos n' + Math.min(ph.length, 5) + '">' + ph.map(figure).join("") + "</div>";
+  }
+
+  function renderTrip(t) {
+    var cs = t.countries.map(countryBySlug).filter(Boolean);
+    var html = '<section class="hero short">' + hero(t.cover.src, t.cover.alt, t.period, t.title, t.tagline) + "</section>" +
+      '<div class="wrap"><div class="c-body"><div><p class="intro">' + esc(t.intro) + "</p>" +
+      (t.route && t.route.length ? '<ol class="route" aria-label="Route">' + t.route.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ol>" : "") +
+      '</div><aside class="fact-card"><h2>Onze reis</h2><dl>' +
+      "<div><dt>Periode</dt><dd>" + esc(t.period) + "</dd></div><div><dt>Nachten</dt><dd>" + t.nights + "</dd></div>" +
+      (t.with ? "<div><dt>Met</dt><dd>" + esc(t.with) + "</dd></div>" : "") +
+      cs.map(function (c) { return '<div><dt>Bestemming</dt><dd><a href="' + cpath(c) + '">' + esc(c.name) + "</a></dd></div>"; }).join("") +
+      "</dl></aside></div>";
+
+    html += section("Dag per dag",
+      '<nav class="day-index" aria-label="Dagen">' + t.days.map(function (d, i) {
+        return '<a href="' + tpath(t) + "#dag-" + (i + 1) + '"><b>' + (i + 1) + "</b><span>" + esc(d.title) + "</span></a>";
+      }).join("") + "</nav>" +
+      '<div class="days">' + t.days.map(function (d, i) {
+        var links = (d.places || []).map(function (slug) {
+          var c = cs[0], a = c && places(c).filter(function (x) { return x.slug === slug; })[0];
+          return a ? '<a class="chip" href="' + cpath(c) + a.slug + '/">' + esc(a.t) + " " + ARROW + "</a>" : "";
+        }).join("");
+        return '<article class="day" id="dag-' + (i + 1) + '"><header><span class="dnum">Dag ' + (i + 1) + "</span>" +
+          '<span class="ddate">' + esc(d.date) + "</span>" +
+          (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
+          "<h3>" + esc(d.title) + "</h3></header>" +
+          '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
+          dayPhotos(d.photos) +
+          (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
+          (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
+      }).join("") + "</div>");
+
+    if (t.stays && t.stays.length) {
+      html += section("Waar we verbleven", '<div class="stays">' + t.stays.map(function (s) {
+        return '<div class="stay">' + photo(s.photo) +
+          '<div class="where">' + esc(s.place) + " · " + s.nights + " nachten</div>" +
+          "<h3>" + esc(s.name) + "</h3><p>" + esc(s.text) + "</p>" +
+          (s.perNight ? '<p class="pernight"><b>' + esc(s.perNight) + "</b> per nacht, voor ons tweeën</p>" : "") + "</div>";
+      }).join("") + "</div>");
+    }
+
+    if (t.transport && t.transport.length) {
+      html += section("Zo deden wij het", '<ul class="list">' + t.transport.map(item).join("") + "</ul>");
+    }
+
+    if (t.costPerDay && t.costPerDay.length) {
+      html += section("Wat het ons kostte",
+        '<div class="cost-panel"><div class="perday">' + t.costPerDay.map(function (k) {
+          return "<div><b>" + esc(k.amount) + "</b><span>" + esc(k.label) + "<small>" + esc(k.sub) + "</small></span></div>";
+        }).join("") + "</div>" +
+        (t.costNote ? '<p class="verdict">' + esc(t.costNote) +
+          (t.costSource ? ' <a href="' + esc(t.costSource.url) + '" rel="noopener">' + esc(t.costSource.t) + "</a>" : "") + "</p>" : "") + "</div>",
+        "Per dag, voor ons tweeën.");
+    }
+
+    html += section("Alles over de bestemming",
+      '<div class="dest-links">' + cs.map(function (c) {
+        return '<a class="card dest" href="' + cpath(c) + '">' + photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
+          '<div><span class="label">Bestemming</span><h3>' + esc(c.name) + "</h3><p>Praktisch, er geraken en de plekken die we bezochten.</p>" +
+          '<span class="more">Bekijk de bestemming ' + ARROW + "</span></div></a>";
+      }).join("") + "</div>");
+
+    html += "</div>";
+    $("trip").innerHTML = html;
   }
 
   /* ---------- router ---------- */
@@ -251,26 +321,41 @@
     // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
     if (/^#\//.test(location.hash)) {
       var h = location.hash.replace(/^#\/?/, "");
-      location.replace(BASE + (h === "kaart" || h === "landen" ? "#" + h : h ? h.replace(/\/?$/, "/") : ""));
+      var target = "";
+      if (h === "kaart") target = "#kaart";
+      else if (h === "landen") target = "#bestemmingen";
+      else if (h) target = "bestemmingen/" + h.replace(/\/?$/, "/");
+      location.replace(BASE + target);
       return;
     }
     var parts = location.pathname.slice(BASE.length).split("/").filter(Boolean);
-    var slug = parts[0];
-    var c = countries.filter(function (x) { return x.slug === slug; })[0];
-    var anchor = !c && /^#(kaart|landen)$/.test(location.hash) ? location.hash.slice(1) : null;
+    var c = parts[0] === "bestemmingen" && parts[1] ? countryBySlug(parts[1]) : null;
+    var t = parts[0] === "reizen" && parts[1] ? trips.filter(function (x) { return x.slug === parts[1]; })[0] : null;
+    var anchor = !c && !t && /^#(reizen|kaart|bestemmingen)$/.test(location.hash) ? location.hash.slice(1) : null;
+    if (!c && location.hash === "#landen") anchor = "bestemmingen";
 
-    $("home").hidden = !!c;
+    $("home").hidden = !!(c || t);
     $("country").hidden = !c;
+    $("trip").hidden = !t;
 
-    document.body.classList.toggle("has-hero", !c || (c.done && !parts[1]));
+    var act = parts[2];
+    document.body.classList.toggle("has-hero", !c || (c.done && !act));
+    if (t) {
+      document.body.classList.add("has-hero");
+      renderTrip(t);
+      setMeta(t.title + " · Travel Mustache", t.tagline || excerpt(t.intro, 155), tpath(t));
+      var m = /^#dag-\d+$/.test(location.hash) && $(location.hash.slice(1));
+      if (m) setTimeout(function () { m.scrollIntoView(); }, 30); else window.scrollTo(0, 0);
+      return;
+    }
     if (c) {
-      var a = parts[1] && places(c).filter(function (x) { return x.slug === parts[1]; })[0];
+      var a = act && places(c).filter(function (x) { return x.slug === act; })[0];
       if (a) {
         renderPlace(c, a);
-        setMeta(a.t + " · " + c.name + " · Travel Mustache", excerpt(a.text || c.tagline || c.intro || "", 155), c.slug + "/" + a.slug + "/");
+        setMeta(a.t + " · " + c.name + " · Travel Mustache", excerpt(a.text || c.tagline || c.intro || "", 155), cpath(c) + a.slug + "/");
       } else {
         renderCountry(c);
-        setMeta(c.name + " · Travel Mustache", c.done ? (c.tagline || excerpt(c.intro || "", 155)) : c.name + ": deze pagina volgt binnenkort.", c.slug + "/", !c.done);
+        setMeta(c.name + " · Travel Mustache", c.done ? (c.tagline || excerpt(c.intro || "", 155)) : c.name + ": deze pagina volgt binnenkort.", cpath(c), !c.done);
       }
       window.scrollTo(0, 0);
       return;
@@ -287,7 +372,7 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  window.__routes = function () { return countries.map(function (c) { return { slug: c.slug, done: !!c.done, acts: places(c).map(function (a) { return a.slug; }) }; }); };
+  window.__routes = function () { return { countries: countries.map(function (c) { return { slug: c.slug, done: !!c.done, acts: places(c).map(function (a) { return a.slug; }) }; }), trips: trips.map(function (t) { return t.slug; }) }; };
 
   renderHome();
   renderMap();

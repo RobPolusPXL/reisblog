@@ -19,29 +19,38 @@
     <div class="wrap">
       <a class="logo" href="./"><img class="lk lk-donker" src="images/logo/logo-horizontaal-donker.webp" alt="Travel Mustache" width="1762" height="155"><img class="lk lk-wit" src="images/logo/logo-horizontaal-wit.webp" alt="" width="1762" height="155"></a>
       <nav aria-label="Hoofdmenu">
+        <a href="./#reizen">Reizen</a>
         <a href="./#kaart">Kaart</a>
-        <a href="./#landen">Landen</a>
+        <a href="./#bestemmingen">Bestemmingen</a>
       </nav>
     </div>
   </header>
 
   <main id="home">
     <section class="hero" id="hero"></section>
+    <section class="wrap" id="reizen">
+      <div class="block-head">
+        <h2>Onze reizen</h2>
+        <p>Het verhaal van elke reis, dag per dag.</p>
+      </div>
+      <div class="grid" id="trips"></div>
+    </section>
     <section class="wrap map-wrap" id="kaart">
       <div class="block-head">
         <h2>Op de kaart</h2>
-        <p>Klik op een land om de reis te lezen. Donker gekleurde landen hebben een pagina, lichte volgen nog.</p>
+        <p>Klik op een land om de bestemming te bekijken.</p>
       </div>
       <div id="map" role="region" aria-label="Wereldkaart met bezochte landen"></div>
     </section>
-    <section class="wrap" id="landen">
-      <div class="block-head"><h2>Alle landen</h2></div>
+    <section class="wrap" id="bestemmingen">
+      <div class="block-head"><h2>Bestemmingen</h2><p>De praktische kant: wanneer gaan, er geraken en wat de moeite waard is.</p></div>
       <div class="grid" id="grid"></div>
       <div class="soon-list" id="soon"></div>
     </section>
   </main>
 
   <article id="country" hidden></article>
+  <article id="trip" hidden></article>
 
   <footer>
     <div class="wrap">
@@ -54,6 +63,7 @@
   <script src="vendor/leaflet/leaflet.js"></script>
   <script src="js/world.js"></script>
   <script src="js/countries.js"></script>
+  <script src="js/trips.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

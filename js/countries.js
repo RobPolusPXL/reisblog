@@ -60,25 +60,6 @@ window.COUNTRIES = [
         ]
       }
     ],
-    transport: [
-      { t: "Huurauto (automaat) via Sunny Cars, opgehaald op de luchthaven van Sarajevo", ok: true }
-    ],
-    stays: [
-      {
-        place: "Mostar",
-        name: "Villa Olea",
-        nights: 3,
-        text: "Onze basis voor de eerste dagen, dicht genoeg bij het centrum om te voet te gaan.",
-        photo: { src: "images/bosnie-en-herzegovina/villa-olea-mostar.webp", alt: "De woonkamer en slaapkamer van Villa Olea in Mostar" }
-      },
-      {
-        place: "Kulen Vakuf",
-        name: "Bungalov Cozy Una",
-        nights: 4,
-        text: "Een bungalow in het rustige Kulen Vakuf, vlak bij het Nationaal Park Una.",
-        photo: { src: "images/bosnie-en-herzegovina/bungalov-cozy-una-kulen-vakuf.webp", alt: "Bungalov Cozy Una in Kulen Vakuf met houten veranda en tuin" }
-      }
-    ],
     activities: [
       {
         t: "Mostar: de oude stad en de Stari Most",
@@ -137,14 +118,6 @@ window.COUNTRIES = [
       { label: "Tanken", t: "Eerst tanken, daarna binnen betalen.", ok: true },
       { label: "Mobiel", t: "Geen EU-roaming. Regel mobiel internet vooraf.", ok: true }
     ],
-    // Bedragen in euro, voor ons tweeën samen. Geen totaalbedrag en geen vervoer: enkel dagprijzen.
-    costPerDay: [
-      { label: "Eten, boodschappen en slapen", amount: "€ 76", sub: "per dag, voor ons tweeën" },
-      { label: "Verblijf", amount: "€ 48", sub: "gemiddeld per nacht, voor ons tweeën" }
-    ],
-    costNote:
-      "Daarmee zitten we iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
-    costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" },
     gallery: []
   },
 

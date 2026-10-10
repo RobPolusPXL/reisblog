@@ -66,16 +66,20 @@ def main():
 
         routes = [""]
         sitemap = [""]
-        for c in info:
-            routes.append(c["slug"] + "/")
-            if c["done"]: sitemap.append(c["slug"] + "/")
+        for c in info["countries"]:
+            base = "bestemmingen/" + c["slug"] + "/"
+            routes.append(base)
+            if c["done"]: sitemap.append(base)
             for a in c["acts"]:
-                routes.append(c["slug"] + "/" + a + "/")
-                if c["done"]: sitemap.append(c["slug"] + "/" + a + "/")
+                routes.append(base + a + "/")
+                if c["done"]: sitemap.append(base + a + "/")
+        for t in info["trips"]:
+            routes.append("reizen/" + t + "/")
+            sitemap.append("reizen/" + t + "/")
 
         # oude gegenereerde mappen opruimen
-        for c in info:
-            shutil.rmtree(os.path.join(ROOT, c["slug"]), ignore_errors=True)
+        for d in ["bestemmingen", "reizen"] + [c["slug"] for c in info["countries"]]:
+            shutil.rmtree(os.path.join(ROOT, d), ignore_errors=True)
 
         for route in routes:
             depth = len([p for p in route.split("/") if p])
