@@ -340,3 +340,8 @@ footer .logo { display: flex; width: fit-content; margin-bottom: 14px; }
   .site-head nav { flex: 0 0 100%; gap: 22px; font-size: 15px; }
 }
 .dbody, .tips { max-width: none; }
+/* reisteksten uitvullen, zonder woorden af te breken (zoals "uitvullen" in Word) */
+.dbody p { text-align: left; hyphens: none; }
+@media (min-width: 701px) {
+  .dbody p, .intro { text-align: justify; hyphens: none; -webkit-hyphens: none; }
+}
