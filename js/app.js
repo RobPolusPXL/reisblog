@@ -341,7 +341,7 @@
     else if (r) r.remove();
   }
 
-  var HOME_DESC = "Travel Mustache: reisinspiratie per land, van plaatsen waar Rob en Joke zelf verbleven.";
+  var HOME_DESC = "Traveling Mustache: reisinspiratie per land, van plaatsen waar Rob en Joke zelf verbleven.";
 
   function route() {
     // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
@@ -370,7 +370,7 @@
     if (t) {
       document.body.classList.add("has-hero");
       renderTrip(t);
-      setMeta(t.title + " · Travel Mustache", t.tagline || excerpt(t.intro, 155), tpath(t));
+      setMeta(t.title + " · Traveling Mustache", t.tagline || excerpt(t.intro, 155), tpath(t));
       var m = /^#dag-\d+$/.test(location.hash) && $(location.hash.slice(1));
       if (m) setTimeout(function () { m.scrollIntoView(); }, 30); else window.scrollTo(0, 0);
       return;
@@ -379,16 +379,16 @@
       var a = act && places(c).filter(function (x) { return x.slug === act; })[0];
       if (a) {
         renderPlace(c, a);
-        setMeta(a.t + " · " + c.name + " · Travel Mustache", excerpt(a.text || c.tagline || c.intro || "", 155), cpath(c) + a.slug + "/");
+        setMeta(a.t + " · " + c.name + " · Traveling Mustache", excerpt(a.text || c.tagline || c.intro || "", 155), cpath(c) + a.slug + "/");
       } else {
         renderCountry(c);
-        setMeta(c.name + " · Travel Mustache", c.done ? (c.tagline || excerpt(c.intro || "", 155)) : c.name + ": deze pagina volgt binnenkort.", cpath(c), !c.done);
+        setMeta(c.name + " · Traveling Mustache", c.done ? (c.tagline || excerpt(c.intro || "", 155)) : c.name + ": deze pagina volgt binnenkort.", cpath(c), !c.done);
       }
       window.scrollTo(0, 0);
       return;
     }
 
-    setMeta("Travel Mustache", HOME_DESC, "");
+    setMeta("Traveling Mustache", HOME_DESC, "");
     if (geoLayer) geoLayer.eachLayer(function (l) { geoLayer.resetStyle(l); });
     if (map) setTimeout(function () { map.invalidateSize(); }, 0);
     if (anchor) setTimeout(function () { $(anchor).scrollIntoView(); }, 30);
