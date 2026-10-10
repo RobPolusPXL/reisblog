@@ -142,20 +142,27 @@
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
-  function hikeHtml(h) {
+  function hikeHtml(h, id) {
     if (!h) return "";
-    var R = h.route, la0 = 1e9, la1 = -1e9, lo0 = 1e9, lo1 = -1e9, k = Math.cos(R[0][0] * Math.PI / 180);
-    R.forEach(function (p) { la0 = Math.min(la0, p[0]); la1 = Math.max(la1, p[0]); lo0 = Math.min(lo0, p[1]); lo1 = Math.max(lo1, p[1]); });
-    var w = (lo1 - lo0) * k, hgt = la1 - la0, sc = 300 / Math.max(w, hgt), pad = 24, W = w * sc + pad * 2, H = hgt * sc + pad * 2;
-    var pt = function (p) { return ((p[1] - lo0) * k * sc + pad).toFixed(1) + "," + ((la1 - p[0]) * sc + pad).toFixed(1); };
-    var line = R.map(pt).join(" "), a = h.alt, mn = Math.min.apply(null, a), mx = Math.max.apply(null, a);
+    var a = h.alt, mn = Math.min.apply(null, a), mx = Math.max.apply(null, a);
     var prof = a.map(function (v, i) { return (i / (a.length - 1) * 300).toFixed(1) + "," + (60 - (v - mn) / (mx - mn) * 56).toFixed(1); }).join(" ");
-    var s = pt(R[0]).split(",");
-    return '<div class="hike"><div class="hike-map"><svg viewBox="0 0 ' + W.toFixed(0) + " " + H.toFixed(0) + '" role="img" aria-label="Route van de wandeling"><polyline points="' + line +
-      '" fill="none" stroke="#0f766e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="' + s[0] + '" cy="' + s[1] + '" r="6" fill="#c2410c" stroke="#fff" stroke-width="2"/></svg></div>' +
+    return '<div class="hike"><div class="hike-map" id="hike-' + id + '" data-hike="' + id + '"></div>' +
       '<div class="hike-info"><h4>' + esc(h.label) + '</h4><dl><div><dt>Afstand</dt><dd>' + String(h.km).replace(".", ",") + ' km</dd></div><div><dt>Tijd</dt><dd>' + esc(h.tijd) +
       '</dd></div><div><dt>Hoogtewinst</dt><dd>' + h.omhoog + ' m</dd></div><div><dt>Hoogste punt</dt><dd>' + h.hoogste + ' m</dd></div></dl>' +
       '<svg class="hike-prof" viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,64 ' + prof + ' 300,64" fill="#bfdad4"/><polyline points="' + prof + '" fill="none" stroke="#0f766e" stroke-width="1.5"/></svg></div></div>';
+  }
+  function initHikes(t) {
+    if (window.__PRERENDER || !window.L) return;
+    t.days.forEach(function (d, i) {
+      var el = d.hike && document.getElementById("hike-" + (i + 1));
+      if (!el || el._leaflet_id) return;
+      var m = L.map(el, { scrollWheelZoom: false });
+      setTimeout(function () { m.invalidateSize(); m.fitBounds(L.polyline(d.hike.route).getBounds(), { padding: [20, 20] }); }, 300);
+      L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: "© OpenStreetMap-bijdragers, © OpenTopoMap (CC-BY-SA)" }).addTo(m);
+      var line = L.polyline(d.hike.route, { color: "#0f766e", weight: 4, opacity: .95 }).addTo(m);
+      L.circleMarker(d.hike.route[0], { radius: 7, color: "#fff", weight: 2, fillColor: "#c2410c", fillOpacity: 1 }).addTo(m).bindTooltip("Start en finish");
+      m.fitBounds(line.getBounds(), { padding: [20, 20] });
+    });
   }
   function tripStamp(t) {
     var m = t.period.match(/([a-z]+) (\d{4})\s*$/i);
@@ -272,7 +279,7 @@
           (d.temp ? '<span class="dtemp">' + d.temp + "°</span>" : "") +
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
-          dayPhotos(d.photos) + hikeHtml(d.hike) +
+          dayPhotos(d.photos) + hikeHtml(d.hike, i + 1) +
           (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
@@ -309,6 +316,7 @@
 
     html += "</div>";
     $("trip").innerHTML = html;
+    setTimeout(function () { initHikes(t); }, 0);
   }
 
   /* ---------- router ---------- */

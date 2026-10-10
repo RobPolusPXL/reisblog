@@ -37,6 +37,7 @@ def main():
         b = pw.chromium.launch()
         ctx = b.new_context(viewport={"width": 1280, "height": 900})
         pg = ctx.new_page()
+        pg.add_init_script('window.__PRERENDER = true')
 
         def render(route, base, template_route=None):
             url = "http://127.0.0.1:%d/%s" % (PORT, route)
