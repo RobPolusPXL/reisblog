@@ -143,9 +143,16 @@
   }
 
   function stravaHtml(d) {
+    if (d.stravaEmbed) return '<div class="strava-wrap">' + d.stravaEmbed + "</div>";
     return d.strava ? '<div class="strava-wrap"><iframe src="https://strava-embeds.com/activity/' + esc(d.strava) + '" title="Strava-activiteit" loading="lazy" frameborder="0" scrolling="no" allowtransparency="true"></iframe></div>' : "";
   }
-  function initStrava() {}
+  function initStrava(t) {
+    if (window.__PRERENDER || document.getElementById("strava-embed-js")) return;
+    if (!t.days.some(function (d) { return d.stravaEmbed; })) return;
+    var sc = document.createElement("script");
+    sc.id = "strava-embed-js"; sc.src = "https://strava-embeds.com/embed.js"; sc.async = true;
+    document.body.appendChild(sc);
+  }
   function tripStamp(t) {
     var m = t.period.match(/([a-z]+) (\d{4})\s*$/i);
     return '<div class="stamp" aria-hidden="true"><div>Bezocht<b>' + esc(m ? m[1] + " " + m[2] : t.period) + "</b>" + t.nights + " nachten</div></div>";
