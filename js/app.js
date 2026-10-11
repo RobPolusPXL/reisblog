@@ -138,21 +138,21 @@
     }).addTo(map);
 
     var parkIcon = L.divIcon({
-      className: "park-pin", iconSize: [30, 30], iconAnchor: [15, 15],
-      html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19c0-9 4-13 6-13s3 5 4 9 2.500 4 4 0 1.500-8 6-8"/><path d="M2 19h20"/></svg>'
+      className: "park-pin", iconSize: [22, 22], iconAnchor: [11, 11],
+      html: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="6.500"/><circle cx="12" cy="10" r="1"/><path d="M12 3.500v13M5.500 10h13M7.400 5.400l9.200 9.200M16.600 5.400l-9.200 9.200"/><path d="M12 10l-4.500 11M12 10l4.500 11M5.500 21.500h13"/></svg>'
     });
     countries.forEach(function (c) {
       places(c).forEach(function (pl) {
         if (!pl.park || !pl.pin) return;
         L.marker(pl.pin, { icon: parkIcon, title: pl.t, riseOnHover: true }).addTo(map)
-          .bindTooltip(pl.t + " (pretpark)", { direction: "top", offset: [0, -12] })
+          .bindTooltip(pl.t + " (pretpark)", { direction: "top", offset: [0, -8] })
           .on("click", function () { location.href = cpath(c) + pl.slug + "/"; });
       });
     });
     var legend = L.control({ position: "bottomleft" });
     legend.onAdd = function () {
       var d = L.DomUtil.create("div", "map-legend");
-      d.innerHTML = '<span class="park-pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19c0-9 4-13 6-13s3 5 4 9 2.500 4 4 0 1.500-8 6-8"/><path d="M2 19h20"/></svg></span> Pretpark';
+      d.innerHTML = '<span class="park-pin"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="6.500"/><circle cx="12" cy="10" r="1"/><path d="M12 3.500v13M5.500 10h13M7.400 5.400l9.200 9.200M16.600 5.400l-9.200 9.200"/><path d="M12 10l-4.500 11M12 10l4.500 11M5.500 21.500h13"/></svg></span> Pretpark';
       return d;
     };
     legend.addTo(map);
