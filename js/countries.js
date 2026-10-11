@@ -179,6 +179,7 @@ window.COUNTRIES = [
   { slug: "montenegro", iso: "499", name: "Montenegro", done: false, pin: [42.7, 19.3] },
   { slug: "verenigde-staten", iso: "840", name: "Verenigde Staten", done: false, pin: [25.76, -80.19] },
   { slug: "bahamas", iso: "044", name: "Bahamas", done: false, pin: [25.03, -77.4] },
+  { slug: "portugal", iso: "620", name: "Portugal", done: false, pin: [38.72, -9.14] },
   { slug: "frankrijk", iso: "250", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
   {
     slug: "polen", iso: "616",
