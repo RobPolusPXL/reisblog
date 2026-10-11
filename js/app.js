@@ -227,6 +227,7 @@
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
+      (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
       (a.sources && a.sources.length ? '<p class="s-sources">' + esc(a.sourcesLabel || "Bronnen") + ": " + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       '<div class="s-more"><h2>Meer in ' + esc(c.name) + '</h2><div class="s-nav">' +
