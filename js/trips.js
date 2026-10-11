@@ -568,11 +568,11 @@ window.TRIPS = [
         },
         {
                 "src": "images/reizen/februari-2026/dag4-achtbaan-boven-het-water.webp",
-                "alt": "Een achtbaantrein boven het water"
+                "alt": "De VelociCoaster boven het water"
         },
         {
                 "src": "images/reizen/februari-2026/dag4-meer-met-achtbaan.webp",
-                "alt": "Het meer met een achtbaan op de achtergrond"
+                "alt": "De VelociCoaster rond het meer"
         },
         {
                 "src": "images/reizen/februari-2026/dag4-avond-waterattractie.webp",
