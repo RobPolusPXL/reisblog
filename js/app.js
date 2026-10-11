@@ -180,7 +180,8 @@
   function tzText(tz) {
     try {
       var now = new Date(), year = now.getFullYear();
-      var off = offsetHours(tz, now), be = offsetHours("Europe/Brussels", now);
+      var here = "Europe/Brussels"; try { here = Intl.DateTimeFormat().resolvedOptions().timeZone || here; } catch (e) {}
+      var off = offsetHours(tz, now), be = offsetHours(here, now);
       var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
       var diff = off - be;
       if (diff !== 0) s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
