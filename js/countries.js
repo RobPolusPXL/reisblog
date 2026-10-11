@@ -180,7 +180,35 @@ window.COUNTRIES = [
   { slug: "verenigde-staten", iso: "840", name: "Verenigde Staten", done: false, pin: [25.76, -80.19] },
   { slug: "bahamas", iso: "044", name: "Bahamas", done: false, pin: [25.03, -77.4] },
   { slug: "frankrijk", iso: "250", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
-  { slug: "polen", iso: "616", name: "Polen", done: false, pin: [50.3, 19.0], visited: "september 2026" },
+  {
+    slug: "polen", iso: "616",
+    name: "Polen",
+    done: true,
+    pin: [50.0, 19.4],
+    visited: "september 2026",
+    facts: [
+      { icon: "pin", label: "Hoofdstad", v: "Warschau" },
+      { icon: "talk", label: "Taal", v: "Pools" },
+      { icon: "coin", label: "Munt", v: "Zloty" },
+      { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }
+    ],
+    tagline: "Achtbanen, themagebieden en herfstdecor in Energylandia.",
+    intro:
+      "Polen ligt in het hart van Europa. Wij reisden in september 2026 naar het zuiden, naar Zator bij Kraków, voor Energylandia, het grootste pretpark van het land.",
+    cover: {"src": "images/polen/energylandia-hoofdingang.webp", "alt": "De hoofdingang van Energylandia"},
+    activities: [
+      {
+        t: "Energylandia",
+        text: "Het grootste pretpark van Polen, met achtbanen, themagebieden en herfstdecor.",
+        ok: true,
+        photos: [{"src": "images/polen/energylandia-letters-en-achtbaan.webp", "alt": "De Energylandia-letters met een achtbaan"}, {"src": "images/polen/energylandia-houten-achtbaan.webp", "alt": "Een houten achtbaan"}],
+        hero: {"src": "images/polen/energylandia-hoofdingang.webp", "alt": "De hoofdingang van Energylandia met de klokkentoren"},
+        body: [{"h": "Het grootste pretpark van Polen", "p": ["Energylandia ligt in Zator, in het zuiden van Polen, ongeveer 50 kilometer van Kraków. Het pretpark opende op 14 juli 2014, beslaat zo'n 90 hectare en heeft 133 attracties. Daarmee is het het grootste pretpark van het land.", "Vooral de achtbanen trekken veel bezoekers. Hyperion, een Intamin-hypercoaster van 77 meter hoog, haalt 142 km/u. Zadra is een RMC-hybridecoaster van 62,8 meter en Abyssus een Vekoma-coaster van 38,5 meter hoog. Alle drie staan ze op het wachttijdenbord in het park.", "Wij kwamen twee dagen: op 10 en 11 september 2026."]}],
+        gallery: [{"section": {"h": "Aankomst in Zator", "p": ["We waren er op de eerste dag al om half tien. Bij de ingang staat een groot Energylandia-logo met een achtbaan erachter, en de poort met klokkentoren is de eerste blik op het park. Op het wachttijdenbord in het park zie je per attractie of ze open is en hoe lang je ongeveer moet wachten."]}}, {"src": "images/polen/energylandia-hoofdingang.webp", "alt": "De hoofdingang met klokkentoren en wachtende bezoekers", "span": 6}, {"src": "images/polen/energylandia-achtbaan-bij-de-ingang.webp", "alt": "Een achtbaan boven de parkeerplaats bij de ingang"}, {"src": "images/polen/energylandia-reuzenrad-en-achtbaan.webp", "alt": "Het reuzenrad en een achtbaan in het park"}, {"src": "images/polen/energylandia-letters-en-achtbaan.webp", "alt": "De Energylandia-letters met een achtbaan erachter", "span": 2, "tall": true}, {"src": "images/polen/energylandia-toren-in-de-zon.webp", "alt": "Een toren tegen de zon", "span": 2, "tall": true}, {"src": "images/polen/energylandia-wachttijdenbord.webp", "alt": "Het wachttijdenbord met alle attracties en hun status", "span": 2, "tall": true}, {"section": {"h": "Achtbanen en uitzicht", "p": ["Het park is een lappendeken van achtbanen. Sommige zijn van staal, andere van hout of een mix daarvan, en je ziet ze vanaf bijna elke plek. Vanuit de hoogte kijk je neer op een achtbaan tussen de themagebieden."]}}, {"src": "images/polen/energylandia-houten-achtbaan.webp", "alt": "Een houten achtbaan met een rode baan", "span": 6}, {"src": "images/polen/energylandia-achtbaan-vanuit-de-hoogte.webp", "alt": "Een achtbaan van boven gezien", "span": 3, "tall": true}, {"src": "images/polen/energylandia-achtbaan-vanuit-de-hoogte-2.webp", "alt": "Dezelfde achtbaan vanuit een andere hoek", "span": 3, "tall": true}, {"section": {"h": "Pauze met ijs, friet en pizza", "p": ["Tussen de attracties door is er genoeg te eten. Wij namen ijs uit de vitrines van het park, een burger met friet en op de tweede dag pizza."]}}, {"src": "images/polen/energylandia-ijsvitrine.webp", "alt": "Een vitrine vol ijs"}, {"src": "images/polen/energylandia-ijsvitrine-2.webp", "alt": "Nog een vitrine met ijssmaken"}, {"src": "images/polen/energylandia-burger-en-friet.webp", "alt": "Een burger met friet", "span": 3, "tall": true}, {"src": "images/polen/energylandia-pizza.webp", "alt": "Twee pizza's op een dienblad", "span": 3, "tall": true}, {"section": {"h": "Themagebieden", "p": ["Energylandia is opgebouwd uit themagebieden. Op de eerste dag liepen we langs een roze molen en een dorpsplein met pastelkleurige huizen. Op de tweede dag was het park versierd voor de herfst, met pompoenen en spookfiguren."]}}, {"src": "images/polen/energylandia-roze-molen.webp", "alt": "Een roze molen tussen de huisjes", "span": 2, "tall": true}, {"src": "images/polen/energylandia-dorpsplein.webp", "alt": "Een dorpsplein met kleurrijke huizen", "span": 2, "tall": true}, {"src": "images/polen/energylandia-pompoenspook.webp", "alt": "Een spookfiguur met pompoenen", "span": 2, "tall": true}, {"src": "images/polen/energylandia-stenen-steegje.webp", "alt": "Een steegje met stenen gebouwen", "span": 6}, {"section": {"h": "De tweede dag", "p": ["Op 11 september was het bewolkt en het park was versierd met herfstdecoraties. We liepen langs een blauwe achtbaan en een waterbaan die in het water weerspiegelt, en bleven tot het einde van de middag."]}}, {"src": "images/polen/energylandia-blauwe-achtbaan-en-pompoenen.webp", "alt": "Een blauwe achtbaan achter een popcornkraam en pompoenen"}, {"src": "images/polen/energylandia-waterbaan-met-weerspiegeling.webp", "alt": "Een waterbaan met weerspiegeling in het meer"}, {"src": "images/polen/energylandia-schuilhokje-met-figuren.webp", "alt": "Een schuilhokje met figuren in het park", "span": 6}],
+        tips: ["Plan twee dagen als je alles wilt zien: het park is 90 hectare groot en heeft 133 attracties.", "Kijk op de wachttijdenborden in het park. Daar staat per attractie of ze open is en wat de geschatte wachttijd is.", "Kraków ligt op ongeveer 50 kilometer. Dat maakt het een goede uitvalsbasis.", "Eten en drinken vind je overal in het park: ijs, burgers en pizza."]
+      }
+    ]
+  },
   {
     slug: "slowakije", iso: "703",
     name: "Slowakije",
