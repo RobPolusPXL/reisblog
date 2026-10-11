@@ -403,3 +403,4 @@ footer .insta:hover span { text-decoration: underline; }
 body.lb-open { overflow: hidden; }
 .s-practical { margin: 44px 0 8px; }
 .s-practical h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 16px; }
+.hike-gal figure.fill .photo { height: 100%; aspect-ratio: auto; }
