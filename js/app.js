@@ -183,14 +183,14 @@
       var off = offsetHours(tz, now), be = offsetHours("Europe/Brussels", now);
       var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
       var diff = off - be;
-      if (diff !== 0) s += ", " + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
+      if (diff !== 0) s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
       return s;
     } catch (e) { return "GMT"; }
   }
   function factsStrip(c) {
     if (!c.facts || !c.facts.length) return "";
     return '<div class="wrap"><div class="facts-strip">' + c.facts.map(function (f) {
-      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + esc(f.tz ? tzText(f.tz) : f.v) + "</span></div>";
+      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + (f.tz ? esc(tzText(f.tz)).replace("\n", "<br>") : esc(f.v)) + "</span></div>";
     }).join("") + "</div></div>";
   }
 
