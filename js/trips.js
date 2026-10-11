@@ -473,7 +473,9 @@ window.TRIPS = [
         "title": "Busch Gardens",
         "date": "3 februari",
         "temp": 17,
-        "places": [],
+        "places": [
+        "busch-gardens-tampa-bay"
+      ],
         "text": [
           "Een dagje pretpark én beter weer. Het hotel serveerde ontbijt met toast, scrambled eggs, sausage, cereal en wafelbeslag uit een machine, waarna je zelf je wafels bakt in een wafelijzer. Niks speciaals, maar een ok ontbijt.",
           "Daarna reden we anderhalf uur naar Tampa. We waren een halfuur voor opening ter plaatse, de tiende auto op de parking. Het park was superrustig: heel de dag schoven we eigenlijk nergens aan. Het langste dat we wachtten was een kwartiertje omdat we graag op de eerste rij wilden zitten. Eén keer konden we gewoon blijven zitten voor een tweede ronde.",
@@ -499,7 +501,7 @@ window.TRIPS = [
           },
           {
             "src": "images/reizen/februari-2026/dag3-sheikra.webp",
-            "alt": "De rode achtbaan SheiKra tussen de bomen"
+            "alt": "Een rode achtbaan tussen de bomen"
           },
           {
             "src": "images/reizen/februari-2026/dag3-tijger.webp",

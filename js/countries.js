@@ -177,7 +177,27 @@ window.COUNTRIES = [
   { slug: "slovenie", iso: "705", name: "Slovenië", done: false, pin: [46.1, 14.8] },
   { slug: "kroatie", iso: "191", name: "Kroatië", done: false, pin: [45.1, 15.2] },
   { slug: "montenegro", iso: "499", name: "Montenegro", done: false, pin: [42.7, 19.3] },
-  { slug: "verenigde-staten", iso: "840", name: "Verenigde Staten", done: false, pin: [25.76, -80.19] },
+  {
+    slug: "verenigde-staten", iso: "840",
+    name: "Verenigde Staten",
+    done: true,
+    pin: [25.76, -80.19],
+    visited: "februari 2026",
+    facts: [
+      { icon: "pin", label: "Hoofdstad", v: "Washington D.C." },
+      { icon: "talk", label: "Taal", v: "Engels" },
+      { icon: "coin", label: "Munt", v: "Amerikaanse dollar" },
+      { icon: "clock", label: "Tijdzone", v: "In Florida 6 uur vroeger dan in België" }
+    ],
+    tagline: "Achtbanen en dieren in Busch Gardens, op een dag in Florida.",
+    intro:
+      "Wij reisden in februari 2026 naar Florida: via Miami en Orlando naar de pretparken en later terug naar Miami. " +
+      "In Tampa bezochten we Busch Gardens, een pretpark en dierentuin in één.",
+    cover: {"src": "images/verenigde-staten/busch-gardens-iron-gwazi.webp", "alt": "De ingang van de achtbaan Iron Gwazi in Busch Gardens"},
+    activities: [
+      {"t": "Busch Gardens Tampa Bay", "text": "Een pretpark en dierentuin in één, met achtbanen, giraffen en flamingo's.", "ok": true, "photos": [{"src": "images/verenigde-staten/busch-gardens-iron-gwazi.webp", "alt": "De ingang van de achtbaan Iron Gwazi"}, {"src": "images/verenigde-staten/busch-gardens-tijger.webp", "alt": "Een tijger in zijn verblijf"}], "hero": {"src": "images/verenigde-staten/busch-gardens-iron-gwazi.webp", "alt": "De ingang van de achtbaan Iron Gwazi in Busch Gardens"}, "body": [{"h": "Achtbanen en dieren op één dag", "p": ["Busch Gardens Tampa Bay ligt in Tampa, aan de westkust van Florida. Het park opende in 1959 en beslaat zo'n 136 hectare. Het combineert achtbanen met een dierentuin, en wordt uitgebaat door United Parks & Resorts.", "Wij kwamen op 3 februari 2026, tijdens het laagseizoen. Dan is het rustig, maar kunnen sommige attracties gesloten zijn voor onderhoud."]}], "gallery": [{"section": {"h": "Aankomst in Tampa", "p": ["Wij waren een halfuur voor opening ter plaatse en de tiende auto op de parking. Het park was superrustig: heel de dag schoven we nergens meer dan een kwartiertje aan, en dat nog omdat we graag op de eerste rij zaten. Eén keer konden we gewoon blijven zitten voor een tweede ronde."]}}, {"src": "images/verenigde-staten/busch-gardens-mardi-gras-poort.webp", "alt": "De poort van een themazone met Mardi Gras-versiering", "span": 6}, {"section": {"h": "Achtbanen", "p": ["De bekendste achtbaan van het park is Iron Gwazi, een hybride coaster van Rocky Mountain Construction. Hij opende op 11 maart 2022, is 63 meter hoog, heeft een val van 91 graden en haalt 122 km/u. Op een baan van 1.242 meter is het de hoogste hybridecoaster van Noord-Amerika, samen met Zadra in het Poolse Energylandia de hoogste ter wereld.", "Verder staan er onder meer SheiKra, Cheetah Hunt, Tigris, Montu en Phoenix Rising, en een valtoren: Falcon's Fury, 102 meter hoog."]}}, {"src": "images/verenigde-staten/busch-gardens-iron-gwazi.webp", "alt": "De ingang van de achtbaan Iron Gwazi met de lift op de achtergrond", "span": 6}, {"src": "images/verenigde-staten/busch-gardens-oranje-achtbaan.webp", "alt": "Een oranje-zwarte achtbaan boven de bomen"}, {"src": "images/verenigde-staten/busch-gardens-rode-achtbaan.webp", "alt": "Een rode achtbaan tussen de bomen"}, {"section": {"h": "Pretpark en dierentuin", "p": ["Busch Gardens is ook een dierentuin. Je ziet er tijgers, giraffen, flamingo's, olifanten en gorilla's, en in de vogelkooi vliegen lorikeets rond. Wie van achtbanen én dieren houdt, combineert ze hier op één dag. In de vogelkooi vloog er bij ons zelfs een vogel op een schouder, waar hij heel lang bleef zitten."]}}, {"src": "images/verenigde-staten/busch-gardens-tijger.webp", "alt": "Een tijger in zijn verblijf"}, {"src": "images/verenigde-staten/busch-gardens-giraf.webp", "alt": "Een giraf in de savanne"}, {"src": "images/verenigde-staten/busch-gardens-flamingos.webp", "alt": "Flamingo's in het gras"}, {"src": "images/verenigde-staten/busch-gardens-lorikeets.webp", "alt": "Twee lorikeets op een touw"}, {"src": "images/verenigde-staten/busch-gardens-pinguin.webp", "alt": "Een pinguïn onder water", "span": 6}], "practical": [{"label": "Ligging", "t": "Tampa ligt op ongeveer anderhalf uur rijden van Orlando. Wij reden er met de huurauto naartoe."}, {"label": "Aankomst", "t": "Wij waren een halfuur voor opening aanwezig en waren de tiende auto op de parking."}, {"label": "Wachtrijen", "t": "In februari schoven we nergens langer dan een kwartier aan."}, {"label": "Laagseizoen", "t": "In het laagseizoen zijn er vaak attracties gesloten voor onderhoud. Kijk vooraf op de website van het park."}], "tips": ["Wees een halfuur voor opening aanwezig: dan ben je een van de eersten op de parking.", "Wil je op de eerste rij zitten? Reken dan op ongeveer een kwartier extra wachten.", "In het laagseizoen zijn sommige attracties gesloten voor onderhoud.", "Neem lippenbalsem mee: ook in februari kan je verbranden."]}
+    ]
+  },
   { slug: "bahamas", iso: "044", name: "Bahamas", done: false, pin: [25.03, -77.4] },
   { slug: "portugal", iso: "620", name: "Portugal", done: false, pin: [38.72, -9.14] },
   { slug: "frankrijk", iso: "250", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
