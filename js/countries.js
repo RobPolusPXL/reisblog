@@ -181,5 +181,35 @@ window.COUNTRIES = [
   { slug: "bahamas", iso: "044", name: "Bahamas", done: false, pin: [25.03, -77.4] },
   { slug: "frankrijk", iso: "250", name: "Frankrijk", done: false, pin: [46.6, 2.5] },
   { slug: "polen", iso: "616", name: "Polen", done: false, pin: [50.3, 19.0], visited: "september 2026" },
-  { slug: "slowakije", iso: "703", name: "Slowakije", done: false, pin: [49.0, 20.0], visited: "september 2026" }
+  {
+    slug: "slowakije", iso: "703",
+    name: "Slowakije",
+    done: true,
+    pin: [49.0, 20.0],
+    visited: "september 2026",
+    facts: [
+      { icon: "pin", label: "Hoofdstad", v: "Bratislava" },
+      { icon: "talk", label: "Taal", v: "Slowaaks" },
+      { icon: "coin", label: "Munt", v: "Euro" },
+      { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }
+    ],
+    tagline: "Over de boomtoppen van Bachledova dolina, met de Tatra aan de horizon.",
+    intro:
+      "Slowakije ligt aan de voet van de Tatra, de hoogste bergketen van de Karpaten. " +
+      "Wij zochten in september 2026 een plek op die je niet zomaar vindt: het Boomkruinenpad in Bachledova dolina, bij Ždiar. " +
+      "Een gondel brengt je naar boven, waarna je op een houten looppad boven de bomen wandelt en via een toren van 32 meter hoog uitkomt op een net boven het bos, met de bergen aan de horizon.",
+    cover: {"src": "images/slowakije/bachledova-dolina-looppad-en-tatra.webp", "alt": "Het houten looppad kronkelt door het bos, met de Belianske Tatry erachter"},
+    activities: [
+      {
+        t: "Boomkruinenpad Bachledova dolina",
+        text: "Een houten looppad boven de boomtoppen en een toren van 32 meter, met uitzicht op de Belianske Tatry.",
+        ok: true,
+        photos: [{"src": "images/slowakije/bachledova-dolina-uitzicht-tatra.webp", "alt": "Uitzicht over de bossen naar de Tatra"}, {"src": "images/slowakije/bachledova-dolina-toren-staand.webp", "alt": "De houten toren van 32 meter"}],
+        hero: {"src": "images/slowakije/bachledova-dolina-looppad-en-tatra.webp", "alt": "Het houten looppad kronkelt door het bos, met de Belianske Tatry erachter"},
+        body: [{"h": "Wandelen boven de bomen", "p": ["Het Boomkruinenpad (Chodník korunami stromov) ligt in Bachledova dolina bij Ždiar, in het noorden van Slowakije, aan de voet van de Belianske Tatry. Het pad is in totaal ongeveer 1,2 kilometer lang: een houten looppad van zo'n 600 meter dat tot 24 meter boven de grond stijgt, en daarna een lus rond een uitkijktoren van 32 meter hoog.", "Onderweg zijn er drie zones met doorzichtige stukken in de vloer, uitleg over planten en dieren in het bos, en een droge glijbaan van 67 meter rond de toren. Bovenaan ligt een net waar je over de boomtoppen kan lopen en een telescoop die de bergtoppen en hun hoogte aanwijst. Het pad is toegankelijk voor rolstoelen en kinderwagens."]}],
+        gallery: [{"section": {"h": "Met de gondel naar boven", "p": ["Een gondel brengt je vanuit het dal naar boven, naar het begin van het looppad. Al meteen zie je de bergketen aan de overkant."]}}, {"src": "images/slowakije/bachledova-dolina-gondel-en-bergen.webp", "alt": "De gondel boven de bergweide, met de bergen op de achtergrond", "span": 6}, {"section": {"h": "Over de boomtoppen", "p": ["Het houten looppad kronkelt tussen de sparren en stijgt langzaam, tot je boven de toppen van de bomen loopt. Op de planken is aangegeven hoe hoog je boven de grond zit. De toren komt al snel in zicht."]}}, {"src": "images/slowakije/bachledova-dolina-looppad-en-toren.webp", "alt": "Het looppad tussen de sparren, met de toren in de verte"}, {"src": "images/slowakije/bachledova-dolina-uitzicht-tatra.webp", "alt": "Uitzicht over de bossen naar de Tatra"}, {"src": "images/slowakije/bachledova-dolina-looppad-staand.webp", "alt": "Het looppad boven de toppen van de sparren", "span": 2, "tall": true}, {"src": "images/slowakije/bachledova-dolina-houten-bomen.webp", "alt": "Houten bomen als decor op het looppad", "span": 2, "tall": true}, {"src": "images/slowakije/bachledova-dolina-toren-staand.webp", "alt": "De houten toren van 32 meter", "span": 2, "tall": true}, {"section": {"h": "De toren van 32 meter", "p": ["Het deel op de toren is meer dan 600 meter lang, want je loopt omhoog langs de toren zelf. Op de planken staat \"32 m nad zemou / above the ground\" gegraveerd. Boven heb je zicht op het looppad dat door het bos kronkelt en op de bergen van de Tatra. Op het terras ligt een groot net waar je op kan staan, met het bos een flink stuk lager."]}}, {"src": "images/slowakije/bachledova-dolina-32-meter-boven-de-grond.webp", "alt": "\"32 m nad zemou\": de plank op de toren", "span": 6}, {"src": "images/slowakije/bachledova-dolina-uitzicht-vanaf-de-toren.webp", "alt": "Genieten van het uitzicht vanaf de toren", "span": 6}, {"src": "images/slowakije/bachledova-dolina-looppad-door-het-bos.webp", "alt": "Het looppad kronkelt tussen de bomen, de Tatra op de achtergrond", "span": 6}, {"src": "images/slowakije/bachledova-dolina-bergen-staand.webp", "alt": "De bergen vanaf de toren", "span": 2, "tall": true}, {"src": "images/slowakije/bachledova-dolina-net-op-de-toren.webp", "alt": "Op het net op de toren", "span": 2, "tall": true}, {"src": "images/slowakije/bachledova-dolina-wandelpad-bord.webp", "alt": "Een bord voor het wandelpad (Turistický chodník) bij het begin", "span": 2, "tall": true}],
+        tips: ["Tickets koop je online in de e-shop van Bachledka. Een prijslijst staat op hun website.", "Controleer de openingsuren voor je vertrekt. Volgens de website is het pad in september van 9 tot 17 uur open, maar de uren verschillen per seizoen en er is onderhoud in het voorjaar en in de herfst.", "Het pad is rolstoelvriendelijk en kinderwagens mogen mee. Rolstoelen en kinderwagens kan je gratis lenen aan de ticketkantoren.", "Kies een dag met helder weer: het uitzicht op de Belianske Tatry is het hoogtepunt."]
+      }
+    ]
+  }
 ];
