@@ -167,6 +167,7 @@
     talk: '<path d="M4 5h16v10H10l-4 4v-4H4z"/><path d="M8 9h8M8 12h5"/>',
     coin: '<circle cx="12" cy="12" r="8"/><path d="M15 9.2a3.4 3.4 0 0 0-3-1.2c-1.7 0-3 1.1-3 2.4 0 3.2 6.2 1.6 6.2 4.6 0 1.3-1.4 2.2-3.2 2.2a3.8 3.8 0 0 1-3.2-1.4M12 6v2m0 8v2"/>',
     plane: '<path d="M3 14l18-9-4 15-5-5-3 3-1-5-5-1z"/><path d="M11 13l10-8"/>',
+    ship: '<path d="M3 15h18l-2.500 4.500h-13z"/><path d="M6.500 15V9.500h11V15M9.500 9.500V6h5v3.500"/>',
     clock: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/>'
   };
   function factsStrip(c) {

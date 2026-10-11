@@ -239,6 +239,7 @@ window.COUNTRIES = [
     visited: "februari 2026",
     facts: [
       { icon: "pin", label: "Hoofdstad", v: "Nassau" },
+      { icon: "ship", label: "Vaartijd", v: "± 17 u vanuit Cape Canaveral" },
       { icon: "talk", label: "Taal", v: "Engels" },
       { icon: "coin", label: "Munt", v: "Bahamaanse dollar" },
       { icon: "clock", label: "Tijdzone", v: "Zelfde als Florida, 6 uur vroeger dan in België" }
