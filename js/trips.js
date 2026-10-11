@@ -586,7 +586,7 @@ window.TRIPS = [
         "title": "Aan boord van de MSC Seashore",
         "date": "5 februari",
         "temp": 15,
-        "places": [],
+        "places": ["cruisen-met-de-msc-seashore"],
         "text": [
           "Een kort reisdagje. We ontbeten, pakten alles in en checkten uit, op weg naar Cape Canaveral om aan boord te gaan van de MSC Seashore. Onderweg stopten we om te tanken en koffiecups te halen bij Walmart, voor Robs compacte koffiemachientje dat mee kan op reis.",
           "In de haven lag het gigantische schip al te wachten. De parking stond al heel vol. Boarden gaat zoals op de luchthaven: paspoortcontrole, bagage door een scanner en wij door een metaaldetector. Daarna moesten onze documenten gecontroleerd worden. Goed dat Rob onze ESTA had afgedrukt.",
@@ -597,33 +597,33 @@ window.TRIPS = [
           "Print je ESTA uit: het wordt gecontroleerd bij het inschepen.",
           "Je kan je etensuur aanpassen aan de balie, maar dan deel je mogelijk een tafel."
         ],
-        "photos": []
+        "photos": [{"src": "images/reizen/februari-2026/dag5-msc-seashore-romp.webp", "alt": "De MSC Seashore aan de kade in Cape Canaveral"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-atrium.webp", "alt": "De inkomhal van drie verdiepingen"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-casino.webp", "alt": "Het casino aan boord"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-dek-zwembad.webp", "alt": "Het zwembaddek van de MSC Seashore"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-kajuit-bed.webp", "alt": "Onze kajuit"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-octopus-glijbaan.webp", "alt": "De glijbanen op het bovendek"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-sail-away-party.webp", "alt": "De sail-away party op het dek"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-diner-hoofdgerecht.webp", "alt": "Het avondeten aan boord"}, {"src": "images/reizen/februari-2026/dag5-msc-seashore-zonsondergang-op-zee.webp", "alt": "Zonsondergang op zee"}]
       },
       {
         "title": "Nassau",
         "date": "6 februari",
         "temp": 20,
-        "places": [],
+        "places": ["nassau"],
         "text": [
           "We begonnen de dag met heerlijke Eggs Benedict in het restaurant, inbegrepen in de prijs. Daarna gingen we van boord in Nassau, de hoofdstad van de Bahama's. In de zon was het aangenaam warm, maar met wolken en wind was het toch fris, te koud om te zwemmen of snorkelen.",
           "Dan maar Nassau bezoeken. We gingen naar de Queen's Staircase: mooie trappen, maar niet indrukwekkend, een beetje zoals de rest van Nassau. Daarna liepen we naar het strand en lagen we een tijdje aan het water. Rond 14 uur kregen we honger en gingen we terug aan boord om te lunchen.",
           "Na het eten probeerden we de glijbaan aan boord, na het ondertekenen van een document dat de rederij niet aansprakelijk is. We gleden samen in een dubbele zwemband. Het water was zeer koud, de jacuzzi daarna gelukkig iets warmer. 's Avonds aten we weer met onze Amerikaanse dinnerbuddy's, nog steeds lekker."
         ],
         "tips": [],
-        "photos": []
+        "photos": [{"src": "images/reizen/februari-2026/dag6-msc-seashore-eggs-benedict.webp", "alt": "Eggs Benedict als ontbijt"}, {"src": "images/reizen/februari-2026/dag6-nassau-bord-in-de-haven.webp", "alt": "Welkomstbord in de haven van Nassau"}, {"src": "images/reizen/februari-2026/dag6-nassau-schip-aan-de-kade.webp", "alt": "De MSC Seashore aan de kade in Nassau"}, {"src": "images/reizen/februari-2026/dag6-nassau-bay-street-hoekhuis.webp", "alt": "Een kleurrijk hoekhuis in het centrum"}, {"src": "images/reizen/februari-2026/dag6-nassau-bay-street-trap.webp", "alt": "Een trap in het centrum van Nassau"}, {"src": "images/reizen/februari-2026/dag6-nassau-bay-street-muurschildering.webp", "alt": "Een muurschildering in Nassau"}, {"src": "images/reizen/februari-2026/dag6-nassau-zonsondergang-bij-vertrek.webp", "alt": "Zonsondergang bij het vertrek uit Nassau"}]
       },
       {
         "title": "Ocean Cay",
         "date": "7 februari",
         "temp": 20,
-        "places": [],
+        "places": ["ocean-cay"],
         "text": [
           "We waren op tijd wakker en klaar om van boord te gaan, toen er werd omgeroepen dat de wind (8 Beaufort, bijna 9) en stroming het aanmeren onmogelijk maakten. We ontbeten dan maar op het dek in het zonnetje. Na een tweede poging lukte het de kapitein om aan te meren, en we keken vanop het bovenste dek hoe het immense schip steeds dichter bij de kade kwam.",
           "Ocean Cay is het privé-eiland van de rederij en gaf ons het Bahama's-gevoel: zon, zee, strand en gekleurde huisjes. Zo'n blauwe zee hadden we nog nooit gezien. We verkenden het eiland eerst te voet, namen dan een plekje met ligbedden op het strand en dook af en toe het water in. We konden zelfs snorkelen. Mooi, maar na Costa Rica niet te vergelijken met het koraal en de vissen daar.",
           "Tussen de middag genoten we van het buffet op het eiland. Tegen 16 uur stopten we nog bij de vuurtoren voor we terug aan boord gingen. Het laatste dinner met onze Amerikaanse tafelgenoten verliep met tips over reizen en cultuurverschillen. Omdat het de laatste avond was, gaven de obers een show: ze dansten de Macarena, liepen in polonaise door de zaal en wij zwaaiden met onze servetten."
         ],
         "tips": [],
-        "photos": []
+        "photos": [{"src": "images/reizen/februari-2026/dag7-ocean-cay-welkomsttoren.webp", "alt": "De welkomsttoren op Ocean Cay"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-roze-huisjes.webp", "alt": "Roze huisjes op het eiland"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-helder-water.webp", "alt": "Helder blauw water"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-strand-met-schip.webp", "alt": "Het strand met de MSC Seashore op de achtergrond"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-vuurtoren.webp", "alt": "De vuurtoren van Ocean Cay"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-lunch-op-het-strand.webp", "alt": "Lunch op het strand"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-ontspannen-op-de-ligbedden.webp", "alt": "Op de ligbedden aan het strand"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-we-love-ocean-cay.webp", "alt": "We love Ocean Cay"}, {"src": "images/reizen/februari-2026/dag7-ocean-cay-zonsondergang.webp", "alt": "Zonsondergang bij Ocean Cay"}]
       },
       {
         "title": "Van boord en naar Miami",
