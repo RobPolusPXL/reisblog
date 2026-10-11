@@ -90,6 +90,17 @@
         (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") +
         '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
     }).join("");
+    var parks = [];
+    countries.forEach(function (c) { places(c).forEach(function (pl) { if (pl.park) parks.push({ c: c, a: pl }); }); });
+    parks.sort(function (x, y) { return x.a.t.localeCompare(y.a.t, "nl"); });
+    $("parks").innerHTML = parks.map(function (x) {
+      return '<a class="card" href="' + cpath(x.c) + x.a.slug + '/">' + photo(x.a.hero ? x.a.hero : x.a.photos[0]) +
+        '<div><span class="label">Pretpark · ' + esc(x.c.name) + "</span>" +
+        "<h3>" + esc(x.a.t) + "</h3>" +
+        (x.a.text ? "<p>" + esc(excerpt(x.a.text, 150)) + "</p>" : "") +
+        '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
+    }).join("");
+    $("pretparken").hidden = !parks.length;
     $("soon").innerHTML = soon.length
       ? "<h3>Hier volgen nog meer bestemmingen</h3><ul>" + soon.map(function (c) {
           return '<li><a class="chip" href="' + cpath(c) + '">' + esc(c.name) + "</a></li>";
@@ -371,7 +382,7 @@
     var parts = location.pathname.slice(BASE.length).split("/").filter(Boolean);
     var c = parts[0] === "bestemmingen" && parts[1] ? countryBySlug(parts[1]) : null;
     var t = parts[0] === "reizen" && parts[1] ? trips.filter(function (x) { return x.slug === parts[1]; })[0] : null;
-    var anchor = !c && !t && /^#(reizen|kaart|bestemmingen)$/.test(location.hash) ? location.hash.slice(1) : null;
+    var anchor = !c && !t && /^#(reizen|kaart|bestemmingen|pretparken)$/.test(location.hash) ? location.hash.slice(1) : null;
     if (!c && location.hash === "#landen") anchor = "bestemmingen";
 
     $("home").hidden = !!(c || t);
