@@ -170,10 +170,29 @@
     ship: '<path d="M3 15h18l-2.500 4.500h-13z"/><path d="M6.500 15V9.500h11V15M9.500 9.500V6h5v3.500"/>',
     clock: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/>'
   };
+  // tijdzone live berekend: zomer- of wintertijd volgt automatisch de datum
+  function offsetHours(tz, date) {
+    var p = new Intl.DateTimeFormat("en-US", { timeZone: tz, timeZoneName: "shortOffset" }).formatToParts(date)
+      .filter(function (x) { return x.type === "timeZoneName"; })[0].value;
+    var m = p.match(/GMT([+-])?(\d+)?(?::(\d+))?/);
+    return m && m[2] ? (m[1] === "-" ? -1 : 1) * (+m[2] + (m[3] ? +m[3] / 60 : 0)) : 0;
+  }
+  function tzText(tz) {
+    try {
+      var now = new Date(), year = now.getFullYear();
+      var off = offsetHours(tz, now), be = offsetHours("Europe/Brussels", now);
+      var winter = Math.min(offsetHours(tz, new Date(year, 0, 1)), offsetHours(tz, new Date(year, 6, 1)));
+      var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
+      var diff = off - be;
+      if (off !== winter) s += " (zomertijd)";
+      if (diff !== 0) s += ", " + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
+      return s;
+    } catch (e) { return "GMT"; }
+  }
   function factsStrip(c) {
     if (!c.facts || !c.facts.length) return "";
     return '<div class="wrap"><div class="facts-strip">' + c.facts.map(function (f) {
-      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + esc(f.v) + "</span></div>";
+      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + esc(f.tz ? tzText(f.tz) : f.v) + "</span></div>";
     }).join("") + "</div></div>";
   }
 

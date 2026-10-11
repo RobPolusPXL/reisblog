@@ -22,7 +22,7 @@ window.COUNTRIES = [
       { icon: "talk", label: "Taal", v: "Bosnisch, Kroatisch, Servisch" },
       { icon: "coin", label: "Munt", v: "Bosnische mark (BAM)" },
       { icon: "plane", label: "Vliegtijd", v: "2 u 5 vanaf Charleroi" },
-      { icon: "clock", label: "Tijdzone", v: "GMT+1 (zomer GMT+2)" }
+      { icon: "clock", label: "Tijdzone", tz: "Europe/Sarajevo" }
     ],
     tagline: "De Stari Most in Mostar, de smaragdgroene Una in Nationaal Park Una.",
     intro:
@@ -187,7 +187,7 @@ window.COUNTRIES = [
       { icon: "plane", label: "Vliegtijd", v: "2 u 30 vanaf Charleroi (naar Podgorica)" },
       { icon: "talk", label: "Taal", v: "Montenegrijns" },
       { icon: "coin", label: "Munt", v: "Euro" },
-      { icon: "clock", label: "Tijdzone", v: "GMT+1 (zomer GMT+2)" }
+      { icon: "clock", label: "Tijdzone", tz: "Europe/Podgorica" }
     ],
     tagline: "Van besneeuwde bergtoppen in Durmitor tot de Baai van Kotor, in één reis.",
     intro:
@@ -218,7 +218,7 @@ window.COUNTRIES = [
       { icon: "pin", label: "Hoofdstad", v: "Washington D.C." },
       { icon: "talk", label: "Taal", v: "Engels" },
       { icon: "coin", label: "Munt", v: "Amerikaanse dollar" },
-      { icon: "clock", label: "Tijdzone", v: "GMT−5 (6 u vroeger dan in België)" }
+      { icon: "clock", label: "Tijdzone", tz: "America/New_York" }
     ],
     tagline: "Achtbanen en dieren in Busch Gardens, op een dag in Florida.",
     intro:
@@ -242,7 +242,7 @@ window.COUNTRIES = [
       { icon: "ship", label: "Vaartijd", v: "± 17 u vanuit Cape Canaveral" },
       { icon: "talk", label: "Taal", v: "Engels" },
       { icon: "coin", label: "Munt", v: "Bahamaanse dollar" },
-      { icon: "clock", label: "Tijdzone", v: "GMT−5 (6 u vroeger dan in België)" }
+      { icon: "clock", label: "Tijdzone", tz: "America/Nassau" }
     ],
     tagline: "Twee dagen cruisen: Nassau en het privé-eiland Ocean Cay.",
     intro:
@@ -268,7 +268,7 @@ window.COUNTRIES = [
       { icon: "plane", label: "Vliegtijd", v: "2 u vanaf Charleroi (naar Kraków)" },
       { icon: "talk", label: "Taal", v: "Pools" },
       { icon: "coin", label: "Munt", v: "Zloty" },
-      { icon: "clock", label: "Tijdzone", v: "GMT+1 (zomer GMT+2)" }
+      { icon: "clock", label: "Tijdzone", tz: "Europe/Warsaw" }
     ],
     tagline: "Achtbanen, themagebieden en herfstdecor in Energylandia.",
     intro:
@@ -322,7 +322,7 @@ window.COUNTRIES = [
       { icon: "plane", label: "Vliegtijd", v: "1 u 50 vanaf Charleroi (naar Bratislava)" },
       { icon: "talk", label: "Taal", v: "Slowaaks" },
       { icon: "coin", label: "Munt", v: "Euro" },
-      { icon: "clock", label: "Tijdzone", v: "GMT+1 (zomer GMT+2)" }
+      { icon: "clock", label: "Tijdzone", tz: "Europe/Bratislava" }
     ],
     tagline: "Over de boomtoppen van Bachledova dolina en met de lift naar de bergmeren van de Hoge Tatra.",
     intro:
