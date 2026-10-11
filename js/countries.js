@@ -262,7 +262,7 @@ window.COUNTRIES = [
     ],
     practical: [
       { label: "Beste reistijd", t: "December tot en met april is droog en aangenaam. Wij waren er in februari: fris, en te koud om te zwemmen. Van juni tot november is het orkaanseizoen, met de grootste kans in augustus en september." },
-      { label: "Inreis", t: "Met een cruise leg je aan zonder iets te regelen. Wie vliegt, heeft als Belg een paspoort nodig dat minstens zes maanden geldig is. Een visum is niet nodig voor een verblijf tot drie maanden. Check de regels vlak voor vertrek.", ok: true },
+      { label: "Inreis", t: "Per vliegtuig of per cruise gelden dezelfde voorwaarden: als Belg heb je een paspoort nodig dat minstens zes maanden geldig is. Een visum is niet nodig voor een verblijf tot drie maanden. Bij een cruise vanuit de VS wordt dit bij het inschepen gecontroleerd, en daar heb je dus al aan voldaan. Check de regels vlak voor vertrek.", ok: true },
       { label: "Munt", t: "De Bahamaanse dollar is 1 op 1 gekoppeld aan de Amerikaanse dollar, en Amerikaanse dollars worden overal aanvaard. Wisselen is dus niet nodig.", ok: true },
       { label: "Prijzen", t: "Duur, want bijna alles wordt ingevoerd. Vooral eten en drinken." },
       { label: "Stekker", t: "Net als in de VS: 120 volt en platte stekkers. Neem een reisstekker mee." },
