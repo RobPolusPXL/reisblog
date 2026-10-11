@@ -310,7 +310,7 @@
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
       var cls = (x.span ? " sp" + x.span : "") + (x.tall ? " tall" : "") + (x.center ? " ctr" : "") + (x.fill ? " fill" : "");
-      if (x.section) return '<div class="gal-text">' + "<h2>" + esc(x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>";
+      if (x.section) { var im = x.section.h.match(/^Ter info: (.*)$/); return '<div class="gal-text' + (im ? " info" : "") + '">' + (im ? '<span class="info-label">Ter info</span>' : "") + "<h2>" + esc(im ? im[1].charAt(0).toUpperCase() + im[1].slice(1) : x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>"; }
       if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
       if (x.frame) return '<figure class="frame-cell sp6">' + (frameHtml || "") + "</figure>";
       if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
