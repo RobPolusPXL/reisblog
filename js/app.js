@@ -180,11 +180,11 @@
   function tzText(tz) {
     try {
       var now = new Date(), year = now.getFullYear();
-      var here = "Europe/Brussels"; try { here = Intl.DateTimeFormat().resolvedOptions().timeZone || here; } catch (e) {}
+      var here = "Europe/Brussels";
       var off = offsetHours(tz, now), be = offsetHours(here, now);
       var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
       var diff = off - be;
-      if (diff !== 0) s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
+      if (diff !== 0) s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan in België";
       return s;
     } catch (e) { return "GMT"; }
   }
