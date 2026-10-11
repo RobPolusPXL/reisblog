@@ -259,6 +259,9 @@
         }).join("") + "</div>",
         "Rechtstreekse vluchten, stand oktober 2026.");
     }
+    if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", '<div class="facts">' + c.weetjes.map(function (f) {
+      return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
+    }).join("") + "</div>");
     if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
       return '<div class="fact' + (f.ok === false ? " concept" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
