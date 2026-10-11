@@ -184,7 +184,8 @@
       var off = offsetHours(tz, now), be = offsetHours(here, now);
       var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
       var diff = off - be;
-      if (diff !== 0) s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan in België";
+      if (diff === 0) s += "\nZelfde tijd als in België";
+      else s += "\n" + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan in België";
       return s;
     } catch (e) { return "GMT"; }
   }
