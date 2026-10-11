@@ -181,10 +181,8 @@
     try {
       var now = new Date(), year = now.getFullYear();
       var off = offsetHours(tz, now), be = offsetHours("Europe/Brussels", now);
-      var winter = Math.min(offsetHours(tz, new Date(year, 0, 1)), offsetHours(tz, new Date(year, 6, 1)));
       var s = "GMT" + (off < 0 ? "\u2212" : "+") + Math.abs(off);
       var diff = off - be;
-      if (off !== winter) s += " (zomertijd)";
       if (diff !== 0) s += ", " + Math.abs(diff) + " u " + (diff < 0 ? "vroeger" : "later") + " dan hier";
       return s;
     } catch (e) { return "GMT"; }
