@@ -562,6 +562,8 @@ window.TRIPS = [
                 "src": "images/reizen/februari-2026/dag4-jurassic-park-jeep.webp",
                 "alt": "Een rode jeep met een dinosauruskop in het groen"
         },
+        {"src": "images/reizen/februari-2026/dag4-dinosaurusskelet.webp", "alt": "Een dinosaurusskelet in een grote hal"},
+        {"src": "images/reizen/februari-2026/dag4-velociraptor-in-kooi.webp", "alt": "Een velociraptor met muilkorf in een stalen frame"},
         {
                 "src": "images/reizen/februari-2026/dag4-spider-man.webp",
                 "alt": "De gevel van de Spider-Man-attractie"
