@@ -534,7 +534,7 @@ window.TRIPS = [
       ],
         "text": [
           "Opnieuw een dagje pretpark en nog beter weer. Na het ontbijt vertrokken we te voet naar Islands of Adventure. Een halfuurtje stappen, als je tenminste de juiste afslag neemt. Wij waren te ver gewandeld en moesten een stukje terug met de elektrische step.",
-          "Het was een leuke dag met fijne spanning en adrenaline. Het was best druk, maar de wachtrijen vielen mee: één keer 45 minuten en voor de rest minder dan 30. Tot we aan de laatste attractie kwamen: al heel de dag was de wachtrij enorm. Vol goede moed begonnen we eraan en drie uur later waren we aan de beurt. Wat een afsluiter. De les: geen enkele attractie is het voor ons waard om drie uur te wachten.",
+          "Het was een leuke dag met fijne spanning en adrenaline. Het was best druk, maar de wachtrijen vielen mee: één keer 45 minuten en voor de rest minder dan 30. Tot we aan de laatste attractie kwamen, Hagrid's Magical Creatures Motorbike Adventure: al heel de dag was de wachtrij enorm. Vol goede moed begonnen we eraan en 180 minuten later waren we aan de beurt. Wat een afsluiter. De les: geen enkele attractie is het voor ons waard om drie uur te wachten.",
           "Daarna aten we nog bij Chili's, een tiktokhit die Joke wou proberen. Lekker, niet wauw, en de porties zijn echt groot. Het weer was zalig, zelfs zo goed dat we in een waterattractie gingen en snel terug droog waren. Heerlijk in zomerkleding rondlopen in februari."
         ],
         "tips": [
@@ -563,7 +563,7 @@ window.TRIPS = [
                 "alt": "Een rode jeep met een dinosauruskop in het groen"
         },
         {"src": "images/reizen/februari-2026/dag4-dinosaurusskelet.webp", "alt": "Een dinosaurusskelet in een grote hal"},
-        {"src": "images/reizen/februari-2026/dag4-velociraptor-in-kooi.webp", "alt": "Een velociraptor met muilkorf in een stalen frame"},
+        {"src": "images/reizen/februari-2026/dag4-velociraptor-in-kooi.webp", "alt": "Een velociraptor met muilkorf in een stalen frame, bij de VelociCoaster"},
         {
                 "src": "images/reizen/februari-2026/dag4-spider-man.webp",
                 "alt": "De gevel van de Spider-Man-attractie"
