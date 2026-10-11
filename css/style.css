@@ -358,6 +358,7 @@ footer .insta:hover span { text-decoration: underline; }
 .hike-gal figure.ctr { grid-column: 3 / span 2; }
 .hike-gal .strava-cell { position: relative; border-radius: 14px; overflow: hidden; background: #f4f1ea; min-height: 0; }
 .hike-gal .strava-cell > *, .hike-gal .strava-cell iframe { position: absolute !important; inset: 0; width: 100% !important; height: 100% !important; max-width: none !important; border: 0; }
+.hike-gal figure.strava-cell.sp6 { aspect-ratio: 16 / 9; }
 .s-tips { margin-top: 28px; }
 @media (max-width: 700px) {
   .hike-gal figure.sp2 { grid-column: span 3; }
