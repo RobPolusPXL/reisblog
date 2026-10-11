@@ -418,3 +418,5 @@ body.lb-open { overflow: hidden; }
 .map-legend .park-pin { cursor: default; }
 .map-legend .park-pin:hover svg { stroke: var(--accent); }
 .map-legend .park-pin svg { filter: none; }
+
+.hot { font-weight: 800; color: #c62828; text-decoration: underline; text-underline-offset: 3px; }
