@@ -404,3 +404,10 @@ body.lb-open { overflow: hidden; }
 .s-practical { margin: 44px 0 8px; }
 .s-practical h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 16px; }
 .hike-gal figure.fill .photo { height: 100%; aspect-ratio: auto; }
+
+/* pretpark-iconen op de kaart */
+.park-pin { width: 30px; height: 30px; border-radius: 50%; background: #c2410c; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.35); display: inline-grid; place-items: center; box-sizing: border-box; cursor: pointer; }
+.park-pin svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.map-legend { background: rgba(255,255,255,.92); padding: 6px 10px 6px 6px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.map-legend .park-pin { width: 24px; height: 24px; box-shadow: none; cursor: default; }
+.map-legend .park-pin svg { width: 14px; height: 14px; }

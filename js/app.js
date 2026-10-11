@@ -137,6 +137,26 @@
       }
     }).addTo(map);
 
+    var parkIcon = L.divIcon({
+      className: "park-pin", iconSize: [30, 30], iconAnchor: [15, 15],
+      html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19c0-9 4-13 6-13s3 5 4 9 2.500 4 4 0 1.500-8 6-8"/><path d="M2 19h20"/></svg>'
+    });
+    countries.forEach(function (c) {
+      places(c).forEach(function (pl) {
+        if (!pl.park || !pl.pin) return;
+        L.marker(pl.pin, { icon: parkIcon, title: pl.t, riseOnHover: true }).addTo(map)
+          .bindTooltip(pl.t + " (pretpark)", { direction: "top", offset: [0, -12] })
+          .on("click", function () { location.href = cpath(c) + pl.slug + "/"; });
+      });
+    });
+    var legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function () {
+      var d = L.DomUtil.create("div", "map-legend");
+      d.innerHTML = '<span class="park-pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19c0-9 4-13 6-13s3 5 4 9 2.500 4 4 0 1.500-8 6-8"/><path d="M2 19h20"/></svg></span> Pretpark';
+      return d;
+    };
+    legend.addTo(map);
+
     map.fitBounds(L.latLngBounds(countries.map(function (c) { return c.pin; })), { padding: [40, 40], maxZoom: 4 });
   }
 
