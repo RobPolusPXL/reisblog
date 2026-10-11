@@ -64,8 +64,14 @@
       "Reisblog van Rob en Joke", "Op zoek naar unieke plaatsen",
       "Reisinspiratie per land, enkel over plaatsen en dingen die we zelf beleefden.");
 
-    $("trips").innerHTML = trips.map(function (t, i) {
-      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + tpath(t) + '">' +
+    var MONTHS = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+    function tripDate(t) {
+      var m = t.period.match(/(\d{1,2})?\D*?([a-z]+) (\d{4})\s*$/i);
+      return m ? new Date(+m[3], Math.max(0, MONTHS.indexOf(m[2].toLowerCase())), +(m[1] || 1)).getTime() : 0;
+    }
+    var sortedTrips = trips.slice().sort(function (a, b) { return tripDate(b) - tripDate(a); });
+    $("trips").innerHTML = sortedTrips.map(function (t) {
+      return '<a class="card" href="' + tpath(t) + '">' +
         photo(t.cover) +
         '<div><span class="label">' + esc(t.period) + " · " + t.nights + " nachten</span>" +
         "<h3>" + esc(t.title) + "</h3>" +
@@ -73,10 +79,11 @@
         '<span class="more">Lees de reis ' + ARROW + "</span></div></a>";
     }).join("");
 
-    var done = countries.filter(function (c) { return c.done; });
-    var soon = countries.filter(function (c) { return !c.done; });
-    $("grid").innerHTML = done.map(function (c, i) {
-      return '<a class="card' + (i === 0 ? " big" : "") + '" href="' + cpath(c) + '">' +
+    var byName = function (a, b) { return a.name.localeCompare(b.name, "nl"); };
+    var done = countries.filter(function (c) { return c.done; }).sort(byName);
+    var soon = countries.filter(function (c) { return !c.done; }).sort(byName);
+    $("grid").innerHTML = done.map(function (c) {
+      return '<a class="card" href="' + cpath(c) + '">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
         "<div><span class=\"label\">Bestemming</span>" +
         "<h3>" + esc(c.name) + "</h3>" +
