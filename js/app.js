@@ -145,7 +145,7 @@
       places(c).forEach(function (pl) {
         if (!pl.park || !pl.pin) return;
         L.marker(pl.pin, { icon: parkIcon, title: pl.t, riseOnHover: true }).addTo(map)
-          .bindTooltip(pl.t + " (pretpark)", { direction: "top", offset: [0, -8] })
+          .bindTooltip(pl.t, { direction: "top", offset: [0, -8] })
           .on("click", function () { location.href = cpath(c) + pl.slug + "/"; });
       });
     });

@@ -409,7 +409,9 @@ body.lb-open { overflow: hidden; }
 
 /* pretpark-iconen op de kaart */
 .park-pin { width: 22px; height: 22px; display: inline-grid; place-items: center; cursor: pointer; }
-.park-pin svg { width: 20px; height: 20px; fill: none; stroke: var(--accent-deep); stroke-width: 1.800; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1.500px #fff) drop-shadow(0 0 2px rgba(255,255,255,.9)); }
+.park-pin svg { width: 20px; height: 20px; fill: none; stroke: var(--accent); transition: stroke .15s; stroke-width: 1.800; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1.500px #fff) drop-shadow(0 0 2px rgba(255,255,255,.9)); }
 .map-legend { background: rgba(255,255,255,.92); padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.park-pin:hover svg { stroke: var(--accent-deep); }
 .map-legend .park-pin { cursor: default; }
+.map-legend .park-pin:hover svg { stroke: var(--accent); }
 .map-legend .park-pin svg { filter: none; }
