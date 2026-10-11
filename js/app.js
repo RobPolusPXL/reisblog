@@ -526,6 +526,14 @@
 
   renderHome();
   renderMap();
+  (function () {
+    var b = $("toTop");
+    if (!b) return;
+    function upd() { b.classList.toggle("show", (window.pageYOffset || document.documentElement.scrollTop) > 700); }
+    window.addEventListener("scroll", upd, { passive: true });
+    b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+    upd();
+  })();
   window.addEventListener("hashchange", route);
   window.addEventListener("popstate", route);
   route();
