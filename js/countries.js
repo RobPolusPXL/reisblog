@@ -188,6 +188,7 @@ window.COUNTRIES = [
     visited: "september 2026",
     facts: [
       { icon: "pin", label: "Hoofdstad", v: "Warschau" },
+      { icon: "plane", label: "Vliegtijd", v: "2 u vanaf Charleroi (naar Kraków)" },
       { icon: "talk", label: "Taal", v: "Pools" },
       { icon: "coin", label: "Munt", v: "Zloty" },
       { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }
@@ -239,6 +240,7 @@ window.COUNTRIES = [
     visited: "september 2026",
     facts: [
       { icon: "pin", label: "Hoofdstad", v: "Bratislava" },
+      { icon: "plane", label: "Vliegtijd", v: "1 u 50 vanaf Charleroi (naar Bratislava)" },
       { icon: "talk", label: "Taal", v: "Slowaaks" },
       { icon: "coin", label: "Munt", v: "Euro" },
       { icon: "clock", label: "Tijdzone", v: "Zelfde als in België" }

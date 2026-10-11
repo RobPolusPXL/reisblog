@@ -142,5 +142,213 @@ window.TRIPS = [
     ],
     costNote: "Daarmee zitten we iets onder het gemiddelde van ongeveer € 90 per dag dat Budget Your Trip voor Bosnië opgeeft.",
     costSource: { t: "Budget Your Trip: Bosnië en Herzegovina", url: "https://www.budgetyourtrip.com/bosnia-and-herzegowina" }
+  },
+  {
+    "slug": "slowakije-polen-september-2026",
+    "title": "Zeven nachten Slowakije en Polen: van de Tatra naar Energylandia",
+    "countries": [
+      "slowakije",
+      "polen"
+    ],
+    "period": "6 – 13 september 2026",
+    "nights": 7,
+    "with": "Joke",
+    "tagline": "Eerst over de boomtoppen en door de Hoge Tatra, daarna twee dagen pretpark en een stille dag in Auschwitz.",
+    "cover": {
+      "src": "images/slowakije/bachledova-dolina-looppad-en-tatra.webp",
+      "alt": "Het houten looppad kronkelt door het bos, met de Belianske Tatry erachter"
+    },
+    "intro": "Zeven nachten in twee landen: eerst een paar dagen wandelen in het noorden van Slowakije, daarna naar Polen voor twee dagen Energylandia, een nacht in een huifkar en een bezoek aan Auschwitz-Birkenau. Met een boomkruinenpad, een lange bergdag naar de meren van de Hoge Tatra en een regendag in een pretpark.",
+    "route": [
+      "Charleroi",
+      "Bachledova dolina",
+      "Štrbské Pleso",
+      "Suchá Belá",
+      "Zator",
+      "Oświęcim"
+    ],
+    "days": [
+      {
+        "title": "Reisdag en het Boomkruinenpad",
+        "date": "6 september",
+        "temp": null,
+        "places": [
+          "boomkruinenpad-bachledova-dolina"
+        ],
+        "text": [
+          "We vlogen vanuit Charleroi en trokken meteen naar Bachledova dolina bij Ždiar voor het Boomkruinenpad. De gondel lieten we links liggen: we wandelden te voet naar boven.",
+          "Boven wandel je op een houten looppad boven de boomtoppen, tot aan de uitkijktoren van 32 meter hoog met het net bovenaan. Daarna naar ons appartement, met een sauna die we maar al te graag gebruikten."
+        ],
+        "tips": [
+          "Je kan het pad ook met de gondel bereiken, maar te voet is het een mooie wandeling."
+        ],
+        "photos": [
+          {
+            "src": "images/slowakije/bachledova-dolina-looppad-door-het-bos.webp",
+            "alt": "Het houten looppad door het bos"
+          },
+          {
+            "src": "images/slowakije/bachledova-dolina-net-op-de-toren.webp",
+            "alt": "Het net op de toren"
+          },
+          {
+            "src": "images/slowakije/bachledova-dolina-uitzicht-vanaf-de-toren.webp",
+            "alt": "Uitzicht vanaf de toren"
+          }
+        ]
+      },
+      {
+        "title": "De Hoge Tatra",
+        "date": "7 september",
+        "temp": null,
+        "places": [
+          "solisko-en-de-wahlenbergove-plesa"
+        ],
+        "text": [
+          "Vanaf Štrbské Pleso namen we de stoeltjeslift en maakten we een lange dagwandeling langs Chata pod Soliskom naar de bergmeren van de Hoge Tatra. We hadden een zaklamp mee, want we kwamen pas bij valavond terug naar beneden.",
+          "Onderweg kwamen we vooral oudere wandelaars tegen, en de zuurtjes in onze rugzak kwamen goed van pas."
+        ],
+        "tips": [
+          "Neem een zaklamp mee als je pas bij valavond terug bent."
+        ],
+        "photos": [
+          {
+            "src": "images/slowakije/solisko-meer-met-berg.webp",
+            "alt": "Een bergmeer in de Hoge Tatra"
+          },
+          {
+            "src": "images/slowakije/solisko-bij-het-kruis.webp",
+            "alt": "Bij het kruis op Predné Solisko"
+          },
+          {
+            "src": "images/slowakije/solisko-avondlicht-meer.webp",
+            "alt": "Het meer in het avondlicht"
+          }
+        ]
+      },
+      {
+        "title": "De kloof Suchá Belá",
+        "date": "8 september",
+        "temp": null,
+        "places": [
+          "sucha-bela"
+        ],
+        "text": [
+          "Vandaag stond Suchá Belá in Slovenský raj op het programma: een wandeling door een kloof. We liepen er ruim 10 kilometer en het was er verrassend rustig."
+        ],
+        "tips": [],
+        "photos": []
+      },
+      {
+        "title": "Naar Polen en Western Camp",
+        "date": "9 september",
+        "temp": null,
+        "places": [
+          "western-camp-resort"
+        ],
+        "text": [
+          "We reden van Slowakije naar Polen, naar Zator. Rond kwart over drie kwamen we aan bij Western Camp Resort, ons verblijf in Wild West-stijl vlak bij Energylandia. Wij sliepen in een huifkar, eerst in een wagon met twee stapelbedden tot het werd rechtgezet.",
+          "Die dag kreeg Rob ook het goede nieuws dat hij geslaagd was voor zijn examen. 's Avonds lagen we aan het zwembad en aten we op het terras."
+        ],
+        "tips": [
+          "Er is een ontbijtbuffet, handig voor een dag pretparkplezier."
+        ],
+        "photos": [
+          {
+            "src": "images/polen/western-camp-huifkarren.webp",
+            "alt": "Huifkarren van Western Camp"
+          },
+          {
+            "src": "images/polen/western-camp-terras-in-de-avond.webp",
+            "alt": "Het verlichte terras in de avond"
+          }
+        ]
+      },
+      {
+        "title": "Eerste dag Energylandia",
+        "date": "10 september",
+        "temp": null,
+        "places": [
+          "energylandia"
+        ],
+        "text": [
+          "We waren een kwartier voor opening aanwezig en begonnen meteen. De wachttijden bleven maximaal ongeveer 20 minuten en we haalden 15 ritten op één dag."
+        ],
+        "tips": [
+          "Wees een kwartier voor opening aanwezig."
+        ],
+        "photos": [
+          {
+            "src": "images/polen/energylandia-hoofdingang.webp",
+            "alt": "De hoofdingang van Energylandia"
+          },
+          {
+            "src": "images/polen/energylandia-reuzenrad-en-achtbaan.webp",
+            "alt": "Een reuzenrad en achtbaan"
+          }
+        ]
+      },
+      {
+        "title": "Energylandia in de regen",
+        "date": "11 september",
+        "temp": null,
+        "places": [],
+        "text": [
+          "Op onze tweede dag regende het. Er waren minder bezoekers, maar vaak reed er maar één trein per attractie. We kwamen op 9 ritten uit."
+        ],
+        "tips": [
+          "Bij sommige attracties moet je op de eerste rij een veiligheidsbril dragen."
+        ],
+        "photos": [
+          {
+            "src": "images/polen/energylandia-wachttijdenbord.webp",
+            "alt": "Het wachttijdenbord in het park"
+          }
+        ]
+      },
+      {
+        "title": "Auschwitz-Birkenau",
+        "date": "12 september",
+        "temp": null,
+        "places": [
+          "auschwitz-birkenau"
+        ],
+        "text": [
+          "Onze laatste dag in Polen was een stille. We bezochten Auschwitz I en Auschwitz II-Birkenau met een gids, en reden daarna naar onze laatste slaapplaats. Een dag die je bijblijft."
+        ],
+        "tips": [
+          "Boek ruim op voorhand en neem de gids."
+        ],
+        "photos": [
+          {
+            "src": "images/polen/auschwitz-sporen-naar-de-poort.webp",
+            "alt": "De sporen naar de poort van Birkenau"
+          }
+        ]
+      },
+      {
+        "title": "Terug naar huis",
+        "date": "13 september",
+        "temp": null,
+        "places": [],
+        "text": [
+          "Tijd om naar huis te vertrekken."
+        ],
+        "tips": [],
+        "photos": []
+      }
+    ],
+    "stays": [
+      {
+        "place": "Zator",
+        "name": "Western Camp Resort",
+        "nights": 3,
+        "text": "Een Wild West-resort vlak bij Energylandia, waar wij in een huifkar sliepen.",
+        "photo": {
+          "src": "images/polen/western-camp-huifkar.webp",
+          "alt": "Een huifkar met houten trap"
+        }
+      }
+    ]
   }
 ];

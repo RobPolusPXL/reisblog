@@ -274,7 +274,7 @@
       }).join("") + "</nav>" +
       '<div class="days">' + t.days.map(function (d, i) {
         var links = (d.places || []).map(function (slug) {
-          var c = cs[0], a = c && places(c).filter(function (x) { return x.slug === slug; })[0];
+          var c = null, a = null; cs.forEach(function (k) { if (a) return; var m = places(k).filter(function (x) { return x.slug === slug; })[0]; if (m) { c = k; a = m; } });
           return a ? '<a class="chip" href="' + cpath(c) + a.slug + '/">' + esc(a.t) + " " + ARROW + "</a>" : "";
         }).join("");
         return '<article class="day" id="dag-' + (i + 1) + '"><header><span class="dnum">Dag ' + (i + 1) + "</span>" +
