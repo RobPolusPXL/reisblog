@@ -529,7 +529,9 @@ window.TRIPS = [
         "title": "Islands of Adventure",
         "date": "4 februari",
         "temp": 22,
-        "places": [],
+        "places": [
+        "islands-of-adventure"
+      ],
         "text": [
           "Opnieuw een dagje pretpark en nog beter weer. Na het ontbijt vertrokken we te voet naar Islands of Adventure. Een halfuurtje stappen, als je tenminste de juiste afslag neemt. Wij waren te ver gewandeld en moesten een stukje terug met de elektrische step.",
           "Het was een leuke dag met fijne spanning en adrenaline. Het was best druk, maar de wachtrijen vielen mee: één keer 45 minuten en voor de rest minder dan 30. Tot we aan de laatste attractie kwamen: al heel de dag was de wachtrij enorm. Vol goede moed begonnen we eraan en drie uur later waren we aan de beurt. Wat een afsluiter. De les: geen enkele attractie is het voor ons waard om drie uur te wachten.",
@@ -539,7 +541,44 @@ window.TRIPS = [
           "Geen enkele attractie is een wachtrij van drie uur waard.",
           "Gezond eten is moeilijker te vinden dan gedacht: de porties zijn groot en vettig."
         ],
-        "photos": []
+        "photos": [
+        {
+                "src": "images/reizen/februari-2026/dag4-kasteel.webp",
+                "alt": "Het kasteel van Hogwarts boven de bomen"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-universal-globe.webp",
+                "alt": "Het Universal-logo aan het water"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-dorp.webp",
+                "alt": "Het dorp met kleine huisjes en veel bezoekers"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-jurassic-park-poort.webp",
+                "alt": "De poort van Jurassic Park"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-jurassic-park-jeep.webp",
+                "alt": "Een rode jeep met een dinosauruskop in het groen"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-spider-man.webp",
+                "alt": "De gevel van de Spider-Man-attractie"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-achtbaan-boven-het-water.webp",
+                "alt": "Een achtbaantrein boven het water"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-meer-met-achtbaan.webp",
+                "alt": "Het meer met een achtbaan op de achtergrond"
+        },
+        {
+                "src": "images/reizen/februari-2026/dag4-avond-waterattractie.webp",
+                "alt": "Een verlichte waterattractie bij nacht"
+        }
+]
       },
       {
         "title": "Aan boord van de MSC Seashore",
