@@ -83,12 +83,12 @@
     var done = countries.filter(function (c) { return c.done; }).sort(byName);
     var soon = countries.filter(function (c) { return !c.done; }).sort(byName);
     $("grid").innerHTML = done.map(function (c) {
-      return '<a class="card" href="' + cpath(c) + '">' +
+      var FLAGS = { "bahamas": "bs", "bosnie-en-herzegovina": "ba", "montenegro": "me", "polen": "pl", "slowakije": "sk", "verenigde-staten": "us" };
+      return '<a class="place" href="' + cpath(c) + '">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
-        "<div><span class=\"label\">Bestemming</span>" +
+        (FLAGS[c.slug] ? '<img class="dest-flag" src="images/flags/' + FLAGS[c.slug] + '.svg" alt="" loading="lazy">' : "") +
         "<h3>" + esc(c.name) + "</h3>" +
-        (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") +
-        '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
+        (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") + "</a>";
     }).join("");
     var parks = [];
     countries.forEach(function (c) { places(c).forEach(function (pl) { if (pl.park) parks.push({ c: c, a: pl }); }); });
