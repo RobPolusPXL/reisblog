@@ -468,3 +468,6 @@ body.lb-open { overflow: hidden; }
 .num-pin span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #fff; color: var(--ink); font: 700 15px/1 var(--body); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 @media (max-width: 960px) { .places[data-n="2map"] { grid-template-columns: repeat(2, 1fr); } .place-map { display: none; } }
 @media (max-width: 560px) { .places[data-n="2map"] { grid-template-columns: 1fr; } }
+.place-map { border: 2px solid #2f7d5b; }
+.block.center.two-map > h2, .block.center.two-map > .sub { margin-left: 0; margin-right: 0; width: calc((100% - 48px) * 2 / 3 + 24px); }
+@media (max-width: 960px) { .block.center.two-map > h2, .block.center.two-map > .sub { margin-left: auto; margin-right: auto; width: auto; } }
