@@ -348,7 +348,7 @@ function section(title, inner, sub, cls) {
       if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
       if (x.frame) return '<figure class="frame-cell sp6">' + (frameHtml || "") + "</figure>";
       if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
-      return '<figure class="' + cls.trim() + '">' + photo(x) + "</figure>";
+      return '<figure class="' + cls.trim() + '">' + photo(x) + (x.caption ? "<figcaption>" + (x.href ? '<a href="' + esc(x.href) + '" rel="noopener" target="_blank">' + esc(x.caption) + "</a>" : esc(x.caption)) + "</figcaption>" : "") + "</figure>";
     }).join("") + "</div>";
   }
   function dayPhotos(ph) {
