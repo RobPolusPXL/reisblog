@@ -477,10 +477,8 @@ body.lb-open { overflow: hidden; }
 .place:hover .dest-flag { opacity: .5; }
 #grid { gap: 18px; }
 
-.gal-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: -4px 0 18px; }
-.gal-links b { font-size: 15px; }
-.gal-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink, inherit); text-decoration: none; font-weight: 500; font-size: 15px; }
-.gal-link span { text-decoration: underline; text-decoration-color: rgba(0,0,0,.25); text-underline-offset: 3px; }
-.gal-link:hover span { text-decoration-color: currentColor; }
-.gal-link svg { width: 26px; height: 26px; flex: none; transition: transform .2s ease; }
+.gal-links { display: inline-flex; align-items: center; gap: 8px; margin-left: 4px; vertical-align: middle; }
+.gal-links b { font-size: inherit; font-weight: 600; margin-right: 2px; }
+.gal-link { display: inline-flex; align-items: center; text-decoration: none; }
+.gal-link svg { width: 24px; height: 24px; flex: none; transition: transform .2s ease; }
 .gal-link:hover svg { transform: scale(1.12); }
