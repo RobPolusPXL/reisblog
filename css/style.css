@@ -441,3 +441,5 @@ body.lb-open { overflow: hidden; }
 .pill-safe { display: inline-block; background: #e8f3e6; color: #1f5a2b; font-weight: 700; padding: 3px 12px; border-radius: 999px; }
 .plist .fact-link { margin: 0 0 0 10px; }
 @media (max-width: 640px) { .plist > div { grid-template-columns: 1fr; gap: 4px; } }
+.plist > div.concept dd::after { content: " (nog niet bevestigd)"; color: #b07d1a; font-size: 15px; }
+.s-practical .plist { margin-top: 8px; }

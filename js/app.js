@@ -197,7 +197,15 @@
     }).join("") + "</div></div>";
   }
 
-  function section(title, inner, sub, cls) {
+  function plist(items) {
+  return '<dl class="plist">' + items.map(function (f) {
+    return "<div" + (f.ok === false ? ' class="concept"' : "") + "><dt>" + esc(f.label) + "</dt><dd>" +
+      (f.tone === "safe" ? '<span class="pill-safe">' + esc(f.t) + "</span>" : esc(f.t)) +
+      (f.link ? ' <a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") +
+      "</dd></div>";
+  }).join("") + "</dl>";
+}
+function section(title, inner, sub, cls) {
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
 
@@ -260,26 +268,16 @@
         }).join("") + "</div>",
         "Rechtstreekse vluchten, stand oktober 2026.");
     }
-    if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", '<div class="facts">' + c.weetjes.map(function (f) {
-      return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
-    }).join("") + "</div>");
+    if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", plist(c.weetjes));
     if (c.practical && c.practical.length) {
       if (c.practical.some(function (f) { return f.group; })) {
         var order = [], byG = {};
         c.practical.forEach(function (f) { var g = f.group || "Overig"; if (!byG[g]) { byG[g] = []; order.push(g); } byG[g].push(f); });
         html += section("Praktisch", '<div class="pgroups">' + order.map(function (g) {
-          return '<div class="pgroup"><h3>' + esc(g) + '</h3><dl class="plist">' + byG[g].map(function (f) {
-            return "<div><dt>" + esc(f.label) + "</dt><dd>" +
-              (f.tone === "safe" ? '<span class="pill-safe">' + esc(f.t) + "</span>" : esc(f.t)) +
-              (f.link ? ' <a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") +
-              "</dd></div>";
-          }).join("") + "</dl></div>";
+          return '<div class="pgroup"><h3>' + esc(g) + "</h3>" + plist(byG[g]) + "</div>";
         }).join("") + "</div>");
       } else {
-      if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
-        return '<div class="fact' + (f.ok === false ? " concept" : "") + (f.tone === "safe" ? " safe" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span>" +
-          (f.link ? '<a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") + "</div>";
-      }).join("") + "</div>");
+      html += section("Praktisch", plist(c.practical));
       }
     }
 
@@ -305,7 +303,7 @@
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
-      (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +
+      (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2>' + plist(a.practical) + "</div>" : "") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
       (a.sources && a.sources.length ? '<p class="s-sources">' + esc(a.sourcesLabel || "Bronnen") + ": " + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       (a.related ? '<div class="s-more s-related"><h2>' + esc(a.related.q) + '</h2><div class="s-nav">' + a.related.links.map(function (l) {
