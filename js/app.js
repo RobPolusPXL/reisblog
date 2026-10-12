@@ -85,7 +85,7 @@
     $("grid").innerHTML = done.map(function (c) {
       return '<a class="card" href="' + cpath(c) + '">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
-        "<div><span class=\"label\">Bestemming</span>" +
+        "<div><span class=\"label\">" + esc((function (v) { var m = (v || "").match(/([a-zà-ÿ]+ \d{4})\s*$/i); return m ? m[1].charAt(0).toUpperCase() + m[1].slice(1) : "Bestemming"; })(c.visited)) + "</span>" +
         "<h3>" + esc(c.name) + "</h3>" +
         (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") +
         '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
