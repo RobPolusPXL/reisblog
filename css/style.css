@@ -473,5 +473,5 @@ body.lb-open { overflow: hidden; }
 @media (max-width: 960px) { .block.center.two-map > h2, .block.center.two-map > .sub { margin-left: auto; margin-right: auto; width: auto; } }
 #grid .place .photo::before { display: none; }
 #grid .place { aspect-ratio: 3 / 4; }
-.dest-flag { position: absolute; z-index: 2; right: 16px; top: 16px; width: 34px; height: 25px; object-fit: cover; border-radius: 4px; opacity: .25; box-shadow: none; transition: opacity .3s ease; }
+.dest-flag { position: absolute; z-index: 2; left: 16px; top: 16px; width: 34px; height: 25px; object-fit: cover; border-radius: 4px; opacity: .25; box-shadow: none; transition: opacity .3s ease; }
 .place:hover .dest-flag { opacity: .5; }
