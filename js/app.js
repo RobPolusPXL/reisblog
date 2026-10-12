@@ -177,6 +177,10 @@
     var m = p.match(/GMT([+-])?(\d+)?(?::(\d+))?/);
     return m && m[2] ? (m[1] === "-" ? -1 : 1) * (+m[2] + (m[3] ? +m[3] / 60 : 0)) : 0;
   }
+  var LINKICONS = {
+    instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="24" height="24" rx="6.5" fill="url(#igg)"/><rect x="5.2" y="5.2" width="13.6" height="13.6" rx="4.2" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="16.3" cy="7.7" r="1" fill="#fff"/></svg>',
+    maps: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5a7.5 7.5 0 0 0-7.5 7.5c0 5.4 7.5 13.5 7.5 13.5s7.5-8.1 7.5-13.5A7.5 7.5 0 0 0 12 1.5z" fill="#ea4335"/><path d="M12 1.5a7.5 7.5 0 0 0-5.3 2.2l6.1 5.9z" fill="#c5221f" opacity=".55"/><circle cx="12" cy="9" r="2.9" fill="#fff"/></svg>'
+  };
   function rich(t) { return esc(t).replace(/\*\*(.+?)\*\*/g, '<strong class="hot">$1</strong>'); }
   function tzText(tz) {
     try {
@@ -344,7 +348,7 @@ function section(title, inner, sub, cls) {
     if (!g) return "";
     return '<div class="d-photos hike-gal">' + g.map(function (x) {
       var cls = (x.span ? " sp" + x.span : "") + (x.tall ? " tall" : "") + (x.center ? " ctr" : "") + (x.fill ? " fill" : "");
-      if (x.section) { var im = x.section.h.match(/^Ter info: (.*)$/); return '<div class="gal-text' + (im ? " info" : "") + '">' + (im ? '<span class="info-label">Ter info</span>' : "") + "<h2>" + esc(im ? im[1].charAt(0).toUpperCase() + im[1].slice(1) : x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join("") + "</div>"; }
+      if (x.section) { var im = x.section.h.match(/^Ter info: (.*)$/); return '<div class="gal-text' + (im ? " info" : "") + '">' + (im ? '<span class="info-label">Ter info</span>' : "") + "<h2>" + esc(im ? im[1].charAt(0).toUpperCase() + im[1].slice(1) : x.section.h) + "</h2>" + x.section.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join("") + (x.section.links ? '<div class="gal-links">' + x.section.links.map(function (l) { return '<a class="gal-link ' + esc(l.type) + '" href="' + esc(l.href) + '" rel="noopener" target="_blank">' + (LINKICONS[l.type] || "") + "<span>" + esc(l.label) + "</span></a>"; }).join("") + "</div>" : "") + "</div>"; }
       if (x.video) return '<figure class="video-cell' + cls + '"><video controls playsinline preload="metadata" poster="' + esc(x.poster) + '" aria-label="' + esc(x.alt) + '"><source src="' + esc(x.video) + '" type="video/mp4"></video></figure>';
       if (x.frame) return '<figure class="frame-cell sp6">' + (frameHtml || "") + "</figure>";
       if (x.embed) return '<figure class="strava-cell' + cls + '">' + (embedHtml || "") + "</figure>";
