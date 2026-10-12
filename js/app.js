@@ -267,7 +267,7 @@ function section(title, inner, sub, cls) {
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
             return '<li><span class="chip' + (a.ok === false ? " concept" : "") + '">' + esc(a.t) + "</span></li>";
           }).join("") + "</ul></div>" : ""),
-        "Klik op een plaats voor foto's en uitleg.", "center" + (pl.length === 2 && pl.every(function (a) { return a.pin; }) ? " two-map" : ""));
+        "");
     }
 
     if (c.getThere && c.getThere.length) {
