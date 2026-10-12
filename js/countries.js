@@ -263,7 +263,7 @@ window.COUNTRIES = [
     practical: [
       { label: "Inreis", group: "Voor je vertrekt", t: "Per vliegtuig of per cruise gelden dezelfde voorwaarden: als Belg heb je een paspoort nodig dat minstens zes maanden geldig is. Voor een kort verblijf als toerist is geen visum nodig. Bij het inschepen wordt dit gecontroleerd. Het is belangrijk dat je je afgedrukte ESTA kunt voorleggen: die heb je nodig om de VS weer binnen te mogen. Check de regels vlak voor vertrek.", ok: true },
       { label: "Beste reistijd", group: "Voor je vertrekt", t: "December tot en met april is droog en aangenaam. Wij waren er in februari: fris, en te koud om te zwemmen. Van juni tot november is het orkaanseizoen, met de grootste kans in augustus en september." },
-      { label: "Reisadvies België", group: "Voor je vertrekt", t: "Veilig", tone: "safe", link: { href: "https://diplomatie.belgium.be/nl/landen/bahamas/reizen-naar-de-bahamas-reisadvies", label: "Reisadvies van Buitenlandse Zaken" } },
+      { label: "Reisadvies België", group: "Voor je vertrekt", t: "Veilig met voorzorgen", tone: "warn", link: { href: "https://diplomatie.belgium.be/nl/landen/bahamas/reizen-naar-de-bahamas-reisadvies", label: "Reisadvies van Buitenlandse Zaken" } },
       { label: "Munt", group: "Ter plaatse", t: "De Bahamaanse dollar is 1 op 1 gekoppeld aan de Amerikaanse dollar, en Amerikaanse dollars worden overal aanvaard. Wisselen is dus niet nodig.", ok: true },
       { label: "Prijzen", group: "Ter plaatse", t: "Duur, want bijna alles wordt ingevoerd. Vooral eten en drinken." },
       { label: "Fooien", group: "Ter plaatse", t: "In restaurants en hotels wordt 15% bediening automatisch op de rekening gezet. Taxichauffeurs krijgen meestal ongeveer 15% van de rit." },

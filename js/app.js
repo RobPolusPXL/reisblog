@@ -200,7 +200,7 @@
   function plist(items) {
   return '<dl class="plist">' + items.map(function (f) {
     return "<div" + (f.ok === false ? ' class="concept"' : "") + "><dt>" + esc(f.label) + "</dt><dd>" +
-      (f.tone === "safe" ? '<span class="pill-safe">' + esc(f.t) + "</span>" : esc(f.t)) +
+      (f.tone ? '<span class="pill-' + esc(f.tone) + '">' + esc(f.t) + "</span>" : esc(f.t)) +
       (f.link ? ' <a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") +
       "</dd></div>";
   }).join("") + "</dl>";

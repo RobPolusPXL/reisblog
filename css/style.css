@@ -453,3 +453,6 @@ body.lb-open { overflow: hidden; }
 }
 /* Uitvullen: alle lopende tekst */
 .intro, .dbody p, .s-body p, .gal-text p, .plist dd, .tips li, .fact span, .tagline-long, .related p { text-align: justify; hyphens: none; -webkit-hyphens: none; }
+.pill-warn { display: inline-block; background: #fbeab0; color: #6b4f00; font-weight: 700; padding: 3px 12px; border-radius: 999px; }
+@media (max-width: 640px) { .pill-warn { background: #f6df93; } }
+.plist .pill-warn ~ .fact-link { color: #6b4f00; }
