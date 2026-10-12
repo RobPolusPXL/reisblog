@@ -456,3 +456,8 @@ body.lb-open { overflow: hidden; }
 .pill-warn { display: inline-block; background: #fbeab0; color: #6b4f00; font-weight: 700; padding: 3px 12px; border-radius: 999px; }
 @media (max-width: 640px) { .pill-warn { background: #f6df93; } }
 .plist .pill-warn ~ .fact-link { color: #6b4f00; }
+.places[data-n="2"] { grid-template-columns: repeat(2, 1fr); }
+.places[data-n="1"] { grid-template-columns: 1fr; }
+.places[data-n="2"] .place { aspect-ratio: 4 / 3; }
+.places[data-n="1"] .place { aspect-ratio: 16 / 9; }
+@media (max-width: 560px) { .places[data-n="2"], .places[data-n="1"] { grid-template-columns: 1fr; } .places[data-n="2"] .place, .places[data-n="1"] .place { aspect-ratio: 3 / 4; } }
