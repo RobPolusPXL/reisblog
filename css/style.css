@@ -431,3 +431,13 @@ body.lb-open { overflow: hidden; }
 .to-top:hover { background: var(--accent-deep); }
 .to-top svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 640px) { .to-top { right: 14px; bottom: 14px; width: 44px; height: 44px; } }
+
+.pgroups { display: grid; gap: 36px; }
+.pgroup h3 { font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--clay); margin: 0 0 6px; }
+.plist { margin: 0; border-top: 2px solid var(--sand-deep); }
+.plist > div { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--sand-deep); font-size: 17px; line-height: 1.5; }
+.plist dt { font-weight: 700; color: var(--ink); }
+.plist dd { margin: 0; }
+.pill-safe { display: inline-block; background: #e8f3e6; color: #1f5a2b; font-weight: 700; padding: 3px 12px; border-radius: 999px; }
+.plist .fact-link { margin: 0 0 0 10px; }
+@media (max-width: 640px) { .plist > div { grid-template-columns: 1fr; gap: 4px; } }

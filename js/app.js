@@ -263,10 +263,25 @@
     if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", '<div class="facts">' + c.weetjes.map(function (f) {
       return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
-    if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
-      return '<div class="fact' + (f.ok === false ? " concept" : "") + (f.tone === "safe" ? " safe" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span>" +
-        (f.link ? '<a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") + "</div>";
-    }).join("") + "</div>");
+    if (c.practical && c.practical.length) {
+      if (c.practical.some(function (f) { return f.group; })) {
+        var order = [], byG = {};
+        c.practical.forEach(function (f) { var g = f.group || "Overig"; if (!byG[g]) { byG[g] = []; order.push(g); } byG[g].push(f); });
+        html += section("Praktisch", '<div class="pgroups">' + order.map(function (g) {
+          return '<div class="pgroup"><h3>' + esc(g) + '</h3><dl class="plist">' + byG[g].map(function (f) {
+            return "<div><dt>" + esc(f.label) + "</dt><dd>" +
+              (f.tone === "safe" ? '<span class="pill-safe">' + esc(f.t) + "</span>" : esc(f.t)) +
+              (f.link ? ' <a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") +
+              "</dd></div>";
+          }).join("") + "</dl></div>";
+        }).join("") + "</div>");
+      } else {
+      if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
+        return '<div class="fact' + (f.ok === false ? " concept" : "") + (f.tone === "safe" ? " safe" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span>" +
+          (f.link ? '<a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") + "</div>";
+      }).join("") + "</div>");
+      }
+    }
 
     if (c.gallery && c.gallery.length) {
       html += section("Meer foto's", '<div class="gallery">' + c.gallery.map(figure).join("") + "</div>");
