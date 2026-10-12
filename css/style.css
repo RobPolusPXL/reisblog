@@ -480,5 +480,5 @@ body.lb-open { overflow: hidden; }
 .gal-links { display: inline-flex; align-items: center; gap: 8px; margin-left: 4px; vertical-align: middle; }
 .gal-links b { font-size: inherit; font-weight: 600; margin-right: 2px; }
 .gal-link { display: inline-flex; align-items: center; text-decoration: none; }
-.gal-link svg { width: 24px; height: 24px; flex: none; transition: transform .2s ease; }
+.gal-link svg { width: 26px; height: 26px; flex: none; transition: transform .2s ease; }
 .gal-link:hover svg { transform: scale(1.12); }
