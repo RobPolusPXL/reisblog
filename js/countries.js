@@ -267,7 +267,7 @@ window.COUNTRIES = [
       { label: "Prijzen", t: "Duur, want bijna alles wordt ingevoerd. Vooral eten en drinken." },
       { label: "Stekker", t: "Net als in de VS: 120 volt en platte stekkers. Neem een reisstekker mee." },
       { label: "Verkeer", t: "Er wordt links gereden, ook al zijn veel auto's uit de VS ingevoerd met het stuur links." },
-      { label: "Reisadvies België", t: "Volgens Buitenlandse Zaken kan er op de Bahama's doorgaans veilig gereisd worden, zolang je de gebruikelijke voorzorgen neemt." },
+      { label: "Reisadvies België", t: "Veilig", tone: "safe", link: { href: "https://diplomatie.belgium.be/nl/landen/bahamas/reizen-naar-de-bahamas-reisadvies", label: "Reisadvies van Buitenlandse Zaken" } },
       { label: "Fooien", t: "In restaurants en hotels wordt 15% bediening automatisch op de rekening gezet. Taxichauffeurs krijgen meestal ongeveer 15% van de rit." },
       { label: "Kraanwater", t: "Het kraanwater is veilig om te drinken." },
       { label: "Noodnummer", t: "919 of 911." },

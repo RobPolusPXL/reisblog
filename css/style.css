@@ -241,6 +241,10 @@ footer .insta:hover span { text-decoration: underline; }
 .fact { background: var(--sand); border-radius: var(--radius); padding: 22px 24px; }
 .fact b { display: block; color: var(--clay); font: 700 13px/1.3 var(--body); letter-spacing: .09em; text-transform: uppercase; margin-bottom: 8px; }
 .fact span { display: block; font-size: 17px; line-height: 1.45; }
+.fact.safe { background: #e8f3e6; border-left: 5px solid #3a8a47; }
+.fact.safe b { color: #2d6a38; }
+.fact.safe span { font-weight: 700; color: #1f5a2b; }
+.fact-link { display: inline-block; margin-top: 8px; font-size: 15px; color: #2d6a38; text-decoration: underline; }
 .fact.concept { background: #fff; border: 2px dashed #e0b24a; }
 @media (max-width: 980px) { .facts { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }

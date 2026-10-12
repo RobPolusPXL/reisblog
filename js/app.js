@@ -264,7 +264,8 @@
       return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
     if (c.practical && c.practical.length) html += section("Praktisch", '<div class="facts">' + c.practical.map(function (f) {
-      return '<div class="fact' + (f.ok === false ? " concept" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
+      return '<div class="fact' + (f.ok === false ? " concept" : "") + (f.tone === "safe" ? " safe" : "") + '"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span>" +
+        (f.link ? '<a class="fact-link" href="' + esc(f.link.href) + '" target="_blank" rel="noopener">' + esc(f.link.label) + "</a>" : "") + "</div>";
     }).join("") + "</div>");
 
     if (c.gallery && c.gallery.length) {
