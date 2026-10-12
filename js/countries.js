@@ -271,7 +271,6 @@ window.COUNTRIES = [
       { label: "Verkeer", group: "Ter plaatse", t: "Er wordt links gereden, ook al zijn veel auto's uit de VS ingevoerd met het stuur links." },
       { label: "Stekker", group: "Ter plaatse", t: "Net als in de VS: 120 volt en platte stekkers. Neem een reisstekker mee." },
       { label: "Noodnummer", group: "In nood", t: "919 of 911." },
-      { label: "Cruise of verblijf?", group: "Onze indruk", t: "Wij zagen alleen Nassau en Ocean Cay, elk op één dag. Dat is een eerste indruk, geen volledig beeld." },
     ]
   },
   { slug: "portugal", iso: "620", name: "Portugal", done: false, pin: [38.72, -9.14] },
