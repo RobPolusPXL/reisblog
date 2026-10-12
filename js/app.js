@@ -193,7 +193,7 @@
   function factsStrip(c) {
     if (!c.facts || !c.facts.length) return "";
     return '<div class="wrap"><div class="facts-strip">' + c.facts.map(function (f) {
-      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + (f.tz ? esc(tzText(f.tz)).replace(/\n(.*)$/, "<small>$1</small>") : esc(f.v)) + "</span></div>";
+      return '<div><svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[f.icon] || "") + "</svg><span><b>" + esc(f.label) + "</b>" + (f.tz ? esc(tzText(f.tz)).replace(/\n(.*)$/, "<small>$1</small>") : esc(f.v).replace(/\n/g, "<br>")) + "</span></div>";
     }).join("") + "</div></div>";
   }
 

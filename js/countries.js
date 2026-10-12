@@ -218,6 +218,7 @@ window.COUNTRIES = [
       { icon: "pin", label: "Hoofdstad", v: "Washington D.C." },
       { icon: "talk", label: "Taal", v: "Engels" },
       { icon: "coin", label: "Munt", v: "Amerikaanse dollar" },
+      { icon: "plane", label: "Vliegtijd", v: "± 8 u naar de oostkust\n± 11 u naar de westkust" },
       { icon: "clock", label: "Tijdzone", tz: "America/New_York" }
     ],
     tagline: "Achtbanen en dieren in Busch Gardens, op een dag in Florida.",
