@@ -205,6 +205,20 @@
       "</dd></div>";
   }).join("") + "</dl>";
 }
+function initCountryMap(pl, c) {
+  var el = document.getElementById("countryMap");
+  if (!el || !window.L || !window.WORLD || el.offsetWidth === 0) return;
+  var m = L.map(el, { zoomControl: false, attributionControl: false, scrollWheelZoom: false, dragging: false, doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false, zoomSnap: 0.1 });
+  L.geoJSON(window.WORLD, { style: function (f) { return { color: "#ffffff", weight: 0.8, fillColor: f.id === c.iso ? "#bfdad4" : "#e9e1d2", fillOpacity: 1 }; } }).addTo(m);
+  var pts = [];
+  pl.forEach(function (a, i) {
+    pts.push(a.pin);
+    L.marker(a.pin, { icon: L.divIcon({ className: "num-pin", iconSize: [30, 30], iconAnchor: [15, 15], html: "<span>" + (i + 1) + "</span>" }), title: a.t })
+      .addTo(m).bindTooltip(a.t, { direction: "top", offset: [0, -12] })
+      .on("click", function () { location.href = cpath(c) + a.slug + "/"; });
+  });
+  m.fitBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 7 });
+}
 function section(title, inner, sub, cls) {
     return '<section class="block' + (cls ? " " + cls : "") + '"><h2>' + title + "</h2>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + inner + "</section>";
   }
@@ -246,10 +260,10 @@ function section(title, inner, sub, cls) {
       })() + "</div>";
 
     if (pl.length) {
-      html += section("Dingen die we deden", '<div class="places" data-n="' + Math.min(pl.length, 3) + '">' + pl.map(function (a) {
+      html += section("Dingen die we deden", '<div class="places" data-n="' + (pl.length === 2 && pl.every(function (a) { return a.pin; }) ? "2map" : Math.min(pl.length, 3)) + '">' + pl.map(function (a) {
         return '<a class="place" href="' + cpath(c) + a.slug + '/">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
-      }).join("") + "</div>" + (rest.length
+      }).join("") + (pl.length === 2 && pl.every(function (a) { return a.pin; }) ? '<div class="place-map" id="countryMap" aria-hidden="true"></div>' : "") + "</div>" + (rest.length
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
             return '<li><span class="chip' + (a.ok === false ? " concept" : "") + '">' + esc(a.t) + "</span></li>";
           }).join("") + "</ul></div>" : ""),
@@ -291,6 +305,7 @@ function section(title, inner, sub, cls) {
 
     html += "</div>";
     $("country").innerHTML = html;
+    initCountryMap(pl, c);
   }
 
   function renderPlace(c, a) {
