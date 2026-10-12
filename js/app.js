@@ -246,7 +246,7 @@ function section(title, inner, sub, cls) {
       })() + "</div>";
 
     if (pl.length) {
-      html += section("Dingen die we deden", '<div class="places" data-n="' + Math.min(pl.length, 3) + '">' + pl.map(function (a) {
+      html += section("Dingen die we deden", '<div class="places" data-n="' + (pl.length > 3 ? "many" : pl.length) + '">' + pl.map(function (a) {
         return '<a class="place" href="' + cpath(c) + a.slug + '/">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
       }).join("") + "</div>" + (rest.length
