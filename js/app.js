@@ -101,9 +101,32 @@
         "<h3>" + esc(c.name) + "</h3>" +
         (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") + "</a>";
     }
+    var CH_L = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>', CH_R = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
     $("grid").innerHTML = groups.map(function (g) {
-      return (groups.length > 1 ? '<h3 class="grid-cont">' + esc(g.name) + "</h3>" : "") + g.items.map(gridCard).join("");
+      return '<section class="cont">' + (groups.length > 1 ? '<h3 class="grid-cont">' + esc(g.name) + "</h3>" : "") +
+        '<div class="cont-wrap"><button type="button" class="cont-btn prev" aria-label="Vorige" hidden>' + CH_L + '</button>' +
+        '<div class="cont-track">' + g.items.map(gridCard).join("") + "</div>" +
+        '<button type="button" class="cont-btn next" aria-label="Volgende" hidden>' + CH_R + "</button></div></section>";
     }).join("");
+    Array.prototype.forEach.call($("grid").querySelectorAll(".cont-wrap"), function (w) {
+      var tr = w.querySelector(".cont-track"), pv = w.querySelector(".prev"), nx = w.querySelector(".next");
+      function upd() {
+        var max = tr.scrollWidth - tr.clientWidth;
+        var can = max > 4;
+        pv.hidden = !can || tr.scrollLeft <= 4;
+        nx.hidden = !can || tr.scrollLeft >= max - 4;
+      }
+      function step(dir) {
+        var card = tr.querySelector(".place");
+        var w1 = card ? card.getBoundingClientRect().width + 18 : tr.clientWidth;
+        tr.scrollBy({ left: dir * w1, behavior: "smooth" });
+      }
+      pv.addEventListener("click", function () { step(-1); });
+      nx.addEventListener("click", function () { step(1); });
+      tr.addEventListener("scroll", upd, { passive: true });
+      window.addEventListener("resize", upd);
+      upd();
+    });
     var parks = [];
     countries.forEach(function (c) { places(c).forEach(function (pl) { if (pl.park) parks.push({ c: c, a: pl }); }); });
     parks.sort(function (x, y) { return x.a.t.localeCompare(y.a.t, "nl"); });
