@@ -59,6 +59,15 @@
       "<h1>" + esc(title) + "</h1>" + (text ? "<p>" + esc(text) + "</p>" : "") + "</div>" + (extra || "") + "</div>";
   }
 
+  var CONTINENT = { "bahamas": "Noord-Amerika", "verenigde-staten": "Noord-Amerika", "costa-rica": "Midden-Amerika",
+    "bosnie-en-herzegovina": "Europa", "montenegro": "Europa", "polen": "Europa", "slowakije": "Europa", "italie": "Europa",
+    "slovenie": "Europa", "kroatie": "Europa", "portugal": "Europa", "frankrijk": "Europa" };
+  var CONT_ORDER = ["Europa", "Noord-Amerika", "Midden-Amerika", "Zuid-Amerika", "Azië", "Afrika", "Oceanië"];
+  function byContinent(list) {
+    var g = {};
+    list.forEach(function (c) { var k = CONTINENT[c.slug] || "Overig"; (g[k] = g[k] || []).push(c); });
+    return CONT_ORDER.concat(["Overig"]).filter(function (k) { return g[k]; }).map(function (k) { return { name: k, items: g[k] }; });
+  }
   function renderHome() {
     $("hero").innerHTML = hero("images/home/hangmat-panorama.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
       "Reisblog van Rob en Joke", "Op zoek naar unieke plaatsen",
@@ -82,13 +91,18 @@
     var byName = function (a, b) { return a.name.localeCompare(b.name, "nl"); };
     var done = countries.filter(function (c) { return c.done; }).sort(byName);
     var soon = countries.filter(function (c) { return !c.done; }).sort(byName);
-    $("grid").innerHTML = done.map(function (c) {
+    var FLAGS_ = null;
+    var groups = byContinent(done);
+    function gridCard(c) {
       var FLAGS = { "bahamas": "bs", "bosnie-en-herzegovina": "ba", "montenegro": "me", "polen": "pl", "slowakije": "sk", "verenigde-staten": "us" };
       return '<a class="place" href="' + cpath(c) + '">' +
         photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
         (FLAGS[c.slug] ? '<img class="dest-flag" src="images/flags/' + FLAGS[c.slug] + '.svg" alt="" loading="lazy">' : "") +
         "<h3>" + esc(c.name) + "</h3>" +
         (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") + "</a>";
+    }
+    $("grid").innerHTML = groups.map(function (g) {
+      return (groups.length > 1 ? '<h3 class="grid-cont">' + esc(g.name) + "</h3>" : "") + g.items.map(gridCard).join("");
     }).join("");
     var parks = [];
     countries.forEach(function (c) { places(c).forEach(function (pl) { if (pl.park) parks.push({ c: c, a: pl }); }); });
@@ -559,6 +573,23 @@ function section(title, inner, sub, cls) {
       var rq = box.requestFullscreen || box.webkitRequestFullscreen;
       if (rq) { try { var r = rq.call(box, { navigationUI: "hide" }); if (r && r.catch) r.catch(function () {}); } catch (e) {} }
     });
+  })();
+
+  (function () {
+    var link = document.querySelector('.site-head nav a[href="./#bestemmingen"]');
+    if (!link) return;
+    var groups = byContinent(countries.filter(function (c) { return c.done; }).sort(function (a, b) { return a.name.localeCompare(b.name, "nl"); }));
+    if (!groups.length) return;
+    var wrap = document.createElement("div");
+    wrap.className = "nav-dd";
+    link.parentNode.insertBefore(wrap, link);
+    wrap.appendChild(link);
+    var panel = document.createElement("div");
+    panel.className = "nav-dd-panel";
+    panel.innerHTML = groups.map(function (g) {
+      return '<div class="nav-dd-col"><h4>' + esc(g.name) + "</h4>" + g.items.map(function (c) { return '<a href="' + cpath(c) + '">' + esc(c.name) + "</a>"; }).join("") + "</div>";
+    }).join("");
+    wrap.appendChild(panel);
   })();
 
   renderHome();
