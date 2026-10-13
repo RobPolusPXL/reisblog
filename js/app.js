@@ -600,7 +600,7 @@ function section(title, inner, sub, cls) {
 
   (function () {
     var link = document.querySelector('.site-head nav a[href="./#bestemmingen"]');
-    if (!link) return;
+    if (!link || link.parentNode.classList.contains("nav-dd") || document.querySelector(".nav-dd")) return;
     var groups = byContinent(countries.filter(function (c) { return c.done; }).sort(function (a, b) { return a.name.localeCompare(b.name, "nl"); }));
     if (!groups.length) return;
     var wrap = document.createElement("div");

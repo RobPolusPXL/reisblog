@@ -492,7 +492,9 @@ body.lb-open { overflow: hidden; }
 .nav-dd-col { position: relative; padding: 24px 28px; min-width: 150px; }
 .nav-dd-col h4 { white-space: nowrap; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font: 700 13px/1 var(--sans, inherit); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 .site-head .nav-dd-col a, body.has-hero .site-head .nav-dd-col a { display: block; padding: 6px 0; color: var(--ink); text-shadow: none; font-weight: 500; white-space: nowrap; }
-.site-head .nav-dd-col a:hover { color: var(--accent); }
+.site-head .nav-dd-col a { transform-origin: left center; transition: transform .18s ease, color .18s ease; }
+.site-head .nav-dd-col a:hover, .site-head .nav-dd-col a:focus-visible { color: var(--accent); transform: scale(1.12); font-weight: 600; }
+body.has-hero .site-head .nav-dd-col a:hover { color: var(--accent); }
 @media (max-width: 960px) { .nav-dd-panel { display: none !important; } }
 
 #grid { display: block; }
