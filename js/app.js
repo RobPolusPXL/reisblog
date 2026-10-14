@@ -145,11 +145,31 @@
       : "";
   }
 
+  // de landgrenzen (1,4 MB) worden pas geladen als een kaart ze nodig heeft
+  function loadWorld(cb) {
+    if (window.WORLD) { cb(); return; }
+    var q = loadWorld.q = loadWorld.q || [];
+    q.push(cb);
+    if (q.length > 1) return;
+    var s = document.createElement("script");
+    s.src = "js/world.js";
+    s.onload = function () { var l = q.slice(); q.length = 0; l.forEach(function (f) { f(); }); };
+    s.onerror = function () { q.length = 0; };
+    document.head.appendChild(s);
+  }
+
   function renderMap() {
-    if (!window.L || !window.WORLD) {
-      $("map").style.display = "none"; // het landenoverzicht blijft werken
-      return;
-    }
+    var el = $("map");
+    if (!window.L) { el.style.display = "none"; return; } // het landenoverzicht blijft werken
+    if (window.__PRERENDER) return; // de kaart wordt bij het voorrenderen toch leeggemaakt
+    if (!("IntersectionObserver" in window)) { loadWorld(drawMap); return; }
+    var io = new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { io.disconnect(); loadWorld(drawMap); }
+    }, { rootMargin: "800px 0px" });
+    io.observe(el);
+  }
+
+  function drawMap() {
     var byIso = {};
     countries.forEach(function (c) { byIso[c.iso] = c; });
     var fill = function () { return "#bfdad4"; }; // donkergroen enkel bij hover
@@ -248,7 +268,11 @@
 }
 function initCountryMap(pl, c) {
   var el = document.getElementById("countryMap");
-  if (!el || !window.L || !window.WORLD || el.offsetWidth === 0) return;
+  if (!el || !window.L || window.__PRERENDER) return;
+  loadWorld(function () { drawCountryMap(el, pl, c); });
+}
+function drawCountryMap(el, pl, c) {
+  if (!window.WORLD || el.offsetWidth === 0 || el._leaflet_id) return;
   var m = L.map(el, { zoomControl: false, attributionControl: false, scrollWheelZoom: false, dragging: false, doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false, zoomSnap: 0.1 });
   L.geoJSON(window.WORLD, { style: function (f) { return { color: "#ffffff", weight: 0.8, fillColor: f.id === c.iso ? "#bfdad4" : "#e9e1d2", fillOpacity: 1 }; } }).addTo(m);
   var pts = [];
@@ -486,6 +510,17 @@ function section(title, inner, sub, cls) {
 
   var HOME_DESC = "Traveling Mustache: reisinspiratie per land, van plaatsen die Rob en Joke zelf beleefden.";
 
+  function laadVolledig(o, klaar) {
+    var soort = o.countries ? "REIS" : "LAND", map = window[soort] = window[soort] || {};
+    function samen() { if (map[o.slug]) Object.assign(o, map[o.slug]); o._volledig = true; klaar(); }
+    if (map[o.slug]) { samen(); return; }
+    var s = document.createElement("script");
+    s.src = "data/" + (soort === "REIS" ? "reizen" : "landen") + "/" + o.slug + ".js";
+    s.onload = samen;
+    s.onerror = function () { o._volledig = true; klaar(); };
+    document.head.appendChild(s);
+  }
+
   function route() {
     // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
     if (/^#\//.test(location.hash)) {
@@ -500,6 +535,10 @@ function section(title, inner, sub, cls) {
     var parts = location.pathname.slice(BASE.length).split("/").filter(Boolean);
     var c = parts[0] === "bestemmingen" && parts[1] ? countryBySlug(parts[1]) : null;
     var t = parts[0] === "reizen" && parts[1] ? trips.filter(function (x) { return x.slug === parts[1]; })[0] : null;
+    // de volledige teksten staan per bestemming/reis in data/ en worden pas hier geladen;
+    // tot dan blijft de voorgerenderde pagina gewoon zichtbaar
+    var need = c && !c._volledig ? c : (t && !t._volledig ? t : null);
+    if (need) { laadVolledig(need, route); return; }
     var anchor = !c && !t && /^#(reizen|kaart|bestemmingen|pretparken)$/.test(location.hash) ? location.hash.slice(1) : null;
     if (!c && location.hash === "#landen") anchor = "bestemmingen";
 

@@ -3,7 +3,7 @@
 
 Gebruik:  python3 build.py
 Vereist:  pip install playwright && playwright install chromium
-Draai dit na elke wijziging in js/countries.js, js/app.js of template.html en commit de gegenereerde bestanden.
+Draai dit na elke wijziging in data/, js/app.js of template.html en commit de gegenereerde bestanden.
 """
 import http.server, os, re, shutil, socketserver, subprocess, sys, threading
 from urllib.parse import urlparse
@@ -32,6 +32,7 @@ def out_path(route):
     return os.path.join(ROOT, route, "index.html") if route else os.path.join(ROOT, "index.html")
 
 def main():
+    subprocess.run(["node", "tools/maak-index.js"], check=True)
     srv = serve()
     with sync_playwright() as pw:
         b = pw.chromium.launch()
