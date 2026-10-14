@@ -513,3 +513,8 @@ body.has-hero .site-head .nav-dd-col a:hover { color: var(--accent); }
 .cont-btn.next { right: -14px; }
 @media (max-width: 900px) { .cont-track .place { flex-basis: calc((100% - 18px) / 2); } }
 @media (max-width: 640px) { .cont-track .place { flex-basis: 84%; } .cont-btn { display: none; } }
+
+/* reizen en pretparken hebben dezelfde kaart en rij als bestemmingen */
+#trips, #parks { display: block; }
+.cont-track .place .photo::before { display: none; }
+.place .label { position: relative; z-index: 2; display: block; margin: 0 0 8px; color: rgba(255,255,255,.85); }

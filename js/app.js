@@ -68,47 +68,15 @@
     list.forEach(function (c) { var k = CONTINENT[c.slug] || "Overig"; (g[k] = g[k] || []).push(c); });
     return CONT_ORDER.concat(["Overig"]).filter(function (k) { return g[k]; }).map(function (k) { return { name: k, items: g[k] }; });
   }
-  function renderHome() {
-    $("hero").innerHTML = hero("images/home/hangmat-panorama.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
-      "Reisblog van Rob en Joke", "Op zoek naar unieke plaatsen",
-      "Reisinspiratie per land, enkel over plaatsen en dingen die we zelf beleefden.");
-
-    var MONTHS = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
-    function tripDate(t) {
-      var m = t.period.match(/(\d{1,2})?\D*?([a-z]+) (\d{4})\s*$/i);
-      return m ? new Date(+m[3], Math.max(0, MONTHS.indexOf(m[2].toLowerCase())), +(m[1] || 1)).getTime() : 0;
-    }
-    var sortedTrips = trips.slice().sort(function (a, b) { return tripDate(b) - tripDate(a); });
-    $("trips").innerHTML = sortedTrips.map(function (t) {
-      return '<a class="card" href="' + tpath(t) + '">' +
-        photo(t.cover) +
-        '<div><span class="label">' + esc(t.period) + " · " + t.nights + " nachten</span>" +
-        "<h3>" + esc(t.title) + "</h3>" +
-        (t.intro ? "<p>" + esc(excerpt(t.intro, 150)) + "</p>" : "") +
-        '<span class="more">Lees de reis ' + ARROW + "</span></div></a>";
-    }).join("");
-
-    var byName = function (a, b) { return a.name.localeCompare(b.name, "nl"); };
-    var done = countries.filter(function (c) { return c.done; }).sort(byName);
-    var soon = countries.filter(function (c) { return !c.done; }).sort(byName);
-    var FLAGS_ = null;
-    var groups = byContinent(done);
-    function gridCard(c) {
-      var FLAGS = { "bahamas": "bs", "bosnie-en-herzegovina": "ba", "montenegro": "me", "polen": "pl", "slowakije": "sk", "verenigde-staten": "us" };
-      return '<a class="place" href="' + cpath(c) + '">' +
-        photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
-        (FLAGS[c.slug] ? '<img class="dest-flag" src="images/flags/' + FLAGS[c.slug] + '.svg" alt="" loading="lazy">' : "") +
-        "<h3>" + esc(c.name) + "</h3>" +
-        (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") + "</a>";
-    }
-    var CH_L = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>', CH_R = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
-    $("grid").innerHTML = groups.map(function (g) {
-      return '<section class="cont">' + (groups.length > 1 ? '<h3 class="grid-cont">' + esc(g.name) + "</h3>" : "") +
-        '<div class="cont-wrap"><button type="button" class="cont-btn prev" aria-label="Vorige" hidden>' + CH_L + '</button>' +
-        '<div class="cont-track">' + g.items.map(gridCard).join("") + "</div>" +
-        '<button type="button" class="cont-btn next" aria-label="Volgende" hidden>' + CH_R + "</button></div></section>";
-    }).join("");
-    Array.prototype.forEach.call($("grid").querySelectorAll(".cont-wrap"), function (w) {
+  var CH_L = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>', CH_R = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+  // een rij kaarten met pijltjes (wordt gebruikt voor bestemmingen, reizen en pretparken)
+  function carouselHtml(cards) {
+    return '<div class="cont-wrap"><button type="button" class="cont-btn prev" aria-label="Vorige" hidden>' + CH_L + '</button>' +
+      '<div class="cont-track">' + cards + '</div>' +
+      '<button type="button" class="cont-btn next" aria-label="Volgende" hidden>' + CH_R + "</button></div>";
+  }
+  function wireCarousels(root) {
+    Array.prototype.forEach.call(root.querySelectorAll(".cont-wrap"), function (w) {
       var tr = w.querySelector(".cont-track"), pv = w.querySelector(".prev"), nx = w.querySelector(".next");
       function upd() {
         var max = tr.scrollWidth - tr.clientWidth;
@@ -127,16 +95,54 @@
       window.addEventListener("resize", upd);
       upd();
     });
+  }
+
+  function renderHome() {
+    $("hero").innerHTML = hero("images/home/hangmat-panorama.webp", "Rob en Joke in een hangmat, met zicht op zee tussen de palmen",
+      "Reisblog van Rob en Joke", "Op zoek naar unieke plaatsen",
+      "Reisinspiratie per land, enkel over plaatsen en dingen die we zelf beleefden.");
+
+    var MONTHS = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+    function tripDate(t) {
+      var m = t.period.match(/(\d{1,2})?\D*?([a-z]+) (\d{4})\s*$/i);
+      return m ? new Date(+m[3], Math.max(0, MONTHS.indexOf(m[2].toLowerCase())), +(m[1] || 1)).getTime() : 0;
+    }
+    var sortedTrips = trips.slice().sort(function (a, b) { return tripDate(b) - tripDate(a); });
+    $("trips").innerHTML = carouselHtml(sortedTrips.map(function (t) {
+      return '<a class="place" href="' + tpath(t) + '">' + photo(t.cover) +
+        '<span class="label">' + esc(t.period) + " · " + t.nights + " nachten</span>" +
+        "<h3>" + esc(t.title) + "</h3>" +
+        (t.tagline ? "<p>" + esc(t.tagline) + "</p>" : "") + "</a>";
+    }).join(""));
+
+    var byName = function (a, b) { return a.name.localeCompare(b.name, "nl"); };
+    var done = countries.filter(function (c) { return c.done; }).sort(byName);
+    var soon = countries.filter(function (c) { return !c.done; }).sort(byName);
+    var FLAGS_ = null;
+    var groups = byContinent(done);
+    function gridCard(c) {
+      var FLAGS = { "bahamas": "bs", "bosnie-en-herzegovina": "ba", "montenegro": "me", "polen": "pl", "slowakije": "sk", "verenigde-staten": "us" };
+      return '<a class="place" href="' + cpath(c) + '">' +
+        photo(c.cover && c.cover.src ? { src: c.cover.src, alt: c.cover.alt } : { alt: c.name }) +
+        (FLAGS[c.slug] ? '<img class="dest-flag" src="images/flags/' + FLAGS[c.slug] + '.svg" alt="" loading="lazy">' : "") +
+        "<h3>" + esc(c.name) + "</h3>" +
+        (c.tagline ? "<p>" + esc(c.tagline) + "</p>" : "") + "</a>";
+    }
+    $("grid").innerHTML = groups.map(function (g) {
+      return '<section class="cont">' + (groups.length > 1 ? '<h3 class="grid-cont">' + esc(g.name) + "</h3>" : "") +
+        carouselHtml(g.items.map(gridCard).join("")) + "</section>";
+    }).join("");
+    wireCarousels($("grid"));
     var parks = [];
     countries.forEach(function (c) { places(c).forEach(function (pl) { if (pl.park) parks.push({ c: c, a: pl }); }); });
     parks.sort(function (x, y) { return x.a.t.localeCompare(y.a.t, "nl"); });
-    $("parks").innerHTML = parks.map(function (x) {
-      return '<a class="card" href="' + cpath(x.c) + x.a.slug + '/">' + photo(x.a.hero ? x.a.hero : x.a.photos[0]) +
-        '<div><span class="label">Pretpark · ' + esc(x.c.name) + "</span>" +
+    $("parks").innerHTML = carouselHtml(parks.map(function (x) {
+      return '<a class="place" href="' + cpath(x.c) + x.a.slug + '/">' + photo(x.a.hero ? x.a.hero : x.a.photos[0]) +
+        '<span class="label">Pretpark · ' + esc(x.c.name) + "</span>" +
         "<h3>" + esc(x.a.t) + "</h3>" +
-        (x.a.text ? "<p>" + esc(excerpt(x.a.text, 150)) + "</p>" : "") +
-        '<span class="more">Lees verder ' + ARROW + "</span></div></a>";
-    }).join("");
+        (x.a.text ? "<p>" + esc(excerpt(x.a.text, 110)) + "</p>" : "") + "</a>";
+    }).join(""));
+    wireCarousels($("trips")); wireCarousels($("parks"));
     $("pretparken").hidden = !parks.length;
     $("soon").innerHTML = soon.length
       ? "<h3>Hier volgen nog meer bestemmingen</h3><ul>" + soon.map(function (c) {
