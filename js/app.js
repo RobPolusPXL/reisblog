@@ -643,21 +643,40 @@ function section(title, inner, sub, cls) {
     });
   })();
 
-  (function () {
-    var link = document.querySelector('.site-head nav a[href="./#bestemmingen"]');
-    if (!link || link.parentNode.classList.contains("nav-dd") || document.querySelector(".nav-dd")) return;
-    var groups = byContinent(countries.filter(function (c) { return c.done; }).sort(function (a, b) { return a.name.localeCompare(b.name, "nl"); }));
-    if (!groups.length) return;
+  // uitklapmenu's bij hoveren over het hoofdmenu: bestemmingen per werelddeel, reizen per jaar, pretparken per land
+  function menuDropdown(href, cols, right) {
+    var link = document.querySelector('.site-head nav a[href="' + href + '"]');
+    if (!link || link.parentNode.classList.contains("nav-dd") || !cols.length) return;
     var wrap = document.createElement("div");
-    wrap.className = "nav-dd";
+    wrap.className = "nav-dd" + (right ? " right" : "");
     link.parentNode.insertBefore(wrap, link);
     wrap.appendChild(link);
     var panel = document.createElement("div");
     panel.className = "nav-dd-panel";
-    panel.innerHTML = groups.map(function (g) {
-      return '<div class="nav-dd-col"><h4>' + esc(g.name) + "</h4>" + g.items.map(function (c) { return '<a href="' + cpath(c) + '">' + esc(c.name) + "</a>"; }).join("") + "</div>";
+    panel.innerHTML = cols.map(function (g) {
+      return '<div class="nav-dd-col"><h4>' + esc(g.name) + "</h4>" + g.items.map(function (i) { return '<a href="' + i.href + '">' + esc(i.label) + "</a>"; }).join("") + "</div>";
     }).join("");
     wrap.appendChild(panel);
+  }
+  (function () {
+    var done = countries.filter(function (c) { return c.done; }).sort(function (a, b) { return a.name.localeCompare(b.name, "nl"); });
+    menuDropdown("./#bestemmingen", byContinent(done).map(function (g) {
+      return { name: g.name, items: g.items.map(function (c) { return { href: cpath(c), label: c.name }; }) };
+    }));
+    var perJaar = {};
+    trips.forEach(function (t) {
+      var y = (t.period.match(/(\d{4})\s*$/) || [0, "Overig"])[1];
+      (perJaar[y] = perJaar[y] || []).push(t);
+    });
+    menuDropdown("./#reizen", Object.keys(perJaar).sort().reverse().map(function (y) {
+      return { name: y, items: perJaar[y].map(function (t) { return { href: tpath(t), label: t.title.split(":")[0] }; }) };
+    }), true);
+    var perLand = [];
+    done.forEach(function (c) {
+      var ps = places(c).filter(function (p) { return p.park; }).sort(function (a, b) { return a.t.localeCompare(b.t, "nl"); });
+      if (ps.length) perLand.push({ name: c.name, items: ps.map(function (p) { return { href: cpath(c) + p.slug + "/", label: p.t }; }) });
+    });
+    menuDropdown("./#pretparken", perLand, true);
   })();
 
   renderHome();

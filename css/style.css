@@ -518,3 +518,5 @@ body.has-hero .site-head .nav-dd-col a:hover { color: var(--accent); }
 #trips, #parks { display: block; }
 .cont-track .place .photo::before { display: none; }
 .place .label { position: relative; z-index: 2; display: block; margin: 0 0 8px; color: rgba(255,255,255,.85); }
+
+.nav-dd.right .nav-dd-panel { left: auto; right: -16px; transform: none; }
