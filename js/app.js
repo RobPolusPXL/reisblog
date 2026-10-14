@@ -510,6 +510,17 @@ function section(title, inner, sub, cls) {
 
   var HOME_DESC = "Traveling Mustache: reisinspiratie per land, van plaatsen die Rob en Joke zelf beleefden.";
 
+  function laadVolledig(o, klaar) {
+    var soort = o.countries ? "REIS" : "LAND", map = window[soort] = window[soort] || {};
+    function samen() { if (map[o.slug]) Object.assign(o, map[o.slug]); o._volledig = true; klaar(); }
+    if (map[o.slug]) { samen(); return; }
+    var s = document.createElement("script");
+    s.src = "data/" + (soort === "REIS" ? "reizen" : "landen") + "/" + o.slug + ".js";
+    s.onload = samen;
+    s.onerror = function () { o._volledig = true; klaar(); };
+    document.head.appendChild(s);
+  }
+
   function route() {
     // oude hash-links (#/land, #/kaart) doorsturen naar de echte adressen
     if (/^#\//.test(location.hash)) {
@@ -524,6 +535,10 @@ function section(title, inner, sub, cls) {
     var parts = location.pathname.slice(BASE.length).split("/").filter(Boolean);
     var c = parts[0] === "bestemmingen" && parts[1] ? countryBySlug(parts[1]) : null;
     var t = parts[0] === "reizen" && parts[1] ? trips.filter(function (x) { return x.slug === parts[1]; })[0] : null;
+    // de volledige teksten staan per bestemming/reis in data/ en worden pas hier geladen;
+    // tot dan blijft de voorgerenderde pagina gewoon zichtbaar
+    var need = c && !c._volledig ? c : (t && !t._volledig ? t : null);
+    if (need) { laadVolledig(need, route); return; }
     var anchor = !c && !t && /^#(reizen|kaart|bestemmingen|pretparken)$/.test(location.hash) ? location.hash.slice(1) : null;
     if (!c && location.hash === "#landen") anchor = "bestemmingen";
 
