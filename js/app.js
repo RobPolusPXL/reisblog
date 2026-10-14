@@ -654,7 +654,7 @@ function section(title, inner, sub, cls) {
     var panel = document.createElement("div");
     panel.className = "nav-dd-panel";
     panel.innerHTML = cols.map(function (g) {
-      return '<div class="nav-dd-col"><h4>' + esc(g.name) + "</h4>" + g.items.map(function (i) { return '<a href="' + i.href + '">' + esc(i.label) + "</a>"; }).join("") + "</div>";
+      return '<div class="nav-dd-col"><h4>' + esc(g.name) + "</h4>" + g.items.map(function (i) { return '<a href="' + i.href + '">' + esc(i.label) + (i.sub ? "<small>" + esc(i.sub) + "</small>" : "") + "</a>"; }).join("") + "</div>";
     }).join("");
     wrap.appendChild(panel);
   }
@@ -669,7 +669,11 @@ function section(title, inner, sub, cls) {
       (perJaar[y] = perJaar[y] || []).push(t);
     });
     menuDropdown("./#reizen", Object.keys(perJaar).sort().reverse().map(function (y) {
-      return { name: y, items: perJaar[y].map(function (t) { return { href: tpath(t), label: t.title.split(":")[0] }; }) };
+      return { name: y, items: perJaar[y].map(function (t) { 
+        var namen = t.countries.map(function (s) { var c = countryBySlug(s); return c ? c.name : s; });
+        var label = namen.length > 1 ? namen.slice(0, -1).join(", ") + " en " + namen[namen.length - 1] : namen[0];
+        return { href: tpath(t), label: label, sub: t.period.replace(/\s*\d{4}\s*$/, "") + " · " + t.nights + " nachten" };
+      }) };
     }), true);
     var perLand = [];
     done.forEach(function (c) {
