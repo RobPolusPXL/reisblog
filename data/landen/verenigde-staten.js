@@ -244,6 +244,7 @@
             "span": 3
           }
         ],
+        "mening": {"score": 4, "p": ["Voorbeeldtekst: hier komt in twee of drie zinnen wat wij ervan vonden."]},
         "practical": [
           {
             "label": "Gezien",
