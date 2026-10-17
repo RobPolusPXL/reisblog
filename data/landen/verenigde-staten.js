@@ -121,21 +121,21 @@
             "h": "Een NBA-wedstrijd in Miami",
             "p": [
               "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
-              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken."
+              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn."
             ]
           },
           {
             "h": "Erheen en weer weg",
             "p": [
               "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
-              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
+              "Het verkeer rond de hal is druk bij aankomst en bij vertrek. Tickets kun je kopen via de site van de Heat of via Ticketmaster. Wij kochten doorverkooptickets via Ticketmaster."
             ]
           },
           {
             "h": "In de hal",
             "p": [
               "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
-              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu."
+              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal. Prijzen per gerecht vond ik niet terug."
             ]
           }
         ],
@@ -158,7 +158,11 @@
           },
           {
             "label": "Openbaar vervoer",
-            "t": "Metromover of Metrorail (station Overtown/Arena)"
+            "t": "Metromover of Metrorail"
+          },
+          {
+            "label": "Tickets",
+            "t": "doorverkoop via Ticketmaster"
           }
         ],
         "gallery": [
@@ -166,25 +170,19 @@
             "section": {
               "h": "Voor de aftrap",
               "p": [
-                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte, en in de gang stond een basketbal als kunstwerk in het Heat-thema."
+                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte. Vanaf het terras van het stadion kijk je uit over de baai, met palmbomen en een verlichte brug."
               ]
             }
           },
           {
             "src": "images/verenigde-staten/miami-heat-palmen-en-brug-bij-nacht.webp",
-            "alt": "Palmbomen en een verlichte brug langs de baai bij nacht",
+            "alt": "Vanaf het terras van het stadion: palmbomen en een verlichte brug langs de baai bij nacht",
             "span": 6
           },
           {
             "src": "images/verenigde-staten/miami-heat-spelersintro-op-het-scherm.webp",
             "alt": "De spelersintro: spelers op de grote schermen en rook boven het veld",
             "span": 6
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
-            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
-            "tall": true,
-            "center": true
           },
           {
             "section": {
@@ -205,16 +203,30 @@
             "span": 6
           },
           {
+            "section": {
+              "h": "Tussendoor",
+              "p": [
+                "In de gang stond een basketbal als kunstwerk in het Heat-thema, en tijdens de wedstrijd kun je iets eten, zoals een stuk pizza."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
+            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
+            "tall": true,
+            "span": 3
+          },
+          {
             "src": "images/verenigde-staten/miami-heat-pizza-met-zicht-op-het-veld.webp",
             "alt": "Een stuk pizza met op de achtergrond het veld",
             "tall": true,
-            "center": true
+            "span": 3
           },
           {
             "section": {
               "h": "Dezelfde hal in 2013",
               "p": [
-                "In 2013 heette de hal nog AmericanAirlines Arena. Op 6 februari 2013 won de Heat er met 114–108 van de Houston Rockets."
+                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen."
               ]
             }
           },
