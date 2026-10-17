@@ -97,6 +97,128 @@
             "url": "https://discover.pbcgov.org/parks/PDF/philfostersnorkeltrail.pdf"
           }
         ]
+      },
+      {
+        "t": "Miami Heat in het Kaseya Center",
+        "pin": [
+          25.7814,
+          -80.187
+        ],
+        "text": "Een NBA-wedstrijd van de Miami Heat tegen Utah Jazz, met veel muziek, show en sfeer.",
+        "ok": true,
+        "hero": {
+          "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
+          "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+        },
+        "photos": [
+          {
+            "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
+            "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+          }
+        ],
+        "body": [
+          {
+            "h": "Een avond basketbal in Miami",
+            "p": [
+              "Het Kaseya Center is de thuishal van de Miami Heat, aan de baai in het centrum van Miami. Wij zagen de Heat op maandag 9 februari 2026 tegen Utah Jazz. De Heat verloor met 111–115.",
+              "Er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme: supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken."
+            ]
+          },
+          {
+            "h": "De wedstrijd",
+            "p": [
+              "De Heat begon sterk en won het eerste kwart met 32–26. In het tweede kwart scoorde Utah 35 punten tegen 20 van de Heat, waardoor Miami met 52–61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf.",
+              "Topscorer van de Heat was Andrew Wiggins met 26 punten. Bij Utah scoorde Jaren Jackson Jr. er 22."
+            ]
+          }
+        ],
+        "practical": [
+          {
+            "label": "Wedstrijd",
+            "t": "Heat – Utah Jazz, 9 februari 2026"
+          },
+          {
+            "label": "Eindstand",
+            "t": "111–115"
+          },
+          {
+            "label": "Rust",
+            "t": "52–61"
+          },
+          {
+            "label": "Plaats",
+            "t": "Kaseya Center, Miami"
+          },
+          {
+            "label": "Toeschouwers",
+            "t": "19.700"
+          }
+        ],
+        "gallery": [
+          {
+            "section": {
+              "h": "Voor de aftrap",
+              "p": [
+                "We liepen vanuit de stad naar de hal. Voor de ingang stond al een grote menigte, en in de gang stond een basketbal als kunstwerk in het Heat-thema."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-palmen-en-brug-bij-nacht.webp",
+            "alt": "Palmbomen en een verlichte brug langs de baai bij nacht",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-spelersintro-op-het-scherm.webp",
+            "alt": "De spelersintro: spelers op de grote schermen en rook boven het veld",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
+            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
+            "tall": true,
+            "center": true
+          },
+          {
+            "section": {
+              "h": "Tijdens de wedstrijd",
+              "p": [
+                "Vanaf onze plaatsen hadden we goed zicht op het veld en op de schermen erboven. Tussendoor was er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzette."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-zicht-op-het-veld.webp",
+            "alt": "Overzicht van het Kaseya Center tijdens de wedstrijd",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-zaklampen-in-de-zaal.webp",
+            "alt": "Supporters met de zaklampen van hun gsm aan in de zaal",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-pizza-met-zicht-op-het-veld.webp",
+            "alt": "Een stuk pizza met op de achtergrond het veld",
+            "tall": true,
+            "center": true
+          }
+        ],
+        "sourcesLabel": "Bronnen",
+        "sources": [
+          {
+            "t": "Wikipedia: Miami Heat 2025–26",
+            "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Miami_Heat_season"
+          },
+          {
+            "t": "FantasyData: boxscore",
+            "url": "https://fantasydata.com/nba/boxscore/23228-utah-jazz-vs-miami-heat-feb-9-2026"
+          },
+          {
+            "t": "Register-Herald",
+            "url": "https://www.register-herald.com/sports/national_sports/sensabaugh-hits-late-3-pointer-to-lift-jazz-to-115-111-win-over-heat/article_def12027-19de-5d2f-a181-c60d01fea46e.html"
+          }
+        ]
       }
     ]
   };
