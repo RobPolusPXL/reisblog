@@ -276,6 +276,99 @@
             "alt": "In 2013: overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
           }
         ]
+      },
+      {
+        "t": "South Beach",
+        "pin": [
+          25.7826,
+          -80.1304
+        ],
+        "text": "Een wandeling langs Ocean Drive in Miami Beach, met art-decohotels, palmbomen en kleurrijke strandpostjes.",
+        "ok": true,
+        "hero": {
+          "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
+          "alt": "Een blauw-gele lifeguardtoren op het strand, met de zee erachter"
+        },
+        "photos": [
+          {
+            "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
+            "alt": "Een blauw-gele lifeguardtoren op het strand, met de zee erachter"
+          }
+        ],
+        "body": [
+          {
+            "h": "Art deco aan Ocean Drive",
+            "p": [
+              "Langs Ocean Drive staan art-decohotels in pastelkleuren, zoals het Colony Hotel, The Pelican en The Carlyle. Op de benedenverdieping hebben veel van hen een terras aan de straat, onder parasols en palmbomen.",
+              "Wij wandelden hier op 8 februari 2026 in de namiddag, tussen de hotels en het strand."
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "src": "images/verenigde-staten/south-beach-miami-beach-letters.webp",
+            "alt": "Het kleurrijke Miami Beach-bord, met twee mensen ertussen",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-ocean-drive-palmen-en-art-deco.webp",
+            "alt": "Ocean Drive met palmbomen en art-decogebouwen",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-colony-hotel.webp",
+            "alt": "Het Colony Hotel met zijn neonbord en een witte klassieke auto ervoor",
+            "span": 3,
+            "tall": true
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-klok-met-temperatuur.webp",
+            "alt": "Een klok met temperatuuraanduiding tussen de palmbomen",
+            "span": 3,
+            "tall": true
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-the-pelican-hotel.webp",
+            "alt": "Het hotel The Pelican in pastelkleuren, met terras langs de straat",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-clevelander-hotel.webp",
+            "alt": "Het Clevelander-hotel met palmbomen ervoor",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-art-deco-poort.webp",
+            "alt": "Een turquoise poort met de tekst Art Deco Miami Beach",
+            "span": 3,
+            "tall": true,
+            "center": true
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-the-carlyle.webp",
+            "alt": "Het hotel The Carlyle met gele parasols op het terras",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
+            "alt": "Een blauw-gele lifeguardtoren op het strand, met de zee erachter",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-zon-boven-het-strand.webp",
+            "alt": "De zon boven het strand, met gebouwen als silhouet"
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-palmen-en-gazon.webp",
+            "alt": "Palmbomen op het gazon, met een art-decogebouw erachter"
+          }
+        ],
+        "practical": [
+          {
+            "label": "Gezien",
+            "t": "8 februari 2026"
+          }
+        ]
       }
     ],
     practical: [
