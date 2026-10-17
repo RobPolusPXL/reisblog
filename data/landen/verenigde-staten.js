@@ -121,14 +121,21 @@
             "h": "Een NBA-wedstrijd in Miami",
             "p": [
               "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
-              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn."
+              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn. Voor een sportliefhebber is een NBA-wedstrijd zeker aan te raden."
             ]
           },
           {
             "h": "Erheen en weer weg",
             "p": [
               "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
-              "Het verkeer rond de hal is druk bij aankomst en bij vertrek. Tickets kun je kopen via de site van de Heat of via Ticketmaster. Wij kochten doorverkooptickets via Ticketmaster."
+              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
+            ]
+          },
+          {
+            "h": "Tickets en plaatsen",
+            "p": [
+              "Tickets kun je kopen via de site van de Heat of via Ticketmaster. In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket.",
+              "In 2013 hadden we staanplaatsen in de bovenste uithoeken van de hal, de zogeheten nosebleeds. Dat raden we af. Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan. Neem liever een zitplaats en betaal iets meer."
             ]
           },
           {
@@ -162,7 +169,7 @@
           },
           {
             "label": "Tickets",
-            "t": "doorverkoop via Ticketmaster"
+            "t": "\u20ac46 per ticket (doorverkoop via Ticketmaster)"
           }
         ],
         "gallery": [
@@ -226,7 +233,7 @@
             "section": {
               "h": "Dezelfde hal in 2013",
               "p": [
-                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen."
+                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen. Tijdens de rust ging een deel van een gezelschap naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan."
               ]
             }
           },
