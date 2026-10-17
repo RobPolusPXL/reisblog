@@ -356,6 +356,7 @@ function section(title, inner, sub, cls) {
     if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", '<div class="facts">' + c.weetjes.map(function (f) {
       return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
+    if (c.tips && c.tips.length) html += section("Tip", '<ul class="tips">' + c.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>");
     if (c.practical && c.practical.length) {
       if (c.practical.some(function (f) { return f.group; })) {
         var order = [], byG = {};
