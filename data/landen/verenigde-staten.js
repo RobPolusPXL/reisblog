@@ -146,13 +146,22 @@
             ]
           }
         ],
-        "story": {
-          "label": "Leuke anekdote",
-          "p": [
-            "We hadden staanplaatsen in de nosebleeds. Een NBA-wedstrijd duurt langer dan je denkt, en het is best lang om rechtop te staan. Tijdens de rust ging een deel van een gezelschap dat zitplaatsen had vlak onder ons naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend.",
-            "Dank aan deze vriendelijke Amerikanen."
-          ]
-        },
+        "story": [
+          {
+            "label": "Hoe ging de wedstrijd?",
+            "p": [
+              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
+              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
+            ]
+          },
+          {
+            "label": "Leuke anekdote",
+            "p": [
+              "We hadden staanplaatsen in de nosebleeds. Een NBA-wedstrijd duurt langer dan je denkt, en het is best lang om rechtop te staan. Tijdens de rust ging een deel van een gezelschap dat zitplaatsen had vlak onder ons naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend."
+            ],
+            "closing": "Dank aan deze vriendelijke Amerikanen."
+          }
+        ],
         "practical": [
           {
             "label": "Gezien in 2013",
