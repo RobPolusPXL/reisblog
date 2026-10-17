@@ -157,7 +157,7 @@
           {
             "src": "images/verenigde-staten/south-beach-miami-beach-letters.webp",
             "alt": "Het kleurrijke Miami Beach-bord, met twee mensen ertussen",
-            "span": 6
+            "nat": true, "span": 6
           },
           {
             "section": {

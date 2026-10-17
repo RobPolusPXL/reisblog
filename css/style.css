@@ -540,3 +540,5 @@ body.has-hero .site-head .nav-dd-col a:hover { color: var(--accent); }
 .site-head .nav-dd-col a small { display: block; margin-top: 1px; font-size: 12.5px; font-weight: 500; color: var(--muted, #6b7a76); }
 .site-head .nav-dd-col a:hover small { color: inherit; }
 .city-places { margin: 36px 0 12px; }
+.hike-gal figure.nat .photo { aspect-ratio: auto; }
+.hike-gal figure.nat .photo img { height: auto; }
