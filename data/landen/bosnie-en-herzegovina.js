@@ -150,15 +150,18 @@
       { t: "Blagaj", ok: false }
     ],
     practical: [
-      { label: "Identiteit", t: "Belgische identiteitskaart volstaat.", ok: true },
-      { label: "Rijbewijs", t: "Belgisch rijbewijs is geldig. Een internationaal rijbewijs is niet nodig.", ok: true },
-      { label: "Stekker", t: "Belgische stekkers werken. Geen reisstekker nodig.", ok: true },
-      { label: "Munt", t: "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", ok: true },
-      { label: "Cash", t: "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen.", ok: true },
-      { label: "Pinnen", t: "Kies bij het pinnen altijd voor BAM, niet voor euro." },
-      { label: "Tol", t: "Op de snelweg A1 betaal je een paar euro bij de uitrit.", ok: true },
-      { label: "Tanken", t: "Eerst tanken, daarna binnen betalen.", ok: true },
-      { label: "Mobiel", t: "Geen EU-roaming. Regel mobiel internet vooraf.", ok: true }
+      {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart of een paspoort volstaat. Je moet je aankomst binnen 48 uur laten registreren. Hotels en andere accommodaties doen dat voor je en geven je een bewijs dat je bij het vertrek kunt moeten tonen.", "ok": true},
+      {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Mei, juni, september en oktober zijn aangenaam. In de zomer wordt het heet en in de winter ligt er sneeuw in de bergen."},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/bosnie-en-herzegovina/reizen-naar-bosnie-en-herzegovina-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Munt", "group": "Ter plaatse", "t": "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", "ok": true},
+      {"label": "Cash", "group": "Ter plaatse", "t": "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen. Pinautomaten staan vooral in de steden.", "ok": true},
+      {"label": "Pinnen", "group": "Ter plaatse", "t": "Kies bij het pinnen altijd voor BAM, niet voor euro."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Kraanwater", "group": "Ter plaatse", "t": "In de steden is het kraanwater doorgaans drinkbaar. Twijfel je, koop dan flessenwater."},
+      {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs is geldig. Een internationaal rijbewijs is niet nodig. Op de snelweg A1 betaal je een paar euro tol bij de uitrit. Eerst tanken, daarna binnen betalen.", "ok": true},
+      {"label": "Mobiel", "group": "Ter plaatse", "t": "Geen EU-roaming. Regel mobiel internet vooraf.", "ok": true},
+      {"label": "Stekker", "group": "Ter plaatse", "t": "Belgische stekkers werken. Geen reisstekker nodig.", "ok": true},
+      {"label": "Noodnummer", "group": "In nood", "t": "112."}
     ],
     gallery: []
   };

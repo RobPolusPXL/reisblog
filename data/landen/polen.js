@@ -52,5 +52,17 @@
         practical: [{"label": "Boeken", "t": "Alleen online, vooraf. Aan de ingang worden geen toegangsbewijzen verkocht en het aantal plaatsen is beperkt."}, {"label": "Met gids", "t": "Een rondleiding duurt ongeveer 3,5 uur, begint in Auschwitz I en is inclusief headset en de bus tussen de twee delen."}, {"label": "Zonder gids", "t": "Alleen op bepaalde uren, met een gratis toegangsbewijs uit het boekingssysteem. Van april tot en met september vanaf 17.00 uur, in oktober vanaf 16.00 uur."}, {"label": "Twee delen, met de bus", "t": "Auschwitz I en Auschwitz II-Birkenau liggen ongeveer 3 kilometer uit elkaar. Bij een rondleiding word je met de bus van het ene naar het andere gebracht."}, {"label": "Talen", "t": "Rondleidingen zijn er in het Pools, Engels, Frans, Duits, Italiaans, Spaans en Russisch."}, {"label": "Aankomst", "t": "Kom minstens 30 minuten voor je rondleiding. Grote bagage laat je achter in het voertuig op de parking."}],
         tips: ["Reken op een emotionele dag en neem er de tijd voor.", "Controleer waar je rondleiding begint. Die start in Auschwitz I, niet op de parking van Auschwitz-Birkenau: wij stonden op de verkeerde site en moesten een shuttlebusje betalen, waarna onze groep al vertrokken was. We hebben ze ingehaald, maar dat was een speurtocht.", "Je krijgt een ontvanger en een koptelefoon om de gids te verstaan. Houd je groep dus in het oog: je merkt aan de stem dat je dichterbij komt.", "Een gids was voor ons een goede beslissing. Anders hadden we veel info gemist."]
       }
+    ],
+    practical: [
+      {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart of een paspoort volstaat. Een visum is niet nodig. Bewaar een foto van je identiteitskaart op je telefoon.", "ok": true},
+      {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Van mei tot en met september is het aangenaam. De winters zijn koud, met sneeuw."},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/polen/reizen-naar-polen-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Munt", "group": "Ter plaatse", "t": "De zloty (PLN), geen euro. Kaarten worden overal aanvaard en met je Belgische kaart kun je geld afhalen aan een bankautomaat. Bij het pinnen kies je best voor PLN."},
+      {"label": "Prijzen", "group": "Ter plaatse", "t": "Over het algemeen goedkoper dan in België, zeker voor eten en drinken."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Kraanwater", "group": "Ter plaatse", "t": "Het kraanwater is veilig om te drinken."},
+      {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs is geldig. De politie is streng bij alcohol: de grens ligt bij 0,2 promille."},
+      {"label": "Stekker", "group": "Ter plaatse", "t": "Zelfde stekkers en spanning als in België. Geen reisstekker nodig.", "ok": true},
+      {"label": "Noodnummer", "group": "In nood", "t": "112."}
     ]
   };

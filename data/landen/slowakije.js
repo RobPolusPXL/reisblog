@@ -52,5 +52,17 @@
         tips: ["Vertrek vroeg. In de zomer kunnen bij de Misové-watervallen wachttijden van bijna een uur ontstaan.", "Je kan de kloof alleen stroomopwaarts lopen. Terug door de kloof is geen optie.", "Bij de ingang betaal je een bezoekersheffing. Het bedrag staat op de website van het nationaal park.", "Reken op ongeveer twee uur voor de kloof zelf.", "Draag stevige schoenen en neem handen vrij mee: je klimt vrijwel de hele route.", "Wij liepen ruim 10 kilometer in totaal. Op een zonnige dag met 28 graden viel de drukte heel goed mee."],
         stravaEmbed: '<div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3532305070004086620" data-full-width="true" data-style="standard" data-surface-type="true" data-map-hash="11.78/48.94913/20.38844" data-from-embed="true" data-token="l9_6ajea5tkYvr2s-Pz4B6DXeBHmPVtAjVb04NPNG3o"></div>'
       }
+    ],
+    practical: [
+      {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart of een paspoort volstaat. Slowakije ligt in de Schengenzone, dus er zijn geen grenscontroles.", "ok": true},
+      {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Mei tot en met september is het beste om te wandelen. In de winter liggen veel hoge routes onder de sneeuw en zijn sommige wandelroutes in de nationale parken dicht."},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/slowakije/reizen-naar-slowakije-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Munt", "group": "Ter plaatse", "t": "De euro, dus wisselen is niet nodig.", "ok": true},
+      {"label": "Prijzen", "group": "Ter plaatse", "t": "Over het algemeen goedkoper dan in België, in de toeristische plaatsen in de bergen iets minder."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Kraanwater", "group": "Ter plaatse", "t": "Het kraanwater is veilig om te drinken."},
+      {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs is geldig. Voor de snelwegen heb je een elektronische vignet nodig, die je vooraf online koopt."},
+      {"label": "Stekker", "group": "Ter plaatse", "t": "Zelfde stekkers en spanning als in België. Geen reisstekker nodig.", "ok": true},
+      {"label": "Noodnummer", "group": "In nood", "t": "112."}
     ]
   };
