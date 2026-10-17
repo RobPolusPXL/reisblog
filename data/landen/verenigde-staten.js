@@ -225,12 +225,12 @@
     practical: [
       {"label": "Inreis", "group": "Voor je vertrekt", "t": "Als Belg heb je een geldig paspoort en een ESTA nodig. Die kost 40 dollar (ongeveer €35), vraag je minstens 72 uur voor vertrek online aan en is twee jaar geldig. Een goedgekeurde ESTA garandeert de toegang niet: de grenswachters beslissen bij aankomst. Check de regels vlak voor vertrek.", "ok": true},
       {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "In Florida is november tot en met april droog en aangenaam. Van juni tot november is het orkaanseizoen, met de grootste kans in augustus en september."},
-      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/verenigde-staten/reizen-naar-verenigde-staten-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/verenigde-staten/reizen-naar-verenigde-staten-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "De Amerikaanse dollar. Met een kaart betaal je bijna overal.", "ok": true},
       {"label": "Prijzen", "group": "Ter plaatse", "t": "Prijzen staan zonder belasting aangeduid. In Florida komt daar ongeveer 6 tot 7% bij."},
       {"label": "Fooien", "group": "Ter plaatse", "t": "Fooien zijn de norm: 15 tot 25% van de rekening in restaurants."},
       {"label": "Kraanwater", "group": "Ter plaatse", "t": "Het kraanwater is veilig om te drinken."},
-      {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden. Buitenlandse Zaken raadt een internationaal rijbewijs sterk aan, dat je samen met je Belgisch rijbewijs toont. Je kunt het bij je gemeente aanvragen."},
+      {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs volstaat."},
       {"label": "Stekker", "group": "Ter plaatse", "t": "110 volt en platte stekkers. Neem een reisstekker mee."},
       {"label": "Noodnummer", "group": "In nood", "t": "911."}
     ]
