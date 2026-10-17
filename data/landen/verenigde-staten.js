@@ -202,113 +202,22 @@
             "alt": "Een stuk pizza met op de achtergrond het veld",
             "tall": true,
             "center": true
-          }
-        ]
-      },
-{
-        "t": "Miami Heat in de AmericanAirlines Arena (2013)",
-        "pin": [
-          25.7814,
-          -80.187
-        ],
-        "text": "Een eerdere NBA-wedstrijd van de Miami Heat, in 2013 tegen Houston Rockets.",
-        "ok": true,
-        "hero": {
-          "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
-          "alt": "Overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
-        },
-        "photos": [
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
-            "alt": "Overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
-          }
-        ],
-        "body": [
-          {
-            "h": "Een eerdere avond basketbal in Miami",
-            "p": [
-              "Al in 2013 was er een Heat-wedstrijd. De hal heette toen nog AmericanAirlines Arena en is dezelfde hal als het huidige Kaseya Center. De Heat waren op dat moment de regerende kampioen.",
-              "Op woensdag 6 februari 2013 won de Heat met 114–108 van de Houston Rockets."
-            ]
           },
-          {
-            "h": "De wedstrijd",
-            "p": [
-              "De Heat won het eerste kwart met 32–30 en ging met 63–56 voor de rust in. Houston kwam in de tweede helft nog terug, maar Miami hield stand. Dwyane Wade blokte ongeveer elf seconden voor het einde een driepunter van James Harden, waarmee de wedstrijd beslist was.",
-              "LeBron James scoorde 32 punten en Wade 31. Bij Houston was James Harden topscorer met 36 punten. Chris Bosh speelde niet mee."
-            ]
-          }
-        ],
-        "practical": [
-          {
-            "label": "Wedstrijd",
-            "t": "Heat – Houston Rockets, 6 februari 2013"
-          },
-          {
-            "label": "Eindstand",
-            "t": "114–108"
-          },
-          {
-            "label": "Rust",
-            "t": "63–56"
-          },
-          {
-            "label": "Plaats",
-            "t": "AmericanAirlines Arena (nu Kaseya Center), Miami"
-          }
-        ],
-        "gallery": [
           {
             "section": {
-              "h": "Voor de aftrap",
+              "h": "Ook in 2013",
               "p": [
-                "Voor de wedstrijd stelden de spelers zich op rond het Heat-logo op het veld, terwijl de zaal volliep."
+                "Ook in 2013 was er een Heat-wedstrijd in dezelfde hal, toen nog AmericanAirlines Arena. Op 6 februari won de Heat daar met 114\u2013108 van de Houston Rockets."
               ]
             }
           },
           {
             "src": "images/verenigde-staten/miami-heat-2013-spelersintro-op-het-veld.webp",
-            "alt": "De spelers staan opgesteld rond het Heat-logo op het veld voor de aftrap",
-            "span": 6
+            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de aftrap"
           },
           {
-            "src": "images/verenigde-staten/miami-heat-2013-de-hal-voor-de-aftrap.webp",
-            "alt": "De AmericanAirlines Arena met kampioensbanners en een verlicht scorebord voor de aftrap",
-            "span": 6
-          },
-          {
-            "section": {
-              "h": "Tijdens de wedstrijd",
-              "p": [
-                "Vanaf een hoge plaats in de hal was het hele veld te zien."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-vrije-worpen.webp",
-            "alt": "Vrije worpen op het veld met het Heat-logo"
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-spel-op-het-veld.webp",
-            "alt": "De spelers op het veld tijdens de wedstrijd"
-          },
-          {
-            "section": {
-              "h": "De dag erna",
-              "p": [
-                "De volgende ochtend was de hal bijna leeg. Onder het dak hingen de shirts van Alonzo Mourning (33) en Tim Hardaway (10) en de banners van de gewonnen titels, waaronder die van 2006 en 2012."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-opgehangen-shirts.webp",
-            "alt": "De opgehangen shirts met nummers 33 en 10 onder het dak van de hal",
-            "span": 6
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-kampioensbanners.webp",
-            "alt": "Kampioensbanners van onder meer 2006 en 2012 onder het dak van de hal",
-            "span": 6
+            "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
+            "alt": "In 2013: overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
           }
         ]
       }
