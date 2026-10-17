@@ -104,7 +104,7 @@
           25.7814,
           -80.187
         ],
-        "text": "Een NBA-wedstrijd van de Miami Heat tegen Utah Jazz, met veel muziek, show en sfeer.",
+        "text": "Wat je kunt verwachten bij een NBA-wedstrijd van de Miami Heat, gezien in 2013 en 2026.",
         "ok": true,
         "hero": {
           "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
@@ -118,40 +118,47 @@
         ],
         "body": [
           {
-            "h": "Een avond basketbal in Miami",
+            "h": "Een NBA-wedstrijd in Miami",
             "p": [
-              "Het Kaseya Center is de thuishal van de Miami Heat, aan de baai in het centrum van Miami. Wij zagen de Heat op maandag 9 februari 2026 tegen Utah Jazz. De Heat verloor met 111–115.",
-              "Er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme: supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken."
+              "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
+              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken."
             ]
           },
           {
-            "h": "De wedstrijd",
+            "h": "Erheen en weer weg",
             "p": [
-              "De Heat begon sterk en won het eerste kwart met 32–26. In het tweede kwart scoorde Utah 35 punten tegen 20 van de Heat, waardoor Miami met 52–61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf.",
-              "Topscorer van de Heat was Andrew Wiggins met 26 punten. Bij Utah scoorde Jaren Jackson Jr. er 22."
+              "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
+              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
+            ]
+          },
+          {
+            "h": "In de hal",
+            "p": [
+              "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
+              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu."
             ]
           }
         ],
         "practical": [
           {
-            "label": "Wedstrijd",
-            "t": "Heat – Utah Jazz, 9 februari 2026"
+            "label": "Gezien in 2013",
+            "t": "Heat – Houston Rockets, 114–108"
           },
           {
-            "label": "Eindstand",
-            "t": "111–115"
+            "label": "Gezien in 2026",
+            "t": "Heat – Utah Jazz, 111–115"
           },
           {
-            "label": "Rust",
-            "t": "52–61"
+            "label": "Adres",
+            "t": "601 Biscayne Boulevard, Miami"
           },
           {
-            "label": "Plaats",
-            "t": "Kaseya Center, Miami"
+            "label": "Capaciteit",
+            "t": "ongeveer 19.600"
           },
           {
-            "label": "Toeschouwers",
-            "t": "19.700"
+            "label": "Openbaar vervoer",
+            "t": "Metromover of Metrorail (station Overtown/Arena)"
           }
         ],
         "gallery": [
@@ -159,7 +166,7 @@
             "section": {
               "h": "Voor de aftrap",
               "p": [
-                "We liepen vanuit de stad naar de hal. Voor de ingang stond al een grote menigte, en in de gang stond een basketbal als kunstwerk in het Heat-thema."
+                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte, en in de gang stond een basketbal als kunstwerk in het Heat-thema."
               ]
             }
           },
@@ -183,7 +190,7 @@
             "section": {
               "h": "Tijdens de wedstrijd",
               "p": [
-                "Vanaf onze plaatsen hadden we goed zicht op het veld en op de schermen erboven. Tussendoor was er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzette."
+                "Vanaf de plaatsen was er goed zicht op het veld en op de schermen erboven."
               ]
             }
           },
@@ -205,9 +212,9 @@
           },
           {
             "section": {
-              "h": "Ook in 2013",
+              "h": "Dezelfde hal in 2013",
               "p": [
-                "Ook in 2013 was er een Heat-wedstrijd in dezelfde hal, toen nog AmericanAirlines Arena. Op 6 februari won de Heat daar met 114\u2013108 van de Houston Rockets."
+                "In 2013 heette de hal nog AmericanAirlines Arena. Op 6 februari 2013 won de Heat er met 114–108 van de Houston Rockets."
               ]
             }
           },
