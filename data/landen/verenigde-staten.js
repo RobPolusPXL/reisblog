@@ -149,7 +149,7 @@
             "h": "In de hal",
             "p": [
               "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Zo eert een NBA-ploeg spelers die veel voor de club hebben betekend: hun rugnummer wordt daarna niet meer aan andere spelers gegeven. Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
-              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen boven het gemiddelde van een NBA-hal."
+              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal."
             ]
           }
         ],
