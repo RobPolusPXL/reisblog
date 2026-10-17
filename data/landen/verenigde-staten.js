@@ -279,13 +279,13 @@
         "text": "De autovrije winkelstraat van Miami Beach, met terrassen, palmbomen en bronzen beelden.",
         "ok": true,
         "hero": {
-          "src": "images/verenigde-staten/lincoln-road-hoofd-van-puzzelstukken.webp",
-          "alt": "Een groot hoofd dat is opgebouwd uit gekleurde puzzelstukken, op Lincoln Road"
+          "src": "images/verenigde-staten/lincoln-road-straatbord-met-palmen.webp",
+          "alt": "Het straatbord Lincoln Rd Mall tussen palmbomen, met een begroeid gebouw erachter"
         },
         "photos": [
           {
-            "src": "images/verenigde-staten/lincoln-road-hoofd-van-puzzelstukken.webp",
-            "alt": "Een groot hoofd dat is opgebouwd uit gekleurde puzzelstukken, op Lincoln Road"
+            "src": "images/verenigde-staten/lincoln-road-straatbord-met-palmen.webp",
+            "alt": "Het straatbord Lincoln Rd Mall tussen palmbomen, met een begroeid gebouw erachter"
           }
         ],
         "body": [
@@ -299,6 +299,11 @@
           }
         ],
         "gallery": [
+          {
+            "src": "images/verenigde-staten/lincoln-road-gekleurde-luifels.webp",
+            "alt": "Een rij gekleurde luifels in alle kleuren van de regenboog op Lincoln Road, met een palmboom en een lantaarnpaal",
+            "span": 6
+          },
           {
             "src": "images/verenigde-staten/lincoln-road-straatbord-met-palmen.webp",
             "alt": "Het straatbord Lincoln Rd Mall tussen palmbomen, met een begroeid gebouw erachter",
