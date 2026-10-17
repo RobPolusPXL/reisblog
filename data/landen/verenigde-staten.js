@@ -125,6 +125,14 @@
             ]
           },
           {
+            "box": true,
+            "label": "Hoe ging de wedstrijd?",
+            "p": [
+              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
+              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
+            ]
+          },
+          {
             "h": "Erheen en weer weg",
             "p": [
               "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
@@ -160,13 +168,6 @@
           "Met de Metromover kom je tot bij de hal."
         ],
         "story": [
-          {
-            "label": "Hoe ging de wedstrijd?",
-            "p": [
-              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
-              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
-            ]
-          },
           {
             "label": "Leuke anekdote",
             "p": [
