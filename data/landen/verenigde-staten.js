@@ -99,181 +99,30 @@
         ]
       },
       {
-        "t": "Miami Heat in het Kaseya Center",
+        "t": "Miami",
+        "city": true,
         "pin": [
-          25.7814,
-          -80.187
+          25.7907,
+          -80.13
         ],
-        "text": "Wat je kunt verwachten bij een NBA-wedstrijd van de Miami Heat, gezien in 2013 en 2026.",
+        "text": "De plekken die we in Miami en Miami Beach bezochten: South Beach, Lincoln Road en een basketwedstrijd van de Heat.",
         "ok": true,
         "hero": {
-          "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
-          "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+          "src": "images/verenigde-staten/south-beach-miami-beach-letters.webp",
+          "alt": "Het kleurrijke Miami Beach-bord, met twee mensen ertussen"
         },
         "photos": [
           {
-            "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
-            "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+            "src": "images/verenigde-staten/south-beach-miami-beach-letters.webp",
+            "alt": "Het kleurrijke Miami Beach-bord, met twee mensen ertussen"
           }
         ],
         "body": [
           {
-            "h": "Een NBA-wedstrijd in Miami",
+            "h": "Miami in drie plekken",
             "p": [
-              "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
-              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn. Voor een sportliefhebber is een NBA-wedstrijd zeker aan te raden."
+              "Dit zijn de plekken die wij in februari 2026 in Miami zagen: de art-decohotels van South Beach, de wandelstraat Lincoln Road en een basketwedstrijd van de Miami Heat in het Kaseya Center."
             ]
-          },
-          {
-            "box": true,
-            "label": "Hoe ging de wedstrijd?",
-            "p": [
-              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
-              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
-            ]
-          },
-          {
-            "h": "Erheen en weer weg",
-            "p": [
-              "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
-              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
-            ]
-          },
-          {
-            "h": "Tickets en plaatsen",
-            "p": [
-              "In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket."
-            ]
-          },
-          {
-            "h": "In de hal",
-            "p": [
-              "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Zo eert een NBA-ploeg spelers die veel voor de club hebben betekend: hun rugnummer wordt daarna niet meer aan andere spelers gegeven. Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
-              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal."
-            ]
-          }
-        ],
-        "warn": {
-          "h": "Staanplaatsen in de bovenste uithoeken raden we af.",
-          "p": "Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan."
-        },
-        "goldTip": {
-          "label": "Gouden tip",
-          "p": [
-            "Neem een zitplaats en betaal iets meer. Een NBA-wedstrijd duurt langer dan je denkt."
-          ]
-        },
-        "tips": [
-          "Tickets kun je kopen via de site van de Heat of via Ticketmaster.",
-          "Met de Metromover kom je tot bij de hal."
-        ],
-        "story": [
-          {
-            "label": "Leuke anekdote",
-            "p": [
-              "We hadden staanplaatsen in de nosebleeds. Een NBA-wedstrijd duurt langer dan je denkt, en het is best lang om rechtop te staan. Tijdens de rust ging een deel van een gezelschap dat zitplaatsen had vlak onder ons naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend."
-            ],
-            "closing": "Dank aan deze vriendelijke Amerikanen."
-          }
-        ],
-        "practical": [
-          {
-            "label": "Gezien in 2013",
-            "t": "Heat – Houston Rockets, 114–108"
-          },
-          {
-            "label": "Gezien in 2026",
-            "t": "Heat – Utah Jazz, 111–115"
-          },
-          {
-            "label": "Adres",
-            "t": "601 Biscayne Boulevard, Miami"
-          },
-          {
-            "label": "Capaciteit",
-            "t": "ongeveer 19.600"
-          },
-          {
-            "label": "Openbaar vervoer",
-            "t": "Metromover of Metrorail"
-          },
-          {
-            "label": "Tickets",
-            "t": "\u20ac46 per ticket (Ticketmaster)"
-          }
-        ],
-        "gallery": [
-          {
-            "section": {
-              "h": "Voor de tip-off",
-              "p": [
-                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte. Vanaf het terras van het stadion kijk je uit over de baai, met palmbomen en een verlichte brug."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-palmen-en-brug-bij-nacht.webp",
-            "alt": "Vanaf het terras van het stadion: palmbomen en een verlichte brug langs de baai bij nacht",
-            "span": 6
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-spelersintro-op-het-scherm.webp",
-            "alt": "De spelersintro: spelers op de grote schermen en rook boven het veld",
-            "span": 6
-          },
-          {
-            "section": {
-              "h": "Tijdens de wedstrijd",
-              "p": [
-                "Vanaf de plaatsen was er goed zicht op het veld en op de schermen erboven."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-zicht-op-het-veld.webp",
-            "alt": "Overzicht van het Kaseya Center tijdens de wedstrijd",
-            "span": 6
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-zaklampen-in-de-zaal.webp",
-            "alt": "Supporters met de zaklampen van hun gsm aan in de zaal",
-            "span": 6
-          },
-          {
-            "section": {
-              "h": "Tussendoor",
-              "p": [
-                "In de gang stond een basketbal als kunstwerk in het Heat-thema, en tijdens de wedstrijd kun je iets eten, zoals een stuk pizza."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
-            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
-            "tall": true,
-            "span": 3
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-pizza-met-zicht-op-het-veld.webp",
-            "alt": "Een stuk pizza met op de achtergrond het veld",
-            "tall": true,
-            "span": 3
-          },
-          {
-            "section": {
-              "h": "Dezelfde hal in 2013",
-              "p": [
-                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen."
-              ]
-            }
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-spelersintro-op-het-veld.webp",
-            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de tip-off"
-          },
-          {
-            "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
-            "alt": "In 2013: overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
           }
         ]
       },
@@ -380,6 +229,12 @@
             "span": 6
           },
           {
+            "src": "images/verenigde-staten/south-beach-strandbord.webp",
+            "alt": "Een bord van Miami Beach met strandregels, met onderaan dat het strand van 22 tot 5 uur gesloten is",
+            "span": 3,
+            "tall": true
+          },
+          {
             "src": "images/verenigde-staten/south-beach-zon-boven-het-strand.webp",
             "alt": "De zon boven het strand, met gebouwen als silhouet",
             "span": 3
@@ -396,6 +251,10 @@
             "t": "8 februari 2026"
           },
           {
+            "label": "Strand",
+            "t": "Gesloten van 22 tot 5 uur, volgens het bord op het strand."
+          },
+          {
             "label": "Ocean Drive",
             "t": "Tussen 5th en 15th Street, langs Lummus Park en het strand."
           },
@@ -407,7 +266,278 @@
             "label": "Wandeltour",
             "t": "Dagelijks om 10:30 vanaf het Welcome Center, tot ongeveer twee uur. Er is ook een audiotour van ongeveer 1,5 uur, onder meer in het Engels."
           }
+        ],
+        "in": "Miami"
+      },
+      {
+        "t": "Lincoln Road",
+        "in": "Miami",
+        "pin": [
+          25.7907,
+          -80.1399
+        ],
+        "text": "De autovrije winkelstraat van Miami Beach, met terrassen, palmbomen en bronzen beelden.",
+        "ok": true,
+        "hero": {
+          "src": "images/verenigde-staten/lincoln-road-hoofd-van-puzzelstukken.webp",
+          "alt": "Een groot hoofd dat is opgebouwd uit gekleurde puzzelstukken, op Lincoln Road"
+        },
+        "photos": [
+          {
+            "src": "images/verenigde-staten/lincoln-road-hoofd-van-puzzelstukken.webp",
+            "alt": "Een groot hoofd dat is opgebouwd uit gekleurde puzzelstukken, op Lincoln Road"
+          }
+        ],
+        "body": [
+          {
+            "h": "Een winkelstraat zonder auto's",
+            "p": [
+              "Lincoln Road Mall is een autovrije straat in Miami Beach, tussen 16th en 17th Street, die doorloopt tot aan Alton Road. Het gebied was oorspronkelijk mangrovebos. In 1912 liet Carl Fisher er een strook vrijmaken en de straat werd het sociale centrum van de stad.",
+              "In de jaren vijftig ontwierp architect Morris Lapidus de herinrichting, met tuinen, fonteinen en een amfitheater. Op 28 november 1960 werd de straat geopend als autovrij gebied, een van de eerste voetgangersgebieden van de VS. Sinds 2011 staat ze op het National Register of Historic Places.",
+              "Vandaag zijn er meer dan 200 winkels, restaurants en bars, een bioscoop, het Colony Theatre en ArtCenter/South Florida."
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "section": {
+              "h": "Beelden langs de straat",
+              "p": [
+                "Op Lincoln Road staat regelmatig kunst. Wij kwamen een hoofd tegen dat is opgebouwd uit puzzelstukken."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/lincoln-road-hoofd-van-puzzelstukken.webp",
+            "alt": "Een groot hoofd dat is opgebouwd uit gekleurde puzzelstukken, op Lincoln Road",
+            "span": 3,
+            "tall": true
+          },
+          {
+            "src": "images/verenigde-staten/lincoln-road-neushoorn-met-kopje.webp",
+            "alt": "Een bronzen neushoorn met een kopje in zijn hand, onderdeel van een bronzen bankstel op Lincoln Road",
+            "span": 3,
+            "tall": true
+          },
+          {
+            "section": {
+              "h": "The Wild Couch Party",
+              "p": [
+                "Op het moment van ons bezoek stond er een bronzen bankstel van het kunstenaarsduo Gillie and Marc: The Wild Couch Party. Het is ongeveer 12 meter lang en toont Dogman en Rabbitwoman met twaalf bedreigde diersoorten, zoals nijlpaarden, giraffen, olifanten, tijgers, koala's en chimpansees. Wij fotografeerden vooral de neushoorn met zijn kopje.",
+                "Volgens de organisatie stonden de beelden van juli 2025 tot juli 2026 op Lincoln Road."
+              ]
+            }
+          },
+          {
+            "section": {
+              "h": "In de schemering",
+              "p": [
+                "Tegen de avond liggen de palmbomen langs de straat in het licht en komen er steeds meer mensen op de wandelstraat en de terrassen."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/lincoln-road-in-de-schemering.webp",
+            "alt": "Lincoln Road in de schemering, met palmbomen en mensen op de wandelstraat",
+            "span": 3,
+            "tall": true,
+            "center": true
+          }
+        ],
+        "practical": [
+          {
+            "label": "Gezien",
+            "t": "11 februari 2026"
+          },
+          {
+            "label": "Ligging",
+            "t": "Tussen 16th en 17th Street, in Miami Beach."
+          },
+          {
+            "label": "Autoverkeer",
+            "t": "Geen, het is een voetgangersstraat."
+          }
         ]
+      },
+      {
+        "t": "Miami Heat in het Kaseya Center",
+        "pin": [
+          25.7814,
+          -80.187
+        ],
+        "text": "Wat je kunt verwachten bij een NBA-wedstrijd van de Miami Heat, gezien in 2013 en 2026.",
+        "ok": true,
+        "hero": {
+          "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
+          "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+        },
+        "photos": [
+          {
+            "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
+            "alt": "Het Kaseya Center bij avond, met de Heat-gevel en wachtende supporters"
+          }
+        ],
+        "body": [
+          {
+            "h": "Een NBA-wedstrijd in Miami",
+            "p": [
+              "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
+              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn. Voor een sportliefhebber is een NBA-wedstrijd zeker aan te raden."
+            ]
+          },
+          {
+            "box": true,
+            "label": "Hoe ging de wedstrijd?",
+            "p": [
+              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
+              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
+            ]
+          },
+          {
+            "h": "Erheen en weer weg",
+            "p": [
+              "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
+              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
+            ]
+          },
+          {
+            "h": "Tickets en plaatsen",
+            "p": [
+              "In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket."
+            ]
+          },
+          {
+            "h": "In de hal",
+            "p": [
+              "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Zo eert een NBA-ploeg spelers die veel voor de club hebben betekend: hun rugnummer wordt daarna niet meer aan andere spelers gegeven. Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
+              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal."
+            ]
+          }
+        ],
+        "warn": {
+          "h": "Staanplaatsen in de bovenste uithoeken raden we af.",
+          "p": "Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan."
+        },
+        "goldTip": {
+          "label": "Gouden tip",
+          "p": [
+            "Neem een zitplaats en betaal iets meer. Een NBA-wedstrijd duurt langer dan je denkt."
+          ]
+        },
+        "tips": [
+          "Tickets kun je kopen via de site van de Heat of via Ticketmaster.",
+          "Met de Metromover kom je tot bij de hal."
+        ],
+        "story": [
+          {
+            "label": "Leuke anekdote",
+            "p": [
+              "We hadden staanplaatsen in de nosebleeds. Een NBA-wedstrijd duurt langer dan je denkt, en het is best lang om rechtop te staan. Tijdens de rust ging een deel van een gezelschap dat zitplaatsen had vlak onder ons naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend."
+            ],
+            "closing": "Dank aan deze vriendelijke Amerikanen."
+          }
+        ],
+        "practical": [
+          {
+            "label": "Gezien in 2013",
+            "t": "Heat – Houston Rockets, 114–108"
+          },
+          {
+            "label": "Gezien in 2026",
+            "t": "Heat – Utah Jazz, 111–115"
+          },
+          {
+            "label": "Adres",
+            "t": "601 Biscayne Boulevard, Miami"
+          },
+          {
+            "label": "Capaciteit",
+            "t": "ongeveer 19.600"
+          },
+          {
+            "label": "Openbaar vervoer",
+            "t": "Metromover of Metrorail"
+          },
+          {
+            "label": "Tickets",
+            "t": "€46 per ticket (Ticketmaster)"
+          }
+        ],
+        "gallery": [
+          {
+            "section": {
+              "h": "Voor de tip-off",
+              "p": [
+                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte. Vanaf het terras van het stadion kijk je uit over de baai, met palmbomen en een verlichte brug."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-palmen-en-brug-bij-nacht.webp",
+            "alt": "Vanaf het terras van het stadion: palmbomen en een verlichte brug langs de baai bij nacht",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-spelersintro-op-het-scherm.webp",
+            "alt": "De spelersintro: spelers op de grote schermen en rook boven het veld",
+            "span": 6
+          },
+          {
+            "section": {
+              "h": "Tijdens de wedstrijd",
+              "p": [
+                "Vanaf de plaatsen was er goed zicht op het veld en op de schermen erboven."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-zicht-op-het-veld.webp",
+            "alt": "Overzicht van het Kaseya Center tijdens de wedstrijd",
+            "span": 6
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-zaklampen-in-de-zaal.webp",
+            "alt": "Supporters met de zaklampen van hun gsm aan in de zaal",
+            "span": 6
+          },
+          {
+            "section": {
+              "h": "Tussendoor",
+              "p": [
+                "In de gang stond een basketbal als kunstwerk in het Heat-thema, en tijdens de wedstrijd kun je iets eten, zoals een stuk pizza."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
+            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
+            "tall": true,
+            "span": 3
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-pizza-met-zicht-op-het-veld.webp",
+            "alt": "Een stuk pizza met op de achtergrond het veld",
+            "tall": true,
+            "span": 3
+          },
+          {
+            "section": {
+              "h": "Dezelfde hal in 2013",
+              "p": [
+                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-2013-spelersintro-op-het-veld.webp",
+            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de tip-off"
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
+            "alt": "In 2013: overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
+          }
+        ],
+        "in": "Miami"
       }
     ],
     practical: [

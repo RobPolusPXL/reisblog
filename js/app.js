@@ -330,11 +330,12 @@ function section(title, inner, sub, cls) {
         }).join("") + "</dl></aside>";
       })() + "</div>";
 
-    if (pl.length) {
-      html += section("Dingen die we deden", '<div class="places" data-n="' + (pl.length === 2 && pl.every(function (a) { return a.pin; }) ? "2map" : (pl.length > 3 ? "many" : pl.length)) + '">' + pl.map(function (a) {
+    var top = pl.filter(function (a) { return !a.in; });
+    if (top.length) {
+      html += section("Dingen die we deden", '<div class="places" data-n="' + (top.length === 2 && top.every(function (a) { return a.pin; }) ? "2map" : (top.length > 3 ? "many" : top.length)) + '">' + top.map(function (a) {
         return '<a class="place" href="' + cpath(c) + a.slug + '/">' + photo(a.photos[0]) +
           "<h3>" + esc(a.t) + "</h3>" + (a.text ? "<p>" + esc(excerpt(a.text, 90)) + "</p>" : "") + "</a>";
-      }).join("") + (pl.length === 2 && pl.every(function (a) { return a.pin; }) ? '<div class="place-map" id="countryMap" aria-hidden="true"></div>' : "") + "</div>" + (rest.length
+      }).join("") + (top.length === 2 && top.every(function (a) { return a.pin; }) ? '<div class="place-map" id="countryMap" aria-hidden="true"></div>' : "") + "</div>" + (rest.length
         ? '<div class="also"><h3>Ook gedaan</h3><ul>' + rest.map(function (a) {
             return '<li><span class="chip' + (a.ok === false ? " concept" : "") + '">' + esc(a.t) + "</span></li>";
           }).join("") + "</ul></div>" : ""),
@@ -385,16 +386,19 @@ function section(title, inner, sub, cls) {
     var i = pl.indexOf(a);
     var prev = pl[i - 1], next = pl[i + 1];
     var n = a.photos.length;
-    var crumbs = '<div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › <span>" + esc(a.t) + "</span></div>";
+    var parent = a.in ? pl.filter(function (x) { return x.t === a.in; })[0] : null;
+    var kids = a.city ? pl.filter(function (x) { return x.in === a.t; }) : [];
+    var crumbs = '<div class="crumbs"><a href="./#bestemmingen">Bestemmingen</a> › <a href="' + cpath(c) + '">' + esc(c.name) + "</a> › " + (parent ? '<a href="' + cpath(c) + parent.slug + '/">' + esc(parent.t) + "</a> › " : "") + "<span>" + esc(a.t) + "</span></div>";
     var html = (a.hero ? '<section class="hero short place-hero">' + hero(a.hero.src, a.hero.alt, c.name, a.t, a.text) + "</section>" : "") +
       '<div class="wrap">' + crumbs +
       (a.hero ? "" : '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>") +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { if (b.box) return '<div class="story-box" role="note"><b>' + esc(b.label || "Leuke anekdote") + "</b>" + b.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>"; return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
+      (kids.length ? '<div class="places city-places" data-n="' + (kids.length > 3 ? "many" : kids.length) + '">' + kids.map(function (k) { return '<a class="place" href="' + cpath(c) + k.slug + '/">' + photo(k.photos[0]) + "<h3>" + esc(k.t) + "</h3>" + (k.text ? "<p>" + esc(excerpt(k.text, 90)) + "</p>" : "") + "</a>"; }).join("") + "</div>" : "") +
       (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
       (a.goldTip ? '<div class="gold-box" role="note"><b>' + esc(a.goldTip.label || "Gouden tip") + "</b>" + a.goldTip.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>" : "") +
-      (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
+      (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : a.city ? "" : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
       (a.story ? [].concat(a.story).map(function (st) { return '<div class="story-box" role="note"><b>' + esc(st.label || "Leuke anekdote") + "</b>" + st.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + (st.closing ? '<p class="closing">' + esc(st.closing) + "</p>" : "") + "</div>"; }).join("") : "") +
       (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips' + (a.tips.length > 1 ? " multi" : "") + '">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
