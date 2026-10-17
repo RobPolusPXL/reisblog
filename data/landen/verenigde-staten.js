@@ -30,7 +30,15 @@
         ],
         "text": "Gratis snorkelen aan de Blue Heron Bridge, met een kunstmatig rif vol vis en betonnen hamerhaaien.",
         "ok": true,
+        "hero": {
+          "src": "images/verenigde-staten/phil-foster-park-onder-de-brug.webp",
+          "alt": "Het strandje onder de Blue Heron Bridge met het heldere water van de lagune"
+        },
         "photos": [
+          {
+            "src": "images/verenigde-staten/phil-foster-park-hoogbouw-aan-de-overkant.webp",
+            "alt": "Uitzicht vanaf het water op een hoogbouwtoren en de Blue Heron Bridge, met een rode patrouilleboot"
+          },
           {
             "src": "images/verenigde-staten/phil-foster-park-plattegrond.webp",
             "alt": "Plattegrond van Phil Foster Park met het snorkelrif, de ingangen en de vaargeul"
