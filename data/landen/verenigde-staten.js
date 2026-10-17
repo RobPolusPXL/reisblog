@@ -203,21 +203,6 @@
             "tall": true,
             "center": true
           }
-        ],
-        "sourcesLabel": "Bronnen",
-        "sources": [
-          {
-            "t": "Wikipedia: Miami Heat 2025–26",
-            "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Miami_Heat_season"
-          },
-          {
-            "t": "FantasyData: boxscore",
-            "url": "https://fantasydata.com/nba/boxscore/23228-utah-jazz-vs-miami-heat-feb-9-2026"
-          },
-          {
-            "t": "Register-Herald",
-            "url": "https://www.register-herald.com/sports/national_sports/sensabaugh-hits-late-3-pointer-to-lift-jazz-to-115-111-win-over-heat/article_def12027-19de-5d2f-a181-c60d01fea46e.html"
-          }
         ]
       }
     ]
