@@ -283,7 +283,7 @@
           25.7826,
           -80.1304
         ],
-        "text": "Een wandeling langs Ocean Drive in Miami Beach, met art-decohotels, palmbomen en kleurrijke strandpostjes.",
+        "text": "Een wandeling langs Ocean Drive in South Beach, tussen art-decohotels in pastelkleuren, palmbomen en het strand.",
         "ok": true,
         "hero": {
           "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
@@ -297,10 +297,10 @@
         ],
         "body": [
           {
-            "h": "Art deco aan Ocean Drive",
+            "h": "Art deco in Miami Beach",
             "p": [
-              "Langs Ocean Drive staan art-decohotels in pastelkleuren, zoals het Colony Hotel, The Pelican en The Carlyle. Op de benedenverdieping hebben veel van hen een terras aan de straat, onder parasols en palmbomen.",
-              "Wij wandelden hier op 8 februari 2026 in de namiddag, tussen de hotels en het strand."
+              "South Beach is het zuidelijke deel van Miami Beach. Het Art Deco-district telt ongeveer 960 historische gebouwen, tussen de Atlantische Oceaan, 6th Street, Alton Road en Dade Boulevard. De meeste dateren uit de periode tussen de Grote Depressie en het begin van de jaren veertig. In 1979 werd het gebied beschermd als historisch district.",
+              "De art-decostijl ontstond in Frankrijk in de jaren 1910 en werd rond 1925 wereldwijd bekend, met geometrische vormen, zonnestralen en luxe materialen als marmer en chroom. In Miami Beach kreeg de stijl een tropische variant: pastelkleuren, neonverlichting, nautische motieven en bloemreliëfs. Typisch zijn ook de \"eyebrows\", kleine luifels boven de ramen die schaduw geven en het interieur koel houden."
             ]
           }
         ],
@@ -309,6 +309,15 @@
             "src": "images/verenigde-staten/south-beach-miami-beach-letters.webp",
             "alt": "Het kleurrijke Miami Beach-bord, met twee mensen ertussen",
             "span": 6
+          },
+          {
+            "section": {
+              "h": "Ocean Drive",
+              "p": [
+                "De bekendste straat van het district is Ocean Drive, tussen 5th en 15th Street, met aan de ene kant de hotels en aan de andere kant Lummus Park en het strand. Op de benedenverdieping van veel hotels zit een terras aan de straat. 's Avonds valt de straat op door de neon.",
+                "Wij wandelden hier op 8 februari 2026 in de namiddag."
+              ]
+            }
           },
           {
             "src": "images/verenigde-staten/south-beach-ocean-drive-palmen-en-art-deco.webp",
@@ -328,6 +337,14 @@
             "tall": true
           },
           {
+            "section": {
+              "h": "De hotels",
+              "p": [
+                "Het Colony Hotel met zijn neonbord is een van de bekendste hotels aan Ocean Drive. Verderop staan onder meer The Pelican, het Clevelander en The Carlyle, elk in een eigen pastelkleur."
+              ]
+            }
+          },
+          {
             "src": "images/verenigde-staten/south-beach-the-pelican-hotel.webp",
             "alt": "Het hotel The Pelican in pastelkleuren, met terras langs de straat",
             "span": 6
@@ -338,6 +355,11 @@
             "span": 6
           },
           {
+            "src": "images/verenigde-staten/south-beach-the-carlyle.webp",
+            "alt": "Het hotel The Carlyle met gele parasols op het terras",
+            "span": 6
+          },
+          {
             "src": "images/verenigde-staten/south-beach-art-deco-poort.webp",
             "alt": "Een turquoise poort met de tekst Art Deco Miami Beach",
             "span": 3,
@@ -345,9 +367,12 @@
             "center": true
           },
           {
-            "src": "images/verenigde-staten/south-beach-the-carlyle.webp",
-            "alt": "Het hotel The Carlyle met gele parasols op het terras",
-            "span": 6
+            "section": {
+              "h": "Het strand",
+              "p": [
+                "Aan de overkant van de straat ligt het strand, met kleurrijke lifeguardtorens."
+              ]
+            }
           },
           {
             "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
@@ -356,17 +381,31 @@
           },
           {
             "src": "images/verenigde-staten/south-beach-zon-boven-het-strand.webp",
-            "alt": "De zon boven het strand, met gebouwen als silhouet"
+            "alt": "De zon boven het strand, met gebouwen als silhouet",
+            "span": 3
           },
           {
             "src": "images/verenigde-staten/south-beach-palmen-en-gazon.webp",
-            "alt": "Palmbomen op het gazon, met een art-decogebouw erachter"
+            "alt": "Palmbomen op het gazon, met een art-decogebouw erachter",
+            "span": 3
           }
         ],
         "practical": [
           {
             "label": "Gezien",
             "t": "8 februari 2026"
+          },
+          {
+            "label": "Ocean Drive",
+            "t": "Tussen 5th en 15th Street, langs Lummus Park en het strand."
+          },
+          {
+            "label": "Art Deco Welcome Center",
+            "t": "1001 Ocean Drive, elke dag open van 9 tot 17 uur, met tentoonstellingen, kaarten en een winkel."
+          },
+          {
+            "label": "Wandeltour",
+            "t": "Dagelijks om 10:30 vanaf het Welcome Center, tot ongeveer twee uur. Er is ook een audiotour van ongeveer 1,5 uur, onder meer in het Engels."
           }
         ]
       }
