@@ -233,7 +233,7 @@
             "section": {
               "h": "Dezelfde hal in 2013",
               "p": [
-                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen. Tijdens de rust ging een deel van een gezelschap naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan."
+                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen. Onze staanplaatsen zaten hoog in de hal en de eerste helft keken we rechtstaand. Tijdens de rust ging een deel van een gezelschap naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend."
               ]
             }
           },
