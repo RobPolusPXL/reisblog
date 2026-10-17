@@ -356,7 +356,7 @@ function section(title, inner, sub, cls) {
     if (c.weetjes && c.weetjes.length) html += section("Wist je dat?", '<div class="facts">' + c.weetjes.map(function (f) {
       return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>");
-    if (c.tips && c.tips.length) html += section("Tip", '<ul class="tips">' + c.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>");
+    if (c.tips && c.tips.length) html += '<section class="block">' + '<ul class="tips' + (c.tips.length > 1 ? " multi" : "") + '">' + c.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></section>";
     if (c.practical && c.practical.length) {
       if (c.practical.some(function (f) { return f.group; })) {
         var order = [], byG = {};
@@ -391,11 +391,13 @@ function section(title, inner, sub, cls) {
       (a.hero ? "" : '<div class="s-head"><span class="label">' + esc(c.name) + "</span><h1>" + esc(a.t) + "</h1>" +
       (a.text ? '<p class="s-lead">' + esc(a.text) + "</p>" : "") + "</div>") +
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
-      (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
+      (a.body ? '<div class="s-body">' + a.body.map(function (b) { if (b.box) return '<div class="story-box" role="note"><b>' + esc(b.label || "Leuke anekdote") + "</b>" + b.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>"; return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
+      (a.goldTip ? '<div class="gold-box" role="note"><b>' + esc(a.goldTip.label || "Gouden tip") + "</b>" + a.goldTip.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
+      (a.story ? [].concat(a.story).map(function (st) { return '<div class="story-box" role="note"><b>' + esc(st.label || "Leuke anekdote") + "</b>" + st.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + (st.closing ? '<p class="closing">' + esc(st.closing) + "</p>" : "") + "</div>"; }).join("") : "") +
       (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +
-      (a.tips && a.tips.length ? '<ul class="tips s-tips">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
+      (a.tips && a.tips.length ? '<ul class="tips s-tips' + (a.tips.length > 1 ? " multi" : "") + '">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
       (a.sources && a.sources.length && a.showSources === true ? '<p class="s-sources">' + esc(a.sourcesLabel || "Bronnen") + ": " + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       (a.related ? '<div class="s-more s-related"><h2>' + esc(a.related.q) + '</h2><div class="s-nav">' + a.related.links.map(function (l) {
         var cc = countries.filter(function (x) { return x.slug === l.c; })[0];
@@ -454,7 +456,7 @@ function section(title, inner, sub, cls) {
           "<h3>" + esc(d.title) + "</h3></header>" +
           '<div class="dbody">' + d.text.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
           dayPhotos(d.photos) +
-          (d.tips && d.tips.length ? '<ul class="tips">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
+          (d.tips && d.tips.length ? '<ul class="tips' + (d.tips.length > 1 ? " multi" : "") + '">' + d.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
           (links ? '<div class="dlinks"><span>Meer over</span>' + links + "</div>" : "") + "</article>";
       }).join("") + "</div>");
 

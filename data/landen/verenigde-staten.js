@@ -104,7 +104,7 @@
           25.7814,
           -80.187
         ],
-        "text": "Een NBA-wedstrijd van de Miami Heat tegen Utah Jazz, met veel muziek, show en sfeer.",
+        "text": "Wat je kunt verwachten bij een NBA-wedstrijd van de Miami Heat, gezien in 2013 en 2026.",
         "ok": true,
         "hero": {
           "src": "images/verenigde-staten/miami-heat-kaseya-center-buitenkant.webp",
@@ -118,54 +118,102 @@
         ],
         "body": [
           {
-            "h": "Een avond basketbal in Miami",
+            "h": "Een NBA-wedstrijd in Miami",
             "p": [
-              "Het Kaseya Center is de thuishal van de Miami Heat, aan de baai in het centrum van Miami. Wij zagen de Heat op maandag 9 februari 2026 tegen Utah Jazz. De Heat verloor met 111–115.",
-              "Er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme: supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken."
+              "De Miami Heat spelen in het Kaseya Center, aan 601 Biscayne Boulevard, aan de baai in het centrum van Miami. Tot 2021 heette de hal AmericanAirlines Arena, daarna kort FTX Arena. Ze biedt plaats aan ongeveer 19.600 toeschouwers.",
+              "Een wedstrijd is meer dan basketbal alleen: er is veel muziek, amusement en sfeer, en het publiek supporteert ronduit partijdig, zelfs de commentatoren. Toch is er geen hooliganisme. Supporters van beide ploegen zitten naast elkaar, zonder thuis- en uitvakken. Ook voor wie niet van basketbal houdt, kan een wedstrijd daardoor een leuke avond zijn. Voor een sportliefhebber is een NBA-wedstrijd zeker aan te raden."
             ]
           },
           {
-            "h": "De wedstrijd",
+            "box": true,
+            "label": "Hoe ging de wedstrijd?",
             "p": [
-              "De Heat begon sterk en won het eerste kwart met 32–26. In het tweede kwart scoorde Utah 35 punten tegen 20 van de Heat, waardoor Miami met 52–61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf.",
-              "Topscorer van de Heat was Andrew Wiggins met 26 punten. Bij Utah scoorde Jaren Jackson Jr. er 22."
+              "In 2026: de Heat wonnen het eerste kwart met 32–⁠26, maar Utah scoorde in het tweede kwart 35 punten tegen 20, waardoor Miami met 52–⁠61 achter de rust inging. In de tweede helft kwam de Heat terug, tot Brice Sensabaugh 47 seconden voor het einde met een driepunter Utah de voorsprong gaf. Eindstand: 111–⁠115. Andrew Wiggins was topscorer van de Heat met 26 punten, bij Utah scoorde Jaren Jackson Jr. er 22.",
+              "In 2013: de Heat wonnen het eerste kwart met 32–⁠30 en gingen met 63–⁠56 de rust in. Houston kwam in het laatste kwart nog tot 104–⁠101, maar Wade blokte ongeveer elf seconden voor het einde een driepunter van Harden. Eindstand: 114–⁠108. LeBron James scoorde 32 punten, Wade 31 en Harden 36."
             ]
+          },
+          {
+            "h": "Erheen en weer weg",
+            "p": [
+              "Vanuit het centrum kun je naar de hal lopen. Met het openbaar vervoer komt de Metromover tot bij de hal, en het Metrorail-station Overtown/Arena ligt op ongeveer vijf blokken. Wie met de auto komt, vindt een parkeerplaats in de buurt, bijvoorbeeld op het terrein van Bayside Marketplace. Daar betaal je voor een Heat-wedstrijd vanaf ongeveer €22.",
+              "Het verkeer rond de hal is druk bij aankomst en bij vertrek."
+            ]
+          },
+          {
+            "h": "Tickets en plaatsen",
+            "p": [
+              "In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket."
+            ]
+          },
+          {
+            "h": "In de hal",
+            "p": [
+              "Onder het dak hangen de banners van de gewonnen titels en de shirts van spelers die door de Heat zijn teruggetrokken, zoals Alonzo Mourning (33) en Tim Hardaway (10). Zo eert een NBA-ploeg spelers die veel voor de club hebben betekend: hun rugnummer wordt daarna niet meer aan andere spelers gegeven. Boven het veld hangt een groot videobord, dat sinds 2024 een nieuw ontwerp heeft.",
+              "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal."
+            ]
+          }
+        ],
+        "warn": {
+          "h": "Staanplaatsen in de bovenste uithoeken raden we af.",
+          "p": "Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan."
+        },
+        "goldTip": {
+          "label": "Gouden tip",
+          "p": [
+            "Neem een zitplaats en betaal iets meer. Een NBA-wedstrijd duurt langer dan je denkt."
+          ]
+        },
+        "tips": [
+          "Tickets kun je kopen via de site van de Heat of via Ticketmaster.",
+          "Met de Metromover kom je tot bij de hal."
+        ],
+        "story": [
+          {
+            "label": "Leuke anekdote",
+            "p": [
+              "We hadden staanplaatsen in de nosebleeds. Een NBA-wedstrijd duurt langer dan je denkt, en het is best lang om rechtop te staan. Tijdens de rust ging een deel van een gezelschap dat zitplaatsen had vlak onder ons naar huis. De mensen die bleven vroegen of we wilden zitten, en dat namen we maar al te graag aan. De tweede helft zagen we dus zittend."
+            ],
+            "closing": "Dank aan deze vriendelijke Amerikanen."
           }
         ],
         "practical": [
           {
-            "label": "Wedstrijd",
-            "t": "Heat – Utah Jazz, 9 februari 2026"
+            "label": "Gezien in 2013",
+            "t": "Heat – Houston Rockets, 114–108"
           },
           {
-            "label": "Eindstand",
-            "t": "111–115"
+            "label": "Gezien in 2026",
+            "t": "Heat – Utah Jazz, 111–115"
           },
           {
-            "label": "Rust",
-            "t": "52–61"
+            "label": "Adres",
+            "t": "601 Biscayne Boulevard, Miami"
           },
           {
-            "label": "Plaats",
-            "t": "Kaseya Center, Miami"
+            "label": "Capaciteit",
+            "t": "ongeveer 19.600"
           },
           {
-            "label": "Toeschouwers",
-            "t": "19.700"
+            "label": "Openbaar vervoer",
+            "t": "Metromover of Metrorail"
+          },
+          {
+            "label": "Tickets",
+            "t": "\u20ac46 per ticket (Ticketmaster)"
           }
         ],
         "gallery": [
           {
             "section": {
-              "h": "Voor de aftrap",
+              "h": "Voor de tip-off",
               "p": [
-                "We liepen vanuit de stad naar de hal. Voor de ingang stond al een grote menigte, en in de gang stond een basketbal als kunstwerk in het Heat-thema."
+                "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte. Vanaf het terras van het stadion kijk je uit over de baai, met palmbomen en een verlichte brug."
               ]
             }
           },
           {
             "src": "images/verenigde-staten/miami-heat-palmen-en-brug-bij-nacht.webp",
-            "alt": "Palmbomen en een verlichte brug langs de baai bij nacht",
+            "alt": "Vanaf het terras van het stadion: palmbomen en een verlichte brug langs de baai bij nacht",
             "span": 6
           },
           {
@@ -174,16 +222,10 @@
             "span": 6
           },
           {
-            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
-            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
-            "tall": true,
-            "center": true
-          },
-          {
             "section": {
               "h": "Tijdens de wedstrijd",
               "p": [
-                "Vanaf onze plaatsen hadden we goed zicht op het veld en op de schermen erboven. Tussendoor was er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzette."
+                "Vanaf de plaatsen was er goed zicht op het veld en op de schermen erboven."
               ]
             }
           },
@@ -198,22 +240,36 @@
             "span": 6
           },
           {
+            "section": {
+              "h": "Tussendoor",
+              "p": [
+                "In de gang stond een basketbal als kunstwerk in het Heat-thema, en tijdens de wedstrijd kun je iets eten, zoals een stuk pizza."
+              ]
+            }
+          },
+          {
+            "src": "images/verenigde-staten/miami-heat-basketbal-kunstwerk.webp",
+            "alt": "Een basketbal als kunstwerk in het Heat-thema, op een sokkel in de gang",
+            "tall": true,
+            "span": 3
+          },
+          {
             "src": "images/verenigde-staten/miami-heat-pizza-met-zicht-op-het-veld.webp",
             "alt": "Een stuk pizza met op de achtergrond het veld",
             "tall": true,
-            "center": true
+            "span": 3
           },
           {
             "section": {
-              "h": "Ook in 2013",
+              "h": "Dezelfde hal in 2013",
               "p": [
-                "Ook in 2013 was er een Heat-wedstrijd in dezelfde hal, toen nog AmericanAirlines Arena. Op 6 februari won de Heat daar met 114\u2013108 van de Houston Rockets."
+                "In 2013 heette de hal nog AmericanAirlines Arena. De Heat hadden toen nog de Big Three met LeBron James, Dwyane Wade en Chris Bosh, die die avond niet meespeelde. Bij de Houston Rockets speelde James Harden. Op 6 februari 2013 won de Heat met 114–108, en dat jaar werd Miami kampioen."
               ]
             }
           },
           {
             "src": "images/verenigde-staten/miami-heat-2013-spelersintro-op-het-veld.webp",
-            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de aftrap"
+            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de tip-off"
           },
           {
             "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
