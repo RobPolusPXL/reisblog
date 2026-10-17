@@ -300,6 +300,16 @@
         ],
         "gallery": [
           {
+            "src": "images/verenigde-staten/lincoln-road-straatbord-met-palmen.webp",
+            "alt": "Het straatbord Lincoln Rd Mall tussen palmbomen, met een begroeid gebouw erachter",
+            "span": 3
+          },
+          {
+            "src": "images/verenigde-staten/lincoln-road-cheesecake-factory-bij-avond.webp",
+            "alt": "The Cheesecake Factory op een hoek van Lincoln Road, bij avond",
+            "span": 3
+          },
+          {
             "section": {
               "h": "Beelden langs de straat",
               "p": [
@@ -329,6 +339,11 @@
             }
           },
           {
+            "src": "images/verenigde-staten/lincoln-road-bankstel-met-dieren.webp",
+            "alt": "Het bronzen bankstel The Wild Couch Party met dieren van brons, op Lincoln Road",
+            "span": 6
+          },
+          {
             "section": {
               "h": "In de schemering",
               "p": [
@@ -342,6 +357,16 @@
             "span": 3,
             "tall": true,
             "center": true
+          },
+          {
+            "section": {
+              "h": "Straks tot aan het strand",
+              "p": [
+                "Lincoln Road loopt niet helemaal tot aan het strand: het oostelijke einde, het 100-blok, sluit aan op Collins Avenue en de Beachwalk. Dat stuk wordt vernieuwd. De stad Miami Beach keurde een project goed van ongeveer €11 miljoen voor de blokken 100 tot 300 en de ingang van de Beachwalk, betaald door de staat Florida, de stad en een privé-ontwikkelaar, Sobe Sky Development.",
+                "In het 100-blok komen onder meer een breed plein met groen en openbare kunst, een monument bij de ingang dat verwijst naar Lapidus, een wandeling met lokale kunst, een herinrichting van de straat voor meer veiligheid voor voetgangers en een klein park bij de ingang van de Beachwalk. Voor het 200- en 300-blok wordt onderzocht of er een voetgangerszone komt.",
+                "Een opleverdatum is niet bekend. De informatie is van september 2025."
+              ]
+            }
           }
         ],
         "practical": [
