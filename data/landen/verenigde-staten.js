@@ -209,30 +209,29 @@
             "span": 6
           },
           {
-            "src": "images/verenigde-staten/south-beach-art-deco-poort.webp",
-            "alt": "Een turquoise poort met de tekst Art Deco Miami Beach",
-            "span": 3,
-            "tall": true,
-            "center": true
-          },
-          {
             "section": {
-              "h": "Het strand",
+              "h": "Richting het strand",
               "p": [
-                "Aan de overkant van de straat ligt het strand, met kleurrijke lifeguardtorens."
+                "Aan de overkant van de straat ligt het strand, met kleurrijke lifeguardtorens. Volgens het bord is het strand gesloten van 22 tot 5 uur."
               ]
             }
           },
           {
-            "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
-            "alt": "Een blauw-gele lifeguardtoren op het strand, met de zee erachter",
-            "span": 6
+            "src": "images/verenigde-staten/south-beach-art-deco-poort.webp",
+            "alt": "Een turquoise poort met de tekst Art Deco Miami Beach",
+            "span": 3,
+            "tall": true
           },
           {
             "src": "images/verenigde-staten/south-beach-strandbord.webp",
             "alt": "Een bord van Miami Beach met strandregels, met onderaan dat het strand van 22 tot 5 uur gesloten is",
             "span": 3,
             "tall": true
+          },
+          {
+            "src": "images/verenigde-staten/south-beach-lifeguard-toren.webp",
+            "alt": "Een blauw-gele lifeguardtoren op het strand, met de zee erachter",
+            "span": 6
           },
           {
             "src": "images/verenigde-staten/south-beach-zon-boven-het-strand.webp",
