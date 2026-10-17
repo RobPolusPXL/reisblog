@@ -397,7 +397,7 @@ function section(title, inner, sub, cls) {
       (a.story ? [].concat(a.story).map(function (st) { return '<div class="story-box" role="note"><b>' + esc(st.label || "Leuke anekdote") + "</b>" + st.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + (st.closing ? '<p class="closing">' + esc(st.closing) + "</p>" : "") + "</div>"; }).join("") : "") +
       (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +
       (a.tips && a.tips.length ? '<ul class="tips s-tips' + (a.tips.length > 1 ? " multi" : "") + '">' + a.tips.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") +
-      (a.sources && a.sources.length ? '<p class="s-sources">' + esc(a.sourcesLabel || "Bronnen") + ": " + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
+      (a.sources && a.sources.length && a.showSources === true ? '<p class="s-sources">' + esc(a.sourcesLabel || "Bronnen") + ": " + a.sources.map(function (s) { return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(s.t) + "</a>"; }).join(" · ") + "</p>" : "") +
       (a.related ? '<div class="s-more s-related"><h2>' + esc(a.related.q) + '</h2><div class="s-nav">' + a.related.links.map(function (l) {
         var cc = countries.filter(function (x) { return x.slug === l.c; })[0];
         return '<a class="prev" href="' + cpath(cc) + (l.s ? l.s + '/' : '') + '"><small>' + esc(l.small) + '</small><b>' + esc(l.b) + "</b></a>";
