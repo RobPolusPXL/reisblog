@@ -182,7 +182,7 @@
         "gallery": [
           {
             "section": {
-              "h": "Voor de aftrap",
+              "h": "Voor de tip-off",
               "p": [
                 "In 2026 liepen we vanuit de stad naar de hal. Voor de ingang stond al een grote menigte. Vanaf het terras van het stadion kijk je uit over de baai, met palmbomen en een verlichte brug."
               ]
@@ -246,7 +246,7 @@
           },
           {
             "src": "images/verenigde-staten/miami-heat-2013-spelersintro-op-het-veld.webp",
-            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de aftrap"
+            "alt": "In 2013: de spelers staan opgesteld rond het Heat-logo op het veld voor de tip-off"
           },
           {
             "src": "images/verenigde-staten/miami-heat-2013-zicht-op-de-hal.webp",
