@@ -551,3 +551,4 @@ body.has-hero .site-head .nav-dd-col a:hover { color: var(--accent); }
 .hike-gal figure.nat .photo img { height: auto; }
 .snorren span { white-space: nowrap; }
 @media (max-width: 560px) { .snorren { gap: 5px; } .snorren img { width: 30px; } .snorren span { margin-left: 2px; font-size: 14px; } }
+.mening-box p { text-align: justify; hyphens: none; -webkit-hyphens: none; }
