@@ -59,7 +59,7 @@
       {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/slowakije/reizen-naar-slowakije-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "De euro, dus wisselen is niet nodig.", "ok": true},
       {"label": "Prijzen", "group": "Ter plaatse", "t": "Over het algemeen goedkoper dan in België, in de toeristische plaatsen in de bergen iets minder."},
-      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Net als in België: een fooi is niet gebruikelijk. Je mag afronden, maar het hoeft niet."},
       {"label": "Kraanwater", "group": "Ter plaatse", "t": "Het kraanwater is veilig om te drinken."},
       {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs is geldig. Voor de snelwegen heb je een elektronische vignet nodig, die je vooraf online koopt."},
       {"label": "Stekker", "group": "Ter plaatse", "t": "Zelfde stekkers en spanning als in België. Geen reisstekker nodig.", "ok": true},

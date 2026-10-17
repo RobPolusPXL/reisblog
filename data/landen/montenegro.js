@@ -37,7 +37,7 @@
       {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/montenegro/reizen-naar-montenegro-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "De euro, dus wisselen is niet nodig. Kaarten worden aanvaard in supermarkten, de meeste restaurants en hotels aan de kust. In kleine steden en bergdorpen vragen ze vaak cash.", "ok": true},
       {"label": "Prijzen", "group": "Ter plaatse", "t": "Aan de kust loopt het in de zomer op, in het binnenland is het goedkoper."},
-      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Soms wordt de bediening automatisch op de rekening gezet. Is dat niet zo, dan wordt een fooi van 10 tot 15% verwacht."},
       {"label": "Kraanwater", "group": "Ter plaatse", "t": "Het kraanwater is op de meeste plaatsen drinkbaar."},
       {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs volstaat. De bergwegen zijn smal en bochtig, dus reken op meer tijd dan de kilometers doen vermoeden."},
       {"label": "Stekker", "group": "Ter plaatse", "t": "Zelfde stekkers en spanning als in België. Geen reisstekker nodig.", "ok": true},

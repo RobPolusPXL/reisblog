@@ -156,7 +156,7 @@
       {"label": "Munt", "group": "Ter plaatse", "t": "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", "ok": true},
       {"label": "Cash", "group": "Ter plaatse", "t": "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen. Pinautomaten staan vooral in de steden.", "ok": true},
       {"label": "Pinnen", "group": "Ter plaatse", "t": "Kies bij het pinnen altijd voor BAM, niet voor euro."},
-      {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
+      {"label": "Fooien", "group": "Ter plaatse", "t": "Net als in België: een fooi is niet gebruikelijk. Je mag afronden, maar het hoeft niet."},
       {"label": "Kraanwater", "group": "Ter plaatse", "t": "In de steden is het kraanwater doorgaans drinkbaar. Twijfel je, koop dan flessenwater."},
       {"label": "Verkeer", "group": "Ter plaatse", "t": "Er wordt rechts gereden en je Belgisch rijbewijs is geldig. Een internationaal rijbewijs is niet nodig. Op de snelweg A1 betaal je een paar euro tol bij de uitrit. Eerst tanken, daarna binnen betalen.", "ok": true},
       {"label": "Mobiel", "group": "Ter plaatse", "t": "Geen EU-roaming. Regel mobiel internet vooraf.", "ok": true},
