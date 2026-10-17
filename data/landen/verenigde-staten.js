@@ -567,7 +567,13 @@
             "alt": "In 2013: overzicht van de volle AmericanAirlines Arena tijdens de wedstrijd"
           }
         ],
-        "in": "Miami"
+        "in": "Miami",
+        "mening": {
+          "score": 5,
+          "p": [
+            "Een NBA-wedstrijd is meer dan basketbal: de show, de muziek en de sfeer zorgen ook voor wie geen fan is voor een leuke avond. Voor €46 per ticket was dit voor ons zeker de moeite, en als sportliefhebber raden we het absoluut aan. Neem wel een zitplaats, want een staanplaats in de bovenste hoeken is een wedstrijd lang rechtop staan."
+          ]
+        }
       }
     ],
     practical: [
