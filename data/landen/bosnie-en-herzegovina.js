@@ -152,7 +152,7 @@
     practical: [
       {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart of een paspoort volstaat. Je moet je aankomst binnen 48 uur laten registreren. Hotels en andere accommodaties doen dat voor je en geven je een bewijs dat je bij het vertrek kunt moeten tonen.", "ok": true},
       {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Mei, juni, september en oktober zijn aangenaam. In de zomer wordt het heet en in de winter ligt er sneeuw in de bergen."},
-      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/bosnie-en-herzegovina/reizen-naar-bosnie-en-herzegovina-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/bosnie-en-herzegovina/reizen-naar-bosnie-en-herzegovina-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "Bosnische mark (BAM), vast gekoppeld aan de euro: 1 euro is ongeveer 1,96 BAM.", "ok": true},
       {"label": "Cash", "group": "Ter plaatse", "t": "Cash is koning. Zorg voor kleine biljetten. Op veel plaatsen kun je ook in euro betalen. Pinautomaten staan vooral in de steden.", "ok": true},
       {"label": "Pinnen", "group": "Ter plaatse", "t": "Kies bij het pinnen altijd voor BAM, niet voor euro."},

@@ -34,7 +34,7 @@
     practical: [
       {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart is toegelaten, maar Buitenlandse Zaken raadt een geldig paspoort aan."},
       {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Mei, juni, september en oktober zijn warm genoeg voor de kust en niet te druk. In juli en augustus is het hoogseizoen met de meeste warmte."},
-      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/montenegro/reizen-naar-montenegro-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/montenegro/reizen-naar-montenegro-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "De euro, dus wisselen is niet nodig. Kaarten worden aanvaard in supermarkten, de meeste restaurants en hotels aan de kust. In kleine steden en bergdorpen vragen ze vaak cash.", "ok": true},
       {"label": "Prijzen", "group": "Ter plaatse", "t": "Aan de kust loopt het in de zomer op, in het binnenland is het goedkoper."},
       {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},

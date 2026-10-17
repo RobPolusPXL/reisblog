@@ -56,7 +56,7 @@
     practical: [
       {"label": "Inreis", "group": "Voor je vertrekt", "t": "Een Belgische identiteitskaart of een paspoort volstaat. Een visum is niet nodig. Bewaar een foto van je identiteitskaart op je telefoon.", "ok": true},
       {"label": "Beste reistijd", "group": "Voor je vertrekt", "t": "Van mei tot en met september is het aangenaam. De winters zijn koud, met sneeuw."},
-      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Bekijk het actuele advies", "tone": "warn", "link": {"href": "https://diplomatie.belgium.be/nl/landen/polen/reizen-naar-polen-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
+      {"label": "Reisadvies België", "group": "Voor je vertrekt", "t": "Veilig", "tone": "safe", "link": {"href": "https://diplomatie.belgium.be/nl/landen/polen/reizen-naar-polen-reisadvies", "label": "Reisadvies van Buitenlandse Zaken"}},
       {"label": "Munt", "group": "Ter plaatse", "t": "De zloty (PLN), geen euro. Kaarten worden overal aanvaard en met je Belgische kaart kun je geld afhalen aan een bankautomaat. Bij het pinnen kies je best voor PLN."},
       {"label": "Prijzen", "group": "Ter plaatse", "t": "Over het algemeen goedkoper dan in België, zeker voor eten en drinken."},
       {"label": "Fooien", "group": "Ter plaatse", "t": "Rond af of laat ongeveer 10% achter in restaurants."},
