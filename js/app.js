@@ -392,6 +392,7 @@ function section(title, inner, sub, cls) {
       (a.ok === false ? '<p class="concept-note s-note">Concept: dit is nog niet bevestigd.</p>' : "") +
       (a.body ? '<div class="s-body">' + a.body.map(function (b) { return "<h2>" + esc(b.h) + "</h2>" + b.p.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }).join("") + "</div>" : "") +
       (a.warn ? '<div class="warn-box" role="note"><b>Waarschuwing</b><p>' + esc(a.warn.h) + "</p>" + (a.warn.p ? "<p>" + esc(a.warn.p) + "</p>" : "") + "</div>" : "") +
+      (a.goldTip ? '<div class="gold-box" role="note"><b>' + esc(a.goldTip.label || "Gouden tip") + "</b>" + a.goldTip.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + "</div>" : "") +
       (a.gallery ? gallery(a.gallery, a.stravaEmbed, a.frameHtml) : '<div class="s-photos' + (n === 2 ? " two" : "") + '">' + a.photos.map(figure).join("") + "</div>") +
       (a.story ? [].concat(a.story).map(function (st) { return '<div class="story-box" role="note"><b>' + esc(st.label || "Leuke anekdote") + "</b>" + st.p.map(function (x) { return "<p>" + esc(x) + "</p>"; }).join("") + (st.closing ? '<p class="closing">' + esc(st.closing) + "</p>" : "") + "</div>"; }).join("") : "") +
       (a.practical && a.practical.length ? '<div class="s-practical"><h2>Praktisch</h2><div class="facts">' + a.practical.map(function (f) { return '<div class="fact"><b>' + esc(f.label) + "</b><span>" + esc(f.t) + "</span></div>"; }).join("") + "</div></div>" : "") +

@@ -134,8 +134,7 @@
           {
             "h": "Tickets en plaatsen",
             "p": [
-              "Tickets kun je kopen via de site van de Heat of via Ticketmaster. In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket.",
-              "In 2013 hadden we staanplaatsen in de bovenste uithoeken van de hal, de zogeheten nosebleeds. Dat raden we af. Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan. Neem liever een zitplaats en betaal iets meer."
+              "In 2026 kochten we doorverkooptickets via Ticketmaster, voor €46 per ticket."
             ]
           },
           {
@@ -145,6 +144,20 @@
               "Tussendoor is er veel te beleven, onder meer een lichtshow waarbij het publiek de zaklamp van de gsm aanzet. Voor het eten staan er onder andere Cubaanse sandwiches, nachos en hotdogs op het menu. De prijzen liggen volgens Stadium Journey boven het gemiddelde van een NBA-hal."
             ]
           }
+        ],
+        "warn": {
+          "h": "Staanplaatsen in de bovenste uithoeken raden we af.",
+          "p": "Er wordt op toegezien dat je niet op de grond gaat zitten, dus je wordt onvermijdelijk aangemaand om weer recht te gaan staan."
+        },
+        "goldTip": {
+          "label": "Gouden tip",
+          "p": [
+            "Neem een zitplaats en betaal iets meer. Een NBA-wedstrijd duurt langer dan je denkt."
+          ]
+        },
+        "tips": [
+          "Tickets kun je kopen via de site van de Heat of via Ticketmaster.",
+          "Met de Metromover kom je tot bij de hal."
         ],
         "story": [
           {

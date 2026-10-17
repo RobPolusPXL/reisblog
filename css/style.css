@@ -323,9 +323,9 @@ footer .insta:hover span { text-decoration: underline; }
 .d-photos.n1 figure, .d-photos.n3 figure:first-child, .d-photos.n5 figure:first-child { grid-column: span 6; }
 .d-photos.n1 .photo, .d-photos.n3 figure:first-child .photo, .d-photos.n5 figure:first-child .photo { aspect-ratio: 16 / 9; }
 .d-photos figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; }
-.tips { list-style: none; margin: 26px 0 0; padding: 18px 22px; background: var(--mist-soft); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; max-width: 68ch; }
+.tips { list-style: none; margin: 26px 0 0; padding: 18px 22px; background: #e2f0ec; border-left: 4px solid #0f766e; border-radius: 0 12px 12px 0; max-width: 68ch; color: #12302c; }
+.tips::before { content: "Tip"; display: block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #0a4f49; margin-bottom: 4px; }
 .tips li { font-size: 16px; line-height: 1.5; padding: 3px 0; }
-.tips li::before { content: "Tip · "; font-weight: 700; color: var(--accent-deep); }
 .dlinks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
 .dlinks > span { font: 700 13px/1 var(--body); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
 .dlinks .chip { display: inline-flex; align-items: center; gap: 8px; }
@@ -393,11 +393,15 @@ footer .insta:hover span { text-decoration: underline; }
 .warn-box p { margin: 0; line-height: 1.55; }
 .warn-box p:first-of-type { font-weight: 700; font-size: 18px; }
 .warn-box p + p { margin-top: 6px; }
-.story-box { margin: 28px 0 0; padding: 18px 22px; background: #e7f1e9; border-left: 4px solid #1e5a34; border-radius: 0 12px 12px 0; color: #14301f; }
-.story-box b { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #1e5a34; margin-bottom: 4px; }
+.story-box { margin: 28px 0 0; padding: 18px 22px; background: #e9edf1; border-left: 4px solid #2e3237; border-radius: 0 12px 12px 0; color: #1c2833; }
+.story-box b { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #475d73; margin-bottom: 4px; }
 .story-box p { margin: 0; line-height: 1.55; }
 .story-box p + p { margin-top: 8px; }
 .story-box .closing { font-weight: 700; }
+.gold-box { margin: 28px 0 0; padding: 18px 22px; background: #fbf3d0; border-left: 4px solid #d4a017; border-radius: 0 12px 12px 0; color: #3b2c05; }
+.gold-box b { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8a6508; margin-bottom: 4px; }
+.gold-box p { margin: 0; line-height: 1.55; }
+.gold-box p + p { margin-top: 8px; }
 .hike-gal .frame-cell { grid-column: span 6; border-radius: 14px; overflow: hidden; background: #f4f1ea; }
 .hike-gal .frame-cell iframe { display: block; width: 100%; height: 640px; border: 0; }
 @media (max-width: 700px) { .hike-gal .frame-cell iframe { height: 520px; } }
